@@ -52,9 +52,9 @@
 
 
 ## 日常比赛
-- [luogu](https://www.luogu.com.cn)
-- [acwing](https://www.acwing.com/activity/1/competition)
-- [atcoder](https://atcoder.jp)
-- [leetcode](https://leetcode.cn/contest)
-- [nowcoder](https://ac.nowcoder.com)
-- [codeforces](https://codeforces.com/contests)
+1. [luogu](https://www.luogu.com.cn)
+2. [acwing](https://www.acwing.com/activity/1/competition)
+3. [atcoder](https://atcoder.jp)
+4. [leetcode](https://leetcode.cn/contest)
+5. [nowcoder](https://ac.nowcoder.com)
+6. [codeforces](https://codeforces.com/contests)
