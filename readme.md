@@ -4,13 +4,13 @@
 > [acm学习路线](#学习路线) [算法模板库](#算法模板库)
 
 ## 学习路线
-
 ### 知识学习
 1. [OI-Wiki](https://oi-wiki.org)
 2. [AcWing算法基础课](https://www.acwing.com/activity/content/11)
 3. [AcWing算法提高课](https://www.acwing.com/activity/content/16)
 4. [AcWing算法进阶课](https://www.acwing.com/activity/content/32)
-
+5. [蓝桥杯C++组辅导课](https://www.acwing.com/activity/content/19/)
+6. [USACO Training辅导课](https://www.acwing.com/activity/content/36/)
 
 ### 综合刷题
 #### acwing
@@ -78,7 +78,6 @@
 
 
 ## 算法模板库
-
 ### 图论
 
 ### 字符串
