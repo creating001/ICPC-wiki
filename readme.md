@@ -22,17 +22,21 @@
 
 #### luogu
 1. [《洛谷官方题单》](https://www.luogu.com.cn/training/list)
-2. [《算法入门学习》](https://www.luogu.com.cn/training/2929)
-3. [《基础提高模板》](https://www.luogu.com.cn/training/2649)
-4. [《能力全面提升综合题单》](https://www.luogu.com.cn/training/9391)
+2. [《洛谷综合题单》](https://vjudge.net/article/2855)
+3. [《算法入门学习》](https://www.luogu.com.cn/training/2929)
+4. [《基础提高模板》](https://www.luogu.com.cn/training/2649)
+5. [《能力全面提升综合题单》](https://www.luogu.com.cn/training/9391)
 
 #### vjudge
 1. [《算法竞赛》](https://vjudge.net/article/3284)
-2. [《kuangbin带你飞》](https://vjudge.net/article/752)
-3. [《挑战程序设计竞赛》](https://vjudge.net/article/46)
-4. [《算法竞赛入门到进阶》](https://vjudge.net/article/2033)
-5. [《算法训练营：海量图解+竞赛刷题(入门)》](https://vjudge.net/article/2642)
-6. [《算法训练营：海量图解+竞赛刷题(进阶)》](https://vjudge.net/article/2652)
+2. [《专题训练》](https://vjudge.net/article/826)
+3. [《POJ题目分类推荐》](https://vjudge.net/article/6)
+4. [《HDU题目分类推荐》](https://vjudge.net/article/349)
+5. [《kuangbin带你飞》](https://vjudge.net/article/752)
+6. [《挑战程序设计竞赛》](https://vjudge.net/article/46)
+7. [《算法竞赛入门到进阶》](https://vjudge.net/article/2033)
+8. [《算法训练营：海量图解+竞赛刷题(入门)》](https://vjudge.net/article/2642)
+9. [《算法训练营：海量图解+竞赛刷题(进阶)》](https://vjudge.net/article/2652)
 
 #### nowcoder
 1. [《算法竞赛进阶指南》](https://ac.nowcoder.com/acm/archive/oi-advance)
