@@ -11,6 +11,7 @@
 3. [AcWing算法提高课](https://www.acwing.com/activity/content/16)
 4. [AcWing算法进阶课](https://www.acwing.com/activity/content/32)
 
+
 ### 综合刷题
 #### acwing
 1. [《算法竞赛进阶指南》](https://www.acwing.com/activity/content/introduction/6)
@@ -42,20 +43,30 @@
 1. [《算法竞赛进阶指南》](https://ac.nowcoder.com/acm/archive/oi-advance)
 2. [《信息学奥赛一本通》](https://ac.nowcoder.com/acm/archive/oi-ybt)
 
+
 ### 每日一题
 1. [《力扣·每日一题》](https://leetcode.cn/problemset/all)
 2. [《夏季·每日一题》](https://www.acwing.com/activity/content/introduction/3307)
 3. [《灵茶·每日一题》](https://docs.qq.com/sheet/DWGFoRGVZRmxNaXFz)
 4. [《蓝桥杯·每日一题》](https://www.acwing.com/activity/content/2869)
 
+
 ### 竞赛真题
+#### acwing
+1. [《USACO月赛》](https://www.acwing.com/activity/content/89/)
+2. [《NOIP提高组历史真题》](https://www.acwing.com/activity/content/18)
+3. [《NOIP普及组历年真题》](https://www.acwing.com/activity/content/17/)
+
+#### codeforces
 1. [《icpc历年真题》](https://codeforces.com/gyms?filterContestType=Official+ACM-ICPC+Contest)
-2. [《USACO训练题》](https://ac.nowcoder.com/acm/archive/usaco)
-3. [《USACO月赛题》](https://ac.nowcoder.com/acm/archive/usaco-month)
-4. [《NOI历史真题》](https://ac.nowcoder.com/acm/archive/noi)
-5. [《NOIP初赛历史真题》](https://ac.nowcoder.com/acm/noip/chusai-pj)
-6. [《NOIP普及组历史真题》](https://ac.nowcoder.com/acm/noip/fusai-pj)
-7. [《NOIP提高组历史真题》](https://www.acwing.com/activity/content/18)
+
+#### nowcoder
+1. [《USACO训练题》](https://ac.nowcoder.com/acm/archive/usaco)
+2. [《USACO月赛题》](https://ac.nowcoder.com/acm/archive/usaco-month)
+3. [《NOI历史真题练习》](https://ac.nowcoder.com/acm/archive/noi)
+4. [《NOIP初赛历史真题》](https://ac.nowcoder.com/acm/noip/chusai-pj)
+5. [《NOIP普及历史真题》](https://ac.nowcoder.com/acm/noip/fusai-pj)
+
 
 ### 日常比赛
 1. [luogu](https://www.luogu.com.cn)
@@ -64,6 +75,7 @@
 4. [leetcode](https://leetcode.cn/contest)
 5. [nowcoder](https://ac.nowcoder.com)
 6. [codeforces](https://codeforces.com/contests)
+
 
 ## 算法模板库
 
