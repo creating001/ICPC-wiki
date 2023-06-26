@@ -33,12 +33,11 @@
 1. [《算法竞赛》](https://vjudge.net/article/3284)
 2. [《专题训练》](https://vjudge.net/article/826)
 3. [《POJ题目分类推荐》](https://vjudge.net/article/6)
-4. [《HDU题目分类推荐》](https://vjudge.net/article/349)
-5. [《kuangbin带你飞》](https://vjudge.net/article/752)
-6. [《挑战程序设计竞赛》](https://vjudge.net/article/46)
-7. [《算法竞赛入门到进阶》](https://vjudge.net/article/2033)
-8. [《算法训练营：海量图解+竞赛刷题(入门)》](https://vjudge.net/article/2642)
-9. [《算法训练营：海量图解+竞赛刷题(进阶)》](https://vjudge.net/article/2652)
+4. [《kuangbin带你飞》](https://vjudge.net/article/752)
+5. [《挑战程序设计竞赛》](https://vjudge.net/article/46)
+6. [《算法竞赛入门到进阶》](https://vjudge.net/article/2033)
+7. [《算法训练营：海量图解+竞赛刷题(入门)》](https://vjudge.net/article/2642)
+8. [《算法训练营：海量图解+竞赛刷题(进阶)》](https://vjudge.net/article/2652)
 
 #### nowcoder
 1. [《算法竞赛进阶指南》](https://ac.nowcoder.com/acm/archive/oi-advance)
@@ -70,12 +69,11 @@
 
 
 ### 日常比赛
-1. [luogu](https://www.luogu.com.cn)
-2. [acwing](https://www.acwing.com/activity/1/competition)
-3. [atcoder](https://atcoder.jp)
-4. [leetcode](https://leetcode.cn/contest)
-5. [nowcoder](https://ac.nowcoder.com)
-6. [codeforces](https://codeforces.com/contests)
+1. [acwing](https://www.acwing.com/activity/1/competition)
+2. [atcoder](https://atcoder.jp)
+3. [leetcode](https://leetcode.cn/contest)
+4. [nowcoder](https://ac.nowcoder.com)
+5. [codeforces](https://codeforces.com/contests)
 
 
 ## 算法模板库
