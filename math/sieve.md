@@ -1,6 +1,6 @@
 # 素数筛法
 
->> 板子题网址: https://www.luogu.com.cn/problem/P3383
+> 板子题网址: https://www.luogu.com.cn/problem/P3383
 
 ## 埃氏筛
 
