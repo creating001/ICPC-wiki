@@ -1,7 +1,8 @@
 # 快读快写
 
+> 板子题网址: https://www.luogu.com.cn/problem/U183572
+
 ```cpp
-//板子题网址: https://www.luogu.com.cn/problem/U183572
 struct IO {
     template<typename T = int>
     inline T read() {
