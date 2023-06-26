@@ -10,7 +10,7 @@
 3. [AcWing算法提高课](https://www.acwing.com/activity/content/16)
 4. [AcWing算法进阶课](https://www.acwing.com/activity/content/32)
 5. [蓝桥杯C++组辅导课](https://www.acwing.com/activity/content/19/)
-6. [USACO Training辅导课](https://www.acwing.com/activity/content/36/)
+6. [USACO Training辅导课](https://www.acwing.com/activity/content/36)
 
 
 ### 综合刷题
@@ -63,9 +63,8 @@
 #### nowcoder
 1. [《USACO训练题》](https://ac.nowcoder.com/acm/archive/usaco)
 2. [《USACO月赛题》](https://ac.nowcoder.com/acm/archive/usaco-month)
-3. [《NOI历史真题练习》](https://ac.nowcoder.com/acm/archive/noi)
-4. [《NOIP初赛历史真题》](https://ac.nowcoder.com/acm/noip/chusai-pj)
-5. [《NOIP普及历史真题》](https://ac.nowcoder.com/acm/noip/fusai-pj)
+3. [《NOIP初赛历史真题》](https://ac.nowcoder.com/acm/noip/chusai-pj)
+4. [《NOIP普及历史真题》](https://ac.nowcoder.com/acm/noip/fusai-pj)
 
 
 ### 日常比赛
