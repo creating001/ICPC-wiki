@@ -2,6 +2,20 @@
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3383
 
+## 普通判素
+
+时间复杂度: $O(N*\sqrt{N})$
+
+```cpp
+inline bool is_prime(int n) {
+    if (n != 2 && n % 2 == 0) return false;
+    for (int i = 3; i * i <= n; i += 2) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+```
+
 ## 埃氏筛
 
 时间复杂度: $O(N*loglogN)$
