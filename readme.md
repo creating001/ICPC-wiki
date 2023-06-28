@@ -31,13 +31,12 @@
 
 #### vjudge
 1. [《算法竞赛》](https://vjudge.net/article/3284)
-2. [《专题训练》](https://vjudge.net/article/826)
-3. [《POJ题目分类推荐》](https://vjudge.net/article/6)
-4. [《kuangbin带你飞》](https://vjudge.net/article/752)
-5. [《挑战程序设计竞赛》](https://vjudge.net/article/46)
-6. [《算法竞赛入门到进阶》](https://vjudge.net/article/2033)
-7. [《算法训练营：海量图解+竞赛刷题(入门)》](https://vjudge.net/article/2642)
-8. [《算法训练营：海量图解+竞赛刷题(进阶)》](https://vjudge.net/article/2652)
+2. [《POJ题目分类推荐》](https://vjudge.net/article/6)
+3. [《kuangbin带你飞》](https://vjudge.net/article/752)
+4. [《挑战程序设计竞赛》](https://vjudge.net/article/46)
+5. [《算法竞赛入门到进阶》](https://vjudge.net/article/2033)
+6. [《算法训练营：海量图解+竞赛刷题(入门)》](https://vjudge.net/article/2642)
+7. [《算法训练营：海量图解+竞赛刷题(进阶)》](https://vjudge.net/article/2652)
 
 #### nowcoder
 1. [《算法竞赛进阶指南》](https://ac.nowcoder.com/acm/archive/oi-advance)
@@ -53,9 +52,9 @@
 
 ### 竞赛真题
 #### acwing
-1. [《USACO月赛》](https://www.acwing.com/activity/content/89/)
+1. [《USACO月赛》](https://www.acwing.com/activity/89)
 2. [《NOIP提高组历史真题》](https://www.acwing.com/activity/content/18)
-3. [《NOIP普及组历年真题》](https://www.acwing.com/activity/content/17/)
+3. [《NOIP普及组历年真题》](https://www.acwing.com/activity/content/17)
 
 #### codeforces
 1. [《icpc历年真题》](https://codeforces.com/gyms?filterContestType=Official+ACM-ICPC+Contest)
