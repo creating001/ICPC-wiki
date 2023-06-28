@@ -28,12 +28,11 @@ int primes[N];
 int prime_cnt = 0;
 bitset<N> is_prime;
 inline void get_prime(int n) {
-    memset(is_prime, true, sizeof is_prime);
-    for (int i = 2; i * i < n; i++) {
-        if (!is_prime[i]) continue;
-        for (int j = i * i; j < n; j += i)
-            is_prime[j] = false;
-    }
+    is_prime.set();
+    for (int i = 2; i * i < n; i++)
+        if (is_prime[i])
+            for (int j = i * i; j < n; j += i)
+                is_prime[j] = false;
     for (int i = 2; i < n; i++)
         if (is_prime[i]) primes[prime_cnt++] = i;
 }
