@@ -59,4 +59,4 @@ inline void get_prime(int n) {
 | 埃氏筛 + bitset   | 219ms           | 492ms  | 2.66s           |
 | 欧拉筛 + bitset   | 332ms           | 661ms  | 3.21s           |
 
-从测试结果中可知，时间复杂度 $O(n \log \log n)$ 的埃氏筛在使用 bitset 优化后速度甚至超过时间复杂度 O(n) 的欧拉筛，而欧拉筛在使用 bitset 后会出现「负优化」的情况。
+从测试结果中可知，时间复杂度 $O(n \log \log n)$ 的埃氏筛在使用 bitset 优化后速度甚至超过时间复杂度 $O(n)$ 的欧拉筛，而欧拉筛在使用 bitset 后会出现「负优化」的情况。
