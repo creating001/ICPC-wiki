@@ -89,6 +89,7 @@
 
 ### 数学问题
 1. [素数筛法](./math/prime_sieve.md)
+2. [高精度算法](./math/bignum.md)
 
 ### 计算几何
 
