@@ -1,8 +1,6 @@
 # 排序算法
 
-> 板子题网址1: https://www.luogu.com.cn/problem/P1177
->
-> 板子题网址2: https://leetcode.cn/problems/sort-an-array/
+> 板子题网址: https://www.luogu.com.cn/problem/P1177
 
 ## 快速排序
 
@@ -19,6 +17,26 @@ void quick_sort(int* a, int l, int r) {
         if (i < j) swap(a[i], a[j]);
     }
     quick_sort(a, l, j), quick_sort(a, j + 1, r);
+}
+```
+
+## 快速选择
+
+> 板子题网址: https://www.luogu.com.cn/problem/P1923
+
+时间复杂度: $O(N)$
+
+```cpp
+int quick_find(int* a, int l, int r, int k) {
+    if (l >= r) return a[l];
+    int x = a[rand() % (r - l) + l], i = l - 1, j = r + 1;
+    while (i < j) {
+        do i++; while (a[i] < x);
+        do j--; while (a[j] > x);
+        if (i < j) swap(a[i], a[j]);
+    }
+    if (k <= j) return quick_find(a, l, j, k);
+    return quick_find(a, j + 1, r, k);
 }
 ```
 
