@@ -84,4 +84,21 @@ inline vector<int> mul(vector<int>& A, vector<int>& B) {
 
 ## 高精 / 低精
 
+> 板子题网址: https://www.acwing.com/problem/content/796/
+
+```cpp
+inline vector<int> div(vector<int>& A, int b, int& r) {
+    vector<int> ans;
+    r = 0;
+    for (int i = A.size() - 1; i >= 0; i--) {
+        r = r * 10 + A[i];
+        ans.emplace_back(r / b);
+        r %= b;
+    }
+    reverse(ans.begin(), ans.end());
+    while (ans.size() > 1 && ans.back() == 0) ans.pop_back();
+    return ans;
+}
+```
+
 ## 高精 / 高精
