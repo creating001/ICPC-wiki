@@ -18,10 +18,6 @@
 1. [《算法竞赛进阶指南》](https://www.acwing.com/activity/content/introduction/6)
 2. [《kuangbin专题打卡活动》](https://www.acwing.com/activity/content/introduction/90)
 
-#### leetcode
-1. [《力扣题单广场(旧版)》](https://leetcode.cn/study-plan)
-2. [《力扣题单广场(新版)》](https://leetcode.cn/studyplan)
-
 #### luogu
 1. [《洛谷官方题单》](https://www.luogu.com.cn/training/list)
 2. [《洛谷综合题单》](https://vjudge.net/article/2855)
