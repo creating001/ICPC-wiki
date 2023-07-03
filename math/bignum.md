@@ -24,7 +24,7 @@ inline vector<int> add(vector<int>& A, vector<int> B) {
 > 板子题网址: https://www.luogu.com.cn/problem/P2142
 
 ```cpp
-inline bool cmp(vector<int>& A, vector<int>& B) {
+inline bool greater_eq(vector<int>& A, vector<int>& B) {
     if (A.size() != B.size()) return A.size() > A.size();
     for (int i = A.size() - 1; i >= 0; i--)
         if (A[i] != B[i]) return A[i] > B[i];
@@ -88,13 +88,10 @@ inline vector<int> mul(vector<int>& A, vector<int>& B) {
 
 ```cpp
 inline vector<int> div(vector<int>& A, int b, int& r) {
-    vector<int> ans;
     r = 0;
-    for (int i = A.size() - 1; i >= 0; i--) {
-        r = r * 10 + A[i];
-        ans.emplace_back(r / b);
-        r %= b;
-    }
+    vector<int> ans;
+    for (int i = A.size() - 1; i >= 0; i--)
+        r = r * 10 + A[i], ans.emplace_back(r / b), r %= b;
     reverse(ans.begin(), ans.end());
     while (ans.size() > 1 && ans.back() == 0) ans.pop_back();
     return ans;
