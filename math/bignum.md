@@ -78,14 +78,12 @@ inline vector<int> sub(vector<int>& A, vector<int>& B) {
 
 ```cpp
 inline vector<int> mul(vector<int>& A, int b) {
-    vector<int> ans;
+    vector<int> ans(A.size() + log10(b + 1) + 1);
     for (int i = 0, t = 0; i < A.size() || t; i++) {
         if (i < A.size()) t += A[i] * b;
-        ans.emplace_back(t % 10);
-        t /= 10;
+        ans[i] += t, t = ans[i] / 10, ans[i] %= 10;
     }
-    while (ans.back() == 0 && ans.size() > 1) ans.pop_back();
-    return ans;
+    return clear(ans), ans;
 }
 ```
 
@@ -112,14 +110,12 @@ inline vector<int> mul(vector<int>& A, vector<int>& B) {
 > 板子题网址: https://www.luogu.com.cn/problem/U289291
 
 ```cpp
-inline vector<int> div(vector<int>& A, int b, int& r) {
+inline vector<int> div(vector<int>& A, int b, long long& r) {
     r = 0;
-    vector<int> ans;
+    vector<int> ans(A.size());
     for (int i = A.size() - 1; i >= 0; i--)
-        r = r * 10 + A[i], ans.emplace_back(r / b), r %= b;
-    reverse(ans.begin(), ans.end());
-    while (ans.size() > 1 && ans.back() == 0) ans.pop_back();
-    return ans;
+        r = r * 10 + A[i], ans[i] = r / b, r %= b;
+    return clear(ans), ans;
 }
 ```
 
