@@ -1,5 +1,7 @@
 # 高精度算法
 
+> 板子题网址: https://www.luogu.com.cn/problem/P1932
+
 ## 加法
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1601
@@ -7,14 +9,13 @@
 ```cpp
 inline vector<int> add(vector<int>& A, vector<int> B) {
     if (A.size() < B.size()) return add(B, A);
-    vector<int> ans(A.size());
-    int t = 0;
-    for (int i = 0; i < A.size(); i++) {
+    vector<int> ans(A.size() + 1);
+    for (int i = 0, t = 0; i < A.size(); i++) {
         if (i < A.size()) t += A[i];
         if (i < B.size()) t += B[i];
         ans[i] = t % 10, t /= 10;
     }
-    if (t) ans.emplace_back(1);
+    while (ans.back() == 0 && ans.size() > 1) ans.pop_back();
     return ans;
 }
 ```
@@ -25,7 +26,7 @@ inline vector<int> add(vector<int>& A, vector<int> B) {
 
 ```cpp
 inline bool greater_eq(vector<int>& A, vector<int>& B) {
-    if (A.size() != B.size()) return A.size() > A.size();
+    if (A.size() != B.size()) return A.size() > B.size();
     for (int i = A.size() - 1; i >= 0; i--)
         if (A[i] != B[i]) return A[i] > B[i];
     return true;
@@ -39,7 +40,7 @@ inline vector<int> sub(vector<int>& A, vector<int>& B) {
         ans.emplace_back((t + 10) % 10);
         t = t < 0 ? 1 : 0;
     }
-    while (ans.size() > 1 && ans.back() == 0) ans.pop_back();
+    while (ans.back() == 0 && ans.size() > 1) ans.pop_back();
     return ans;
 }
 ```
@@ -58,7 +59,7 @@ inline vector<int> mul(vector<int>& A, int b) {
         ans.emplace_back(t % 10);
         t /= 10;
     }
-    while (ans.size() > 1 && ans.back() == 0) ans.pop_back();
+    while (ans.back() == 0 && ans.size() > 1) ans.pop_back();
     return ans;
 }
 ```
@@ -84,7 +85,7 @@ inline vector<int> mul(vector<int>& A, vector<int>& B) {
 
 ## 高精 / 低精
 
-> 板子题网址: https://www.acwing.com/problem/content/796/
+> 板子题网址: https://www.luogu.com.cn/problem/U289291
 
 ```cpp
 inline vector<int> div(vector<int>& A, int b, int& r) {
@@ -99,3 +100,32 @@ inline vector<int> div(vector<int>& A, int b, int& r) {
 ```
 
 ## 高精 / 高精
+
+> 板子题网址: https://www.luogu.com.cn/problem/P2005
+
+```cpp
+inline void clear_end(vector<int>& arr) {
+    while (arr.back() == 0 && arr.size() > 1) arr.pop_back();
+}
+
+inline bool greater_eq(vector<int>& A, vector<int>& B, int last_dg) {
+    if (B.size() + last_dg < A.size() && A[B.size() + last_dg])
+        return true;
+    for (int i = B.size() - 1; i >= 0; i--)
+        if (A[i + last_dg] != B[i]) return A[i + last_dg] > B[i];
+    return true;
+}
+
+inline vector<int> div(vector<int>& A, vector<int>& B, vector<int>& R) {
+    vector<int> ans(A.size() - B.size() + 1);
+    R = A;
+    for (int i = A.size() - B.size(); i >= 0; i--)
+        while (greater_eq(R, B, i)) {
+            for (int j = 0; j < B.size(); j++)
+                if ((R[i + j] -= B[j]) < 0) R[i + j + 1] -= 1, R[i + j] += 10;
+            ans[i]++;
+        }
+    clear_end(ans), clear_end(R);
+    return ans;
+}
+```
