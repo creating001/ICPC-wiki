@@ -73,6 +73,7 @@
 
 ### 字符串
 1. [KMP匹配算法](./string/kmp.md)
+2. [字典树](./string/trie.md)
 
 ### 基础算法
 1. [排序算法](./basic/sort.md)
