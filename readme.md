@@ -9,8 +9,6 @@
 2. [AcWing算法基础课](https://www.acwing.com/activity/content/11)
 3. [AcWing算法提高课](https://www.acwing.com/activity/content/16)
 4. [AcWing算法进阶课](https://www.acwing.com/activity/content/32)
-5. [蓝桥杯C++组辅导课](https://www.acwing.com/activity/content/19/)
-6. [USACO Training辅导课](https://www.acwing.com/activity/content/36)
 
 
 ### 综合刷题
