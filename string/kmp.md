@@ -1,6 +1,6 @@
 # KMP匹配算法
 
-> 板子题网址: https://www.acwing.com/problem/content/833/
+> 板子题网址: https://www.luogu.com.cn/problem/P3375
 
 时间复杂度: $O(N + M)$
 
