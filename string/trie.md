@@ -8,22 +8,27 @@
 int son[N][M], idx, cnts[N];
 ```
 
-## 插入和查询
+## 字典树操作
 ```cpp
-inline void insert(string& str) {
-    int p = 0;
-    for (char i : str) {
-        int u = i - 'a';
-        if (!son[p][u]) son[p][u] = idx++;
-        p = son[p][u];
-    }
-    cnts[p]++;
+inline int getIndex(char ch) {
+    if (isdigit(ch)) return ch - '0';
+    if (islower(ch)) return ch - 'a' + 10;
+    return ch - 'A' + 36;
 }
 
-inline int query(string& str) {
+inline void insert(char* str) {
+    for (int i = 0, p = 0; str[i]; i++) {
+        int u = getIndex(str[i]);
+        if (!son[p][u]) son[p][u] = ++idx;
+        p = son[p][u];
+        cnts[p]++;
+    }
+}
+
+inline int query(char* str) {
     int p = 0;
-    for (char i : str) {
-        int u = i - 'a';
+    for (int i = 0; str[i]; i++) {
+        int u = getIndex(str[i]);
         if (!son[p][u]) return 0;
         p = son[p][u];
     }

@@ -5,7 +5,7 @@
 时间复杂度: $O(N + M)$
 
 ```cpp
-char p[N], s[M];//p是模式串，s是主串
+char p[N], s[M];//p是模式串，s是主串, 下标从1开始
 int n, m, nex[N];
 
 for (int i = 2, j = 0; i <= n; i++) {
