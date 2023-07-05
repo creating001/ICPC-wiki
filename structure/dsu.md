@@ -2,6 +2,13 @@
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3367
 
+## 数据结构
+
+```cpp
+// N 为最大点数, p[i] 表示 i 的父节点, size[i] 表示 i 所在集合的大小
+int p[N], size[N];
+```
+
 ## 初始化
 
 ```cpp
