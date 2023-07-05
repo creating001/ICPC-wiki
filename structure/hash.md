@@ -1,5 +1,9 @@
 # 哈希表
 
+> 板子题网址: https://www.acwing.com/problem/content/842/
+>
+> 板子题网址: https://www.luogu.com.cn/problem/P3370
+
 ## 链表法
 ```cpp
 int h[N], e[N], nex[N], idx;
