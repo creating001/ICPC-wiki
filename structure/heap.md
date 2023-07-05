@@ -1,4 +1,4 @@
-# 堆(优先队列)
+# 二叉堆
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3378
 

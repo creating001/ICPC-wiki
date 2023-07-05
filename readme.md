@@ -81,7 +81,7 @@
 
 ### 数据结构
 1. [并查集](./structure/dsu.md)
-2. [堆(优先队列)](./structure/heap.md)
+2. [二叉堆](./structure/heap.md)
 
 ### 动态规划
 
