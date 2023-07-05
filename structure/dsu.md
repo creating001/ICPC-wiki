@@ -35,7 +35,7 @@ inline void unite(int x, int y) {
 }
 ```
 
-## 判断是否连通
+## 判断连通
 
 ```cpp
 inline bool is_connect(int x, int y) {
