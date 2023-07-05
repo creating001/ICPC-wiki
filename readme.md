@@ -82,6 +82,7 @@
 ### 数据结构
 1. [并查集](./structure/dsu.md)
 2. [二叉堆](./structure/heap.md)
+3. [哈希表](./structure/hash.md)
 
 ### 动态规划
 
