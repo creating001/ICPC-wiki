@@ -1,6 +1,6 @@
 # 并查集
 
-> 板子题网址: https://www.luogu.com.cn/problem/P3375
+> 板子题网址: https://www.luogu.com.cn/problem/P3367
 
 ## 初始化
 
