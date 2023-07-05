@@ -13,7 +13,7 @@ int p[N], size[N];
 
 ```cpp
 inline void init() {
-    for (int i = 0; i < N; i++) p[i] = i;
+    for (int i = 0; i < N; i++) p[i] = i, siz[i] = 1;
 }
 ```
 
@@ -29,7 +29,9 @@ inline int find(int x) {
 
 ```cpp
 inline void unite(int x, int y) {
-    p[find(x)] = find(y);
+    int px = find(x), py = find(y);
+    if (find(x) == find(y)) return;
+    siz[py] += siz[px], p[px] = py;
 }
 ```
 
