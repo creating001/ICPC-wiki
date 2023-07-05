@@ -80,6 +80,7 @@
 2. [二分查找](./basic/bsearch.md)
 
 ### 数据结构
+1. [并查集](./structure/dsu.md)
 
 ### 动态规划
 
