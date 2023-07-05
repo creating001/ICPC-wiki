@@ -28,10 +28,7 @@ inline void up(int k) {
 
 ## 建堆
 ```cpp
-inline void build(int size) {
-    siz = size;
-    for (int i = siz / 2; i; i--) down(i);
-}
+for (int i = siz / 2; i; i--) down(i);
 ```
 
 ## 插入
@@ -43,21 +40,7 @@ inline void insert(int x) {
 
 ## 删除
 ```cpp
-inline void remove(int k) {
-    swap(h[k], h[siz--]), down(k), up(k);
-}
-```
-
-## 修改
-```cpp
-inline void modify(int k, int x) {
-    h[k] = x, down(k), up(k);
-}
-```
-
-## 查询
-```cpp
-inline int query(int k) {
-    return h[k];
+inline void remove() {
+    swap(h[1], h[siz--]), down(1);
 }
 ```
