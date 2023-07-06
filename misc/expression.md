@@ -25,7 +25,7 @@ inline void eval() {
     nums.push(r);
 }
 
-inline void solve(){
+inline int solve(){
     string expression;
     cin >> expression;
     for (int i = 0; i < expression.size(); i++) {
@@ -51,6 +51,6 @@ inline void solve(){
         }
     }
     while (!ops.empty()) eval();
-    cout << nums.top() << endl;
+    return nums.top();
 }
 ```
