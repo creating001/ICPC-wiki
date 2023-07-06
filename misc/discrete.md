@@ -2,9 +2,7 @@
 
 ## 整数离散化
 
-> 板子题网址1: https://www.luogu.com.cn/problem/U183572
->
-> 板子题网址2: https://www.luogu.com.cn/problem/B3694
+> 板子题网址: https://www.luogu.com.cn/problem/B3694
 
 时间复杂度: $O(N \times \log N )$
 

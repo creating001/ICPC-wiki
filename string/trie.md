@@ -2,7 +2,7 @@
 
 > 板子题网址: https://www.luogu.com.cn/problem/P8306
 
-## 数据结构模拟
+## 数据存储
 ```cpp
 // N为最大节点数, M为字符集大小, idx为当前节点数, cnts为当前节点的字符串数量
 int son[N][M], idx, cnts[N];
