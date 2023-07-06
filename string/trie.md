@@ -1,6 +1,8 @@
 # 字典树
 
 > 板子题网址: https://www.luogu.com.cn/problem/P8306
+>
+> 板子题网址: https://www.acwing.com/problem/content/description/145/
 
 ## 数据存储
 ```cpp
