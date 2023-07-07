@@ -10,7 +10,7 @@
 
 ### 朴素Dijkstra算法
 
-时间复杂度为$O(V^2)$
+> 朴素Dijkstra算法适用于稠密图, 时间复杂度为$O(V^2)$
 
 ```cpp
 
@@ -18,7 +18,7 @@
 
 ### 堆优化Dijkstra算法
 
-时间复杂度为$O(ElogV)$。
+> 堆优化Dijkstra算法适用于非稠密图, 时间复杂度为$O(ElogV)$。
 
 ```cpp
 
@@ -36,7 +36,7 @@
 
 ## SPFA算法
 
-> SPFA算法是Bellman-Ford算法的队列优化版本，其时间复杂度为$O(kE)$ ($k$为最短路的平均长度)。
+> SPFA算法是Bellman-Ford算法的队列优化，其时间复杂度为$O(kE)$, $k$为最短路的平均长度。
 >
 > 板子题网址: https://www.acwing.com/problem/content/853
 > 板子题网址: https://www.luogu.com.cn/problem/P3385
