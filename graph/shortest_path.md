@@ -13,7 +13,8 @@
 > 朴素Dijkstra算法适用于稠密图, 时间复杂度为$O(V^2)$
 
 ```cpp
-const int N = 1e3 + 10, INF = 0x3f3f3f3f;
+const int N = 1e3 + 5, INF = 0x3f3f3f3f;
+
 int n, m;
 int g[N][N], vis[N], dis[N];
 
@@ -39,9 +40,15 @@ inline int dijkstra(int s, int t) {
 > 堆优化Dijkstra算法适用于非稠密图, 时间复杂度为$O(ElogV)$。
 
 ```cpp
+const int N = 1e5+5, M = 2e5+5, INF = 0x3f3f3f3f;
+
+int n, m;
+int h[N], e_to[M], e_w[M], nex[M], idx;
+int vis[N], dis[N];
+
 inline int dijkstra(int s, int t) {
     memset(dis, 0x3f, sizeof dis);
-    priority_queue<PII, vector<PII>, greater<>> q;
+    priority_queue<PII, vector<PII>, greater<PII>> q;
     q.emplace(0, s);
     dis[s] = 0;
     while (!q.empty()) {
@@ -65,11 +72,63 @@ inline int dijkstra(int s, int t) {
 ## Bellman-Ford算法
 
 > Bellman-Ford算法用于解决负权边的最短路问题，其时间复杂度为$O(VE)$。
->
+
 > 板子题网址: https://www.acwing.com/problem/content/855
 
 ```cpp
+const int N = 1e3 + 5, M = 1e4 + 5, INF = 0x3f3f3f3f;
 
+struct Edge {
+    int x, y, w;
+} edge[M];
+
+int n, m, k, dis[N], backup[N];
+
+inline int bellman_ford(int s, int t) {
+    memset(dis, 0x3f, sizeof(dis));
+    dis[s] = 0;
+    for (int i = 1; i <= k; i++) {
+        memcpy(backup, dis, sizeof(dis));
+        for (int j = 1; j <= m; j++) {
+            auto& e = edge[j];
+            if (backup[e.x] == INF) continue;
+            if (dis[e.y] > backup[e.x] + e.w)
+                dis[e.y] = backup[e.x] + e.w;
+        }
+    }
+    return dis[t];
+}
+```
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3385
+
+```cpp
+const int M = 2e5 + 5, INF = 0x3f3f3f3f;
+
+struct Edge {
+    int x, y, w;
+}edge[M];
+
+int n, m, dis[N];
+
+inline bool bellman_ford(int s) {
+    memset(dis, 0x3f, sizeof(dis));
+    dis[s] = 0;
+    for (int i = 1; i <= n - 1; i++)
+        for (int j = 0; j < m; j++) {
+            const auto& e = edges[j];
+            if (dis[e.x] == INF) continue;
+            if (dis[e.y] > dis[e.x] + e.w) {
+                dis[e.y] = dis[e.x] + e.w;
+            }
+        }
+    for (int i = 0; i < m; i++) {
+        const auto& e = edges[i];
+        if (dis[e.y] == INF || dis[e.x] == INF) continue;
+        if (dis[e.y] > dis[e.x] + e.w) return true;
+    }
+    return false;
+}
 ```
 
 ## SPFA算法
