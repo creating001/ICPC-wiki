@@ -24,7 +24,7 @@ inline int dijkstra(int s, int t) {
         int u = -1;
         for (int j = 1; j <= n; j++)
             if (!vis[j] && (u == -1 || dis[j] < dis[u])) u = j;
-        if (u == -1) break;
+        if (u == -1 || u == n) break;
         for (int j = 1; j <= n; j++)
             dis[j] = min(dis[j], dis[u] + g[u][j]);
         vis[u] = 1;
@@ -39,7 +39,27 @@ inline int dijkstra(int s, int t) {
 > 堆优化Dijkstra算法适用于非稠密图, 时间复杂度为$O(ElogV)$。
 
 ```cpp
-
+inline int dijkstra(int s, int t) {
+    memset(dis, 0x3f, sizeof dis);
+    priority_queue<PII, vector<PII>, greater<>> q;
+    q.emplace(0, s);
+    dis[s] = 0;
+    while (!q.empty()) {
+        int cur = q.top().second;
+        q.pop();
+        if (vis[cur]) continue;
+        vis[cur] = 1;
+        for (int i = h[cur]; ~i; i = nex[i]) {
+            int to = e_to[i], w = e_w[i];
+            if (dis[to] > dis[cur] + w) {
+                dis[to] = dis[cur] + w;
+                q.emplace(dis[to], to);
+            }
+        }
+    }
+    if (dis[t] == INF) return -1;
+    return dis[t];
+}
 ```
 
 ## Bellman-Ford算法
