@@ -13,7 +13,25 @@
 > 朴素Dijkstra算法适用于稠密图, 时间复杂度为$O(V^2)$
 
 ```cpp
+const int N = 1e3 + 10, INF = 0x3f3f3f3f;
+int n, m;
+int g[N][N], vis[N], dis[N];
 
+inline int dijkstra(int s, int t) {
+    memset(dis, 0x3f, sizeof(dis));
+    dis[s] = 0;
+    for (int i = 1; i <= n; i++) {
+        int u = -1;
+        for (int j = 1; j <= n; j++)
+            if (!vis[j] && (u == -1 || dis[j] < dis[u])) u = j;
+        if (u == -1) break;
+        for (int j = 1; j <= n; j++)
+            dis[j] = min(dis[j], dis[u] + g[u][j]);
+        vis[u] = 1;
+    }
+    if (dis[t] == INF) return -1;
+    return dis[t];
+}
 ```
 
 ### 堆优化Dijkstra算法
