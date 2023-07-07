@@ -1,8 +1,8 @@
 # 素数筛法
 
-> 板子题网址1: https://www.luogu.com.cn/problem/P3383
+> 板子题网址: https://www.luogu.com.cn/problem/P3383
 >
-> 板子题网址2: https://www.luogu.com.cn/problem/P3912
+> 板子题网址: https://www.luogu.com.cn/problem/P3912
 
 ## 普通判素
 
