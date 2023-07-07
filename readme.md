@@ -37,13 +37,6 @@
 2. [《信息学奥赛一本通》](https://ac.nowcoder.com/acm/archive/oi-ybt)
 
 
-### 每日一题
-1. [《力扣·每日一题》](https://leetcode.cn/problemset/all)
-2. [《夏季·每日一题》](https://www.acwing.com/activity/content/introduction/3307)
-3. [《灵茶·每日一题》](https://docs.qq.com/sheet/DWGFoRGVZRmxNaXFz)
-4. [《蓝桥杯·每日一题》](https://www.acwing.com/activity/content/2869)
-
-
 ### 竞赛真题
 #### acwing
 1. [《USACO月赛》](https://www.acwing.com/activity/89)
