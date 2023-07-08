@@ -11,7 +11,7 @@
 ### 朴素Dijkstra算法
 
 > 朴素Dijkstra算法适用于稠密图, 时间复杂度为$O(V^2)$
-
+123123
 ```cpp
 inline int dijkstra(int s, int t) {
     memset(dis, 0x3f, sizeof(dis));
