@@ -135,7 +135,26 @@ inline int spfa(int s, int t) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3385
 
 ```cpp
-
+inline bool spfa() {
+    memset(dis, 0x3f, sizeof(dis));
+    queue<int> q;
+    q.emplace(1), vis[1] = 1, dis[1] = 0;
+    while (!q.empty()) {
+        int cur = q.front();
+        q.pop();
+        vis[cur] = 0;
+        for (int i = h[cur]; ~i; i = nex[i]) {
+            int to = e_to[i], w = e_w[i];
+            if (dis[to] > dis[cur] + w) {
+                dis[to] = dis[cur] + w;
+                cnts[to] = cnts[cur] + 1;
+                if (cnts[to] >= n) return true;
+                if (!vis[to]) q.emplace(to), vis[to] = 1;
+            }
+        }
+    }
+    return false;
+}
 ```
 
 ## Floyd算法
