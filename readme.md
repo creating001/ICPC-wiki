@@ -64,6 +64,8 @@
 ## 算法模板库
 ### 图论
 1. [最短路算法](./graph/shortest_path.md)
+2. [最小生成树](./graph/mst.md)
+3. [二分图](./graph/bi-graph.md)
 
 ### 字符串
 1. [KMP匹配算法](./string/kmp.md)
