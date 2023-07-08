@@ -23,7 +23,7 @@ inline int prim() {
             ans += dis[u];
         }
         for (int j = 1; j <= n; j++)
-            dis[j] = min(dis[j], g[j][u]);
+            if (!vis[j]) dis[j] = min(dis[j], g[j][u]);
     }
     return ans;
 }
@@ -38,13 +38,13 @@ inline int prim() {
 ```cpp
 inline int kruskal() {
     int ans = 0;
-    for (int i = 0; i < m; i++)
+    int cnt = 0;
+    for (int i = 1; i <= m; i++)
         if (find(e[i].x) != find(e[i].y)) {
             unite(e[i].x, e[i].y);
-            ans += e[i].w;
+            ans += e[i].w, cnt++;
         }
-    for (int i = 1; i < n; i++)
-        if (find(i) != find(i + 1)) return INF;
+    if(cnt != n - 1) return INF;
     return ans;
 }
 ```
