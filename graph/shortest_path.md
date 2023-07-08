@@ -164,7 +164,12 @@ inline bool spfa() {
 > 板子题网址: https://www.luogu.com.cn/problem/B3647
 
 ```cpp
-
+inline void floyd() {
+    for (int k = 1; k <= n; k++)
+        for (int i = 1; i <= n; i++)
+            for (int j = 1; j <= n; j++)
+                dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j]);
+}
 ```
 
 ## Johnson算法
