@@ -6,20 +6,27 @@
 
 > prim算法流程是: 选取一个点作为起点, 然后每次选取一个与当前集合距离最小的点加入集合, 直到所有点都加入集合为止。
 
-### 朴素版Prim算法
-
 时间复杂度: $O(N^2)$
 
 ```cpp
-
-```
-
-### 堆优化版Prim算法
-
-时间复杂度: $O(M \log N)$
-
-```cpp
-
+inline int prim() {
+    int ans = 0;
+    memset(dis, 0x3f, sizeof(dis));
+    for (int i = 0; i < n; i++) {
+        int u = -1;
+        for (int j = 1; j <= n; j++)
+            if (!vis[j] && (u == -1 || dis[j] < dis[u]))
+                u = j;
+        vis[u] = 1;
+        if (i) {
+            if (dis[u] == INF) return INF;
+            ans += dis[u];
+        }
+        for (int j = 1; j <= n; j++)
+            dis[j] = min(dis[j], g[j][u]);
+    }
+    return ans;
+}
 ```
 
 ## Kruskal算法
@@ -29,5 +36,15 @@
 时间复杂度: $O(M \log M)$
 
 ```cpp
-
+inline int kruskal() {
+    int ans = 0;
+    for (int i = 0; i < m; i++)
+        if (find(e[i].x) != find(e[i].y)) {
+            unite(e[i].x, e[i].y);
+            ans += e[i].w;
+        }
+    for (int i = 1; i < n; i++)
+        if (find(i) != find(i + 1)) return INF;
+    return ans;
+}
 ```
