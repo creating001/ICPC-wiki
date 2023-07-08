@@ -13,11 +13,6 @@
 > 朴素Dijkstra算法适用于稠密图, 时间复杂度为$O(V^2)$
 
 ```cpp
-const int N = 1e3 + 5, INF = 0x3f3f3f3f;
-
-int n, m;
-int g[N][N], vis[N], dis[N];
-
 inline int dijkstra(int s, int t) {
     memset(dis, 0x3f, sizeof(dis));
     dis[s] = 0;
@@ -40,12 +35,6 @@ inline int dijkstra(int s, int t) {
 > 堆优化Dijkstra算法适用于非稠密图, 时间复杂度为$O(ElogV)$。
 
 ```cpp
-const int N = 1e5+5, M = 2e5+5, INF = 0x3f3f3f3f;
-
-int n, m;
-int h[N], e_to[M], e_w[M], nex[M], idx;
-int vis[N], dis[N];
-
 inline int dijkstra(int s, int t) {
     memset(dis, 0x3f, sizeof dis);
     priority_queue<PII, vector<PII>, greater<PII>> q;
@@ -76,14 +65,6 @@ inline int dijkstra(int s, int t) {
 > 板子题网址: https://www.acwing.com/problem/content/855
 
 ```cpp
-const int N = 1e3 + 5, M = 1e4 + 5, INF = 0x3f3f3f3f;
-
-struct Edge {
-    int x, y, w;
-} edge[M];
-
-int n, m, k, dis[N], backup[N];
-
 inline int bellman_ford(int s, int t) {
     memset(dis, 0x3f, sizeof(dis));
     dis[s] = 0;
@@ -103,14 +84,6 @@ inline int bellman_ford(int s, int t) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3385
 
 ```cpp
-const int M = 1e5 + 5, INF = 0x3f3f3f3f;
-
-struct Edge {
-    int x, y, w;
-}edge[M];
-
-int n, m, dis[N];
-
 inline bool bellman_ford(int s) {
     memset(dis, 0x3f, sizeof(dis));
     dis[s] = 0;
@@ -138,12 +111,6 @@ inline bool bellman_ford(int s) {
 > 板子题网址: https://www.acwing.com/problem/content/853
 
 ```cpp
-const int N = 1e5 + 5, INF = 0x3f3f3f3f;
-
-int n, m;
-int h[N], e_to[N], e_w[N], nex[N], idx;
-int dis[N], vis[N];
-
 inline int spfa(int s, int t) {
     memset(dis, 0x3f, sizeof(dis));
     queue<int> q;
