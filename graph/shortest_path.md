@@ -103,7 +103,7 @@ inline int bellman_ford(int s, int t) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3385
 
 ```cpp
-const int M = 2e5 + 5, INF = 0x3f3f3f3f;
+const int M = 1e5 + 5, INF = 0x3f3f3f3f;
 
 struct Edge {
     int x, y, w;
@@ -136,12 +136,40 @@ inline bool bellman_ford(int s) {
 > SPFA算法是Bellman-Ford算法的队列优化，其时间复杂度为$O(kE)$, $k$为最短路的平均长度。
 >
 > 板子题网址: https://www.acwing.com/problem/content/853
+
+```cpp
+const int N = 1e5 + 5, INF = 0x3f3f3f3f;
+
+int n, m;
+int h[N], e_to[N], e_w[N], nex[N], idx;
+int dis[N], vis[N];
+
+inline int spfa(int s, int t) {
+    memset(dis, 0x3f, sizeof(dis));
+    queue<int> q;
+    q.push(s);
+    vis[s] = 1, dis[s] = 0;
+    while (!q.empty()) {
+        int cur = q.front();
+        q.pop(), vis[cur] = 0;
+        if (dis[cur] == INF) continue;
+        for (int i = h[cur]; ~i; i = nex[i]) {
+            int to = e_to[i], w = e_w[i];
+            if (dis[to] > dis[cur] + w) {
+                dis[to] = dis[cur] + w;
+                if (!vis[to]) q.emplace(to), vis[to] = 1;
+            }
+        }
+    }
+    return dis[t];
+}
+```
+
 > 板子题网址: https://www.luogu.com.cn/problem/P3385
 
 ```cpp
 
 ```
-
 
 ## Floyd算法
 
