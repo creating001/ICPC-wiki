@@ -36,10 +36,11 @@ inline void divide(int x) {
 时间复杂度: $O(N \times \log \log N)$
 
 ```cpp
-inline void get_prime(int n) {
+inline void get_primes(int n) {
     memset(is_prime, 1, sizeof(is_prime));
     for (int i = 2; i <= n; i++) {
         if (!is_prime[i]) continue;
+        primes[cnt++] = i;
         for (int j = i + i; j <= n; j += i)
             is_prime[j] = false;
     }
@@ -51,18 +52,14 @@ inline void get_prime(int n) {
 时间复杂度: $O(N)$
 
 ```cpp
-
+inline void get_prime(int n) {
+    memset(is_prime, 1, sizeof(is_prime));
+    for (int i = 2; i <= n; i++) {
+        if (is_prime[i]) primes[cnts++] = i;
+        for (int j = 0; primes[j] <= n / i; j++) {
+            is_prime[primes[j] * i] = false;
+            if (i % primes[j] == 0) break;
+        }
+    }
+}
 ```
-
-## 速度测试
-
-> 以下代码均使用 g++-4.8 code.cpp -O2 命令行编译，CPU 使用 Intel i5-8259U 进行测试。测试结果取十次平均值。
-
-| 算法              | $5 \times 10^7$ | $10^8$ | $5 \times 10^8$ |
-| ----------------- | --------------- | ------ | --------------- |
-| 埃氏筛 + 布尔数组 | 386ms           | 773ms  | 4.41s           |
-| 欧拉筛 + 布尔数组 | 257ms           | 521ms  | 2.70s           |
-| 埃氏筛 + bitset   | 219ms           | 492ms  | 2.66s           |
-| 欧拉筛 + bitset   | 332ms           | 661ms  | 3.21s           |
-
-从测试结果中可知，时间复杂度 $O(n \log \log n)$ 的埃氏筛在使用 bitset 优化后速度甚至超过时间复杂度 $O(n)$ 的欧拉筛，而欧拉筛在使用 bitset 后会出现「负优化」的情况。
