@@ -4,16 +4,15 @@
 >
 > 板子题网址: https://www.luogu.com.cn/problem/P3912
 
-## 普通判素
+## 试除法
 
 时间复杂度: $O(N \times \sqrt{N})$
 
 ```cpp
-inline bool is_prime(int n) {
-    if (n != 2 && n % 2 == 0) return false;
-    for (int i = 3; i * i <= n; i += 2) {
-        if (n % i == 0) return false;
-    }
+inline bool is_prime(int x) {
+    if (x < 2 || (x > 2 && x % 2 == 0)) return false;
+    for (int i = 3; i <= x / i; i += 2)
+        if (x % i == 0) return false;
     return true;
 }
 ```
