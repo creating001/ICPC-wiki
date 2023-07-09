@@ -1,0 +1,39 @@
+# 约数
+
+## 试除法求约数
+
+时间复杂度: $O(\sqrt{N})$
+
+```cpp
+inline vector<int> get_divisors(int x) {
+    vector<int> res;
+    for (int i = 1; i <= x / i; i++)
+        if (x % i == 0) {
+            res.emplace_back(i);
+            if (i != x / i) res.emplace_back(x / i);
+        }
+    sort(res.begin(), res.end());
+    return res;
+}
+```
+
+## 约数个数
+
+> 板子题网址: https://www.acwing.com/problem/content/872
+>
+> 原理：$N = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$，则约数个数为 $(a_1 + 1) \times (a_2 + 1) \times \cdots \times (a_k + 1)$
+
+时间复杂度: $O(\sqrt{N})$
+
+```cpp
+inline int get_divisor_count(int x) {
+    int res = 1;
+    for (int i = 2; i <= x / i; i++) {
+        int s = 0;
+        while (x % i == 0) x /= i, s++;
+        res *= s + 1;
+    }
+    if (x > 1) res *= 2;
+    return res;
+}
+```
