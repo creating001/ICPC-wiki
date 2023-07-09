@@ -177,5 +177,18 @@ inline void floyd() {
 > 板子题网址: https://www.luogu.com.cn/problem/P5905
 
 ```cpp
-
+inline bool johnson() {
+    for (int i = 1; i <= n; i++) add_edge(0, i, 0);
+    if (spfa(0)) return true;
+    for (int i = 1; i <= n; i++)
+        for (int j = h[i]; ~j; j = nex[j])
+            e_w[j] += d[i] - d[e_to[j]];
+    for (int i = 1; i <= n; i++) dijkstra(i);
+    for (int i = 1; i <= n; i++)
+        for (int j = 1; j <= n; j++){
+            if (dis[i][j] == INF) continue;
+            else dis[i][j] += d[j] - d[i];
+        }
+    return false;
+}
 ```
