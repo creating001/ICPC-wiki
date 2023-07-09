@@ -37,3 +37,22 @@ inline int get_divisor_count(int x) {
     return res;
 }
 ```
+
+## 约数之和
+
+> 原理: $N = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$，则约数之和为 $\prod_{i = 1}^k \sum_{j = 0}^{a_i} p_i^j$
+
+时间复杂度: $O(\sqrt{N})$
+
+```cpp
+inline int get_divisor_sum(int x) {
+    int res = 1;
+    for (int i = 2; i <= x / i; i++) {
+        int s = 1, t = 1;
+        while (x % i == 0) x /= i, t *= i, s += t;
+        res *= s;
+    }
+    if (x > 1) res *= x + 1;
+    return res;
+}
+```
