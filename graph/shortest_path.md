@@ -20,12 +20,11 @@ inline int dijkstra(int s, int t) {
         int u = -1;
         for (int j = 1; j <= n; j++)
             if (!vis[j] && (u == -1 || dis[j] < dis[u])) u = j;
-        if (u == -1 || u == n) break;
+        if (u == -1 || u == t) break;
         for (int j = 1; j <= n; j++)
             dis[j] = min(dis[j], dis[u] + g[u][j]);
         vis[u] = 1;
     }
-    if (dis[t] == INF) return -1;
     return dis[t];
 }
 ```
@@ -53,7 +52,6 @@ inline int dijkstra(int s, int t) {
             }
         }
     }
-    if (dis[t] == INF) return -1;
     return dis[t];
 }
 ```
