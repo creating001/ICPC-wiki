@@ -6,7 +6,7 @@
 
 ## 试除法
 
-时间复杂度: $O(N \times \sqrt{N})$
+时间复杂度: $O(\sqrt{N})$
 
 ```cpp
 inline bool is_prime(int x) {
@@ -36,20 +36,13 @@ inline void divide(int x) {
 时间复杂度: $O(N \times \log \log N)$
 
 ```cpp
-const int N = 1e8 + 5;
-int prime_cnt = 0;
-int primes[N >> 3];
-bitset<N> is_prime;
-
 inline void get_prime(int n) {
-    is_prime.set();
-    for (int i = 3; i * i < n; i += 2)
-        if (is_prime[i])
-            for (int j = i * i; j < n; j += 2 * i)
-                is_prime[j] = false;
-    primes[prime_cnt++] = 2;
-    for (int i = 3; i < n; i += 2)
-        if (is_prime[i]) primes[prime_cnt++] = i;
+    memset(is_prime, 1, sizeof(is_prime));
+    for (int i = 2; i <= n; i++) {
+        if (!is_prime[i]) continue;
+        for (int j = i + i; j <= n; j += i)
+            is_prime[j] = false;
+    }
 }
 ```
 
