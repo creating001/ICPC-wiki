@@ -22,8 +22,10 @@ inline bool dfs(int u, int c) {
 ## 匈牙利算法
 
 > 板子题链接: https://www.acwing.com/problem/content/863
+>
+> 板子题链接: https://www.luogu.com.cn/problem/P3386
 
-时间复杂度: $O(VE)$
+时间复杂度: $O(VE)$, 实际运行时间 $O(\sqrt{V}E)$
 
 ```cpp
 inline bool dfs(int u) {
