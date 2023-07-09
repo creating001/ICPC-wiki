@@ -17,6 +17,20 @@ inline bool is_prime(int x) {
 }
 ```
 
+## 质因数分解
+
+时间复杂度: $O(\sqrt{N})$
+
+```cpp
+inline void divide(int x) {
+    for (int i = 2; i <= x / i; i++) {
+        int s = 0;
+        while (x % i == 0) x /= i, s++;
+    }
+    if (x > 1){/* x 是质数 */}
+}
+```
+
 ## 埃氏筛
 
 时间复杂度: $O(N \times \log \log N)$
