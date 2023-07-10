@@ -86,9 +86,9 @@
 ### 数学问题
 1. [素数](./math/prime.md)
 2. [约数](./math/divisor.md)
-3. [欧拉函数](./math/euler.md)
-4. [快速幂](./math/quick_pow.md)
-5. [欧几里得算法](./math/gcd.md)
+3. [快速幂](./math/quick_pow.md)
+4. [欧拉函数](./math/euler.md)
+5. [欧几里得](./math/gcd.md)
 6. [高精度算法](./math/bignum.md)
 
 ### 计算几何
