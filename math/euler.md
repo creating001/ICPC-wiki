@@ -60,7 +60,7 @@ inline void get_euler(int n) {
 推论: 若 $a$ 和 $n$ 互质，则 $a^x \equiv a^{x \bmod \varphi(n)} \pmod{n}$。
 
 证明过程:
-1. 假设$[1, n]$ 中与 $n$ 互质的数为 $p_1, p_2, \cdots, p_{\varphi(n)}$
+1. 假设 $[1, n]$ 中与 $n$ 互质的数为 $p_1, p_2, \cdots, p_{\varphi(n)}$
 2. 因为 $a$ 与 $n$ 互质, 所以 $a \times p_1, a \times p_2, \cdots, a \times p_{\varphi(n)}$ 与 $p_1, p_2, \cdots, p_{\varphi(n)}$ 在模 $n$ 意义下相等
 3. 因为 $p_1, p_2, \cdots, p_{\varphi(n)}$ 两两互质，所以 $a^{\varphi(n)} \times p_1 \times p_2 \times \cdots \times p_{\varphi(n)} \equiv p_1 \times p_2 \times \cdots \times p_{\varphi(n)} \pmod{n}$
 4. 所以 $a^{\varphi(n)} \equiv 1 \pmod{n}$
