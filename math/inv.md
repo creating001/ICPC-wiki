@@ -2,9 +2,9 @@
 
 若 $ax \equiv 1 \pmod{p}$，则称 $x$ 是 $a$ 在模 $p$ 意义下的乘法逆元。
 
-> 板子题网址: https://www.luogu.com.cn/problem/P3811
+> 板子题网址1: https://www.luogu.com.cn/problem/P3811
 >
-> 板子题网址: https://www.luogu.com.cn/problem/P5431
+> 板子题网址2: https://www.luogu.com.cn/problem/P5431
 
 ## 欧拉定理求逆元
 

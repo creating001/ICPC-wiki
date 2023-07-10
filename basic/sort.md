@@ -42,7 +42,7 @@ int quick_find(int* a, int l, int r, int k) {
 
 ## 归并排序
 
-> 应用: 求逆序对, 时间复杂度: $O(N \times \log N)$
+> 应用: **求逆序对**, 时间复杂度: $O(N \times \log N)$
 
 ```cpp
 void merge_sort(int* a, int l, int r) {

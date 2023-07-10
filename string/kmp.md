@@ -1,5 +1,6 @@
-# KMP匹配算法
+# KMP
 
+## KMP匹配
 > 板子题网址: https://www.luogu.com.cn/problem/P3375
 
 时间复杂度: $O(N + M)$
@@ -23,4 +24,12 @@ for (int i = 1, j = 0; i <= m; i++) {
         j = nex[j];
     }
 }
+```
+
+## 扩展 KMP(Z 函数)
+
+> 板子题网址: https://www.luogu.com.cn/problem/P5410
+
+```cpp
+
 ```

@@ -5,8 +5,6 @@
 ## 整数二分
 
 > 板子题网址: https://www.acwing.com/problem/content/791
->
-> 板子题网址: https://www.luogu.com.cn/problem/P2249
 
 ```cpp
 bool check(int x); // 检查x是否满足某种性质

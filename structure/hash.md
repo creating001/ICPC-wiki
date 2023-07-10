@@ -1,6 +1,6 @@
 # 哈希表
 
-> 板子题网址: https://www.acwing.com/problem/content/842/
+> 板子题网址: https://www.acwing.com/problem/content/842
 
 ## 链表法
 ```cpp

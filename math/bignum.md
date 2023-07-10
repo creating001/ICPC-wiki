@@ -74,7 +74,7 @@ inline vector<int> sub(vector<int>& A, vector<int>& B) {
 
 ### 高精 * 低精
 
-> 板子题网址: https://www.acwing.com/problem/content/795/
+> 板子题网址: https://www.acwing.com/problem/content/795
 
 ```cpp
 inline vector<int> mul(vector<int>& A, int b) {

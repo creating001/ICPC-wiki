@@ -71,9 +71,9 @@ inline void get_euler(int n) {
 3. 所以 $a^{ k \times \varphi(n) + x \bmod \varphi(n)} \equiv a^{x \bmod \varphi(n)} \pmod{n}$
 4. 所以 $a^x \equiv a^{x \bmod \varphi(n)} \pmod{n}$
 
-## 欧拉降幂
+## 欧拉降幂(扩展欧拉定理)
 
-前置知识: 快速幂公式 $a^k = a^{2^{k_1}} \times a^{2^{k_2}} \times \cdots \times a^{2^{k_n}}$
+> 板子题网址: https://www.luogu.com.cn/problem/P5091
 
 欧拉降幂定理: 若 $a$ 和 $n$ 互质，则 $a^x \equiv a^{x \bmod \varphi(n) + \varphi(n)} \pmod{n}$。
 

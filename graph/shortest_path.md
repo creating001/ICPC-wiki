@@ -4,8 +4,6 @@
 
 > Dijkstra算法用于解决非负权边的最短路问题。
 >
-> 板子题网址: https://www.luogu.com.cn/problem/P3371
->
 > 板子题网址: https://www.luogu.com.cn/problem/P4779
 
 ### 朴素Dijkstra算法

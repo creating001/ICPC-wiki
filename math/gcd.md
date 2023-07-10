@@ -12,6 +12,8 @@ inline int gcd(int a, int b) {
 
 ## 裴蜀定理
 
+> 板子题网址: https://www.luogu.com.cn/problem/P4549
+
 定理: 对于任意的整数 $a, b, c$，方程 $ax + by = c$ 有整数解当且仅当 $gcd(a, b) | c$ 成立。
 
 证明:
@@ -22,6 +24,10 @@ inline int gcd(int a, int b) {
 $x = x_0 + \frac{b}{gcd(a, b)}t, y = y_0 - \frac{a}{gcd(a, b)}t$，其中 $x_0, y_0$ 为一组特解。
 
 ## 扩展欧几里得算法
+
+> 板子题网址1: https://www.luogu.com.cn/problem/P2613
+>
+> 板子题网址2: https://www.luogu.com.cn/problem/P5091
 
 ```cpp
 inline int exgcd(int a, int b, int &x, int &y) {
@@ -39,15 +45,3 @@ inline int exgcd(int a, int b, int &x, int &y) {
 1. $b = 0$ 时 $ax + by = d$ , 则 $x = 1, y = 0$
 2. - $b \neq 0$ 时，我们已经已知 $by + (a \bmod b)x = d$ 成立, 我们需要构造 $ax' + by' = d$ 成立
    - 所以可得 $x' = x$, $y' = y - a / b * x$
-
-## 扩展欧几里得求逆元
-
-时间复杂度: $O(\log{P})$ (其中 $P$ 为模数)
-
-```cpp
-inline int inv(int a, int p) {
-    int x, y;
-    exgcd(a, p, x, y);
-    return (x % p + p) % p;
-}
-```

@@ -15,6 +15,8 @@ inline bool is_prime(int x) {
 
 ## 质因数分解
 
+> 板子题网址: https://www.acwing.com/problem/content/869
+
 时间复杂度: $O(\sqrt{N})$
 
 ```cpp
