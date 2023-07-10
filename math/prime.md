@@ -1,8 +1,4 @@
-# 素数筛法
-
-> 板子题网址: https://www.luogu.com.cn/problem/P3383
->
-> 板子题网址: https://www.luogu.com.cn/problem/P3912
+# 素数
 
 ## 试除法
 
@@ -33,6 +29,8 @@ inline void divide(int x) {
 
 ## 埃氏筛
 
+> 板子题网址: https://www.luogu.com.cn/problem/P3383
+
 时间复杂度: $O(N \times \log \log N)$
 
 ```cpp
@@ -48,6 +46,8 @@ inline void get_primes(int n) {
 ```
 
 ## 欧拉筛
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3912
 
 时间复杂度: $O(N)$
 

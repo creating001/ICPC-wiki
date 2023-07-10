@@ -84,9 +84,11 @@
 ### 动态规划
 
 ### 数学问题
-1. [素数筛法](./math/prime_sieve.md)
+1. [素数](./math/prime.md)
 2. [约数](./math/divisor.md)
-3. [高精度算法](./math/bignum.md)
+3. [欧拉函数](./math/euler.md)
+4. [高精度算法](./math/bignum.md)
+
 
 
 ### 计算几何
