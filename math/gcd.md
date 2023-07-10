@@ -33,6 +33,6 @@ inline int exgcd(int a, int b, int &x, int &y) {
 ```
 
 推导过程: $ax + by = d$
-1. $b = 0$ 时，$ax + by = d$ , 则 $x = 1, y = 0$
+1. $b = 0$ 时 $ax + by = d$ , 则 $x = 1, y = 0$
 2. - $b \neq 0$ 时，我们已经已知 $by + (a \bmod b)x = d$ 成立, 我们需要构造 $ax' + by' = d$ 成立'
    - 所以可得 $x' = x$, $y' = y - a / b * x$
