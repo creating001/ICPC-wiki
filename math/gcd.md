@@ -18,6 +18,9 @@ inline int gcd(int a, int b) {
 1. 充分性证明: 扩展欧几里得算法构造。
 2. 必要性证明: $gcd(a, b) | a$ 且 $gcd(a, b) | b$ 成立，所以 $gcd(a, b) | ax + by$ 成立。
 
+全部解:
+$x = x_0 + \frac{b}{gcd(a, b)}t, y = y_0 - \frac{a}{gcd(a, b)}t$，其中 $x_0, y_0$ 为一组特解。
+
 ## 扩展欧几里得算法
 
 ```cpp
@@ -34,5 +37,5 @@ inline int exgcd(int a, int b, int &x, int &y) {
 
 推导过程: $ax + by = d$
 1. $b = 0$ 时 $ax + by = d$ , 则 $x = 1, y = 0$
-2. - $b \neq 0$ 时，我们已经已知 $by + (a \bmod b)x = d$ 成立, 我们需要构造 $ax' + by' = d$ 成立'
+2. - $b \neq 0$ 时，我们已经已知 $by + (a \bmod b)x = d$ 成立, 我们需要构造 $ax' + by' = d$ 成立
    - 所以可得 $x' = x$, $y' = y - a / b * x$
