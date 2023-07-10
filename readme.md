@@ -65,11 +65,11 @@
 ### 图论
 1. [最短路](./graph/shortest_path.md)
 2. [最小生成树](./graph/mst.md)
-3. [二分图](./graph/bi-graph.md)
+3. [二分图匹配](./graph/bi-graph.md)
 
 ### 字符串
-1. [KMP匹配](./string/kmp.md)
-2. [字典树](./string/trie.md)
+1. [字典树](./string/trie.md)
+2. [KMP匹配](./string/kmp.md)
 3. [字符串哈希](./string/hash.md)
 
 ### 基础算法
@@ -89,7 +89,7 @@
 3. [欧拉函数](./math/euler.md)
 4. [欧几里得](./math/gcd.md)
 5. [乘法逆元](./math/inv.md)
-6. [高精度](./math/bignum.md)
+6. [模拟高精度](./math/bignum.md)
 
 ### 计算几何
 
