@@ -6,3 +6,49 @@
 2. $\varphi(p) = p - 1$，其中 $p$ 为质数
 3. $\varphi(n) = n \times \prod_{p | n} (1 - \frac{1}{p})$，其中 $p$ 为 $n$ 的质因子
 
+## 定义法求欧拉函数
+
+> 板子题网址：https://www.acwing.com/problem/content/875
+
+```cpp
+
+时间复杂度: $O(\sqrt{N})$
+
+```cpp
+inline int get_phi(int x) {
+    int ans = x;
+    for (int i = 2; i <= x / i; i++)
+        if (x % i == 0) {
+            ans = ans / i * (i - 1);
+            while (x % i == 0) x /= i;
+        }
+    if (x > 1) ans = ans / x * (x - 1);
+    return ans;
+}
+
+```
+
+## 线性筛法求欧拉函数
+
+> 板子题网址：https://www.acwing.com/problem/content/876
+
+时间复杂度：$O(N)$
+
+```cpp
+inline void get_euler(int n) {
+    memset(is_prime, 1, sizeof(is_prime));
+    phi[1] = 1;
+    for (int i = 2; i <= n; i++) {
+        if (is_prime[i])
+            primes[cnts++] = i, phi[i] = i - 1;
+        for (int j = 0; primes[j] <= n / i; j++) {
+            is_prime[primes[j] * i] = false;
+            if (i % primes[j] == 0) {
+                phi[primes[j] * i] = primes[j] * phi[i];
+                break;
+            }
+            phi[primes[j] * i] = (primes[j] - 1) * phi[i];
+        }
+    }
+}
+```
