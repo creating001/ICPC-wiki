@@ -190,3 +190,11 @@ inline bool johnson() {
     return false;
 }
 ```
+
+## 差分约束系统
+
+> 板子题网址: https://www.luogu.com.cn/problem/P5960
+
+```cpp
+
+```

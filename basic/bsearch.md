@@ -43,3 +43,11 @@ inline double bsearch(double l, double r) {
     }
 }
 ```
+
+## 三分法
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3382
+
+```cpp
+
+```
