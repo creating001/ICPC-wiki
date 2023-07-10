@@ -88,7 +88,8 @@
 2. [约数](./math/divisor.md)
 3. [欧拉函数](./math/euler.md)
 4. [欧几里得](./math/gcd.md)
-5. [高精度](./math/bignum.md)
+5. [乘法逆元](./math/inv.md)
+6. [高精度](./math/bignum.md)
 
 ### 计算几何
 
