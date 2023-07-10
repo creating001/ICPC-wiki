@@ -40,7 +40,7 @@ inline int get_divisor_count(int x) {
 
 ## 约数之和
 
-> 原理: $N = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$，则约数之和为 $\prod_{i = 1}^k \sum_{j = 0}^{a_i} p_i^j$
+> 原理: $N = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}$，则约数之和为 $\prod_{i = 1}^k \sum_{j = 0}^{a_i} p_i^j$, 利用等比数列求和公式可得 $\prod_{i = 1}^k \frac{p_i^{a_i + 1} - 1}{p_i - 1}$
 
 时间复杂度: $O(\sqrt{N})$
 
@@ -48,11 +48,21 @@ inline int get_divisor_count(int x) {
 inline int get_divisor_sum(int x) {
     int res = 1;
     for (int i = 2; i <= x / i; i++) {
-        int s = 1, t = 1;
-        while (x % i == 0) x /= i, t *= i, s += t;
-        res *= s;
+        int t = 1;
+        while (x % i == 0) x /= i, t = t * i + 1;
+        res *= t;
     }
     if (x > 1) res *= x + 1;
     return res;
+}
+```
+
+## 辗转相除法求约数
+
+时间复杂度: $O(\log{N})$
+
+```cpp
+inline int gcd(int a, int b) {
+    return b ? gcd(b, a % b) : a;
 }
 ```
