@@ -56,13 +56,3 @@ inline int get_divisor_sum(int x) {
     return res;
 }
 ```
-
-## 辗转相除法求约数
-
-时间复杂度: $O(\log{N})$
-
-```cpp
-inline int gcd(int a, int b) {
-    return b ? gcd(b, a % b) : a;
-}
-```
