@@ -39,3 +39,15 @@ inline int exgcd(int a, int b, int &x, int &y) {
 1. $b = 0$ 时 $ax + by = d$ , 则 $x = 1, y = 0$
 2. - $b \neq 0$ 时，我们已经已知 $by + (a \bmod b)x = d$ 成立, 我们需要构造 $ax' + by' = d$ 成立
    - 所以可得 $x' = x$, $y' = y - a / b * x$
+
+## 扩展欧几里得求逆元
+
+时间复杂度: $O(\log{P})$ (其中 $P$ 为模数)
+
+```cpp
+inline int inv(int a, int p) {
+    int x, y;
+    exgcd(a, p, x, y);
+    return (x % p + p) % p;
+}
+```
