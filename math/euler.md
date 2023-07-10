@@ -70,3 +70,22 @@ inline void get_euler(int n) {
 2. 因为 $a^{\varphi(n)} \equiv 1 \pmod{n}$
 3. 所以 $a^{ k \times \varphi(n) + x \bmod \varphi(n)} \equiv a^{x \bmod \varphi(n)} \pmod{n}$
 4. 所以 $a^x \equiv a^{x \bmod \varphi(n)} \pmod{n}$
+
+## 欧拉降幂
+
+前置知识: 快速幂公式 $a^k = a^{2^{k_1}} \times a^{2^{k_2}} \times \cdots \times a^{2^{k_n}}$
+
+欧拉降幂定理: 若 $a$ 和 $n$ 互质，则 $a^x \equiv a^{x \bmod \varphi(n) + \varphi(n)} \pmod{n}$。
+
+```cpp
+inline int quick_pow(LL a, int b, int p) {
+    if (b > 2 * phi[p]) b = b % phi[p] + phi[p];
+    int ans = 1;
+    while (b) {
+        if (b & 1) ans = ans * a % p;
+        a = a * a % p;
+        b >>= 1;
+    }
+    return ans;
+}
+```
