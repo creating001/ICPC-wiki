@@ -24,7 +24,9 @@ inline int inv(int a, int p) {
 }
 ```
 
-## 线性求 $[1,n]$ 逆元
+## 递推法求 $[1,n]$ 逆元
+
+$i$ 模 $p$ 意义下的逆元可以表示为 $inv[i] = (p - p / i) * inv[p \pmod{i}]  \pmod{p}$。
 
 ```cpp
 // 适用于 p 为质数的情况
@@ -35,3 +37,10 @@ inline void init_inv(int n, int p) {
     }
 }
 ```
+
+证明:
+1. $p$ 可表示为 $p = i * k + r$，其中 $0 \leq r < i$
+2. 所以 $i * k + r \equiv 0 \pmod{p}$
+3. 两边同时乘以 $inv[i]$ 和 $inv[r]$，得到 $k \times inv[r] + inv[i] \equiv 0 \pmod{p}$
+4. 所以 $inv[i] \equiv k \times inv[r]$ 其中 $k = \left \lfloor \frac{p}{i}  \right \rfloor$
+5. 所以 $inv[i] \equiv (p - p / i) \times inv[p \pmod{i}]$
