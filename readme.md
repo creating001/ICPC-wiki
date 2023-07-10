@@ -63,18 +63,18 @@
 
 ## 算法模板库
 ### 图论
-1. [最短路算法](./graph/shortest_path.md)
+1. [最短路](./graph/shortest_path.md)
 2. [最小生成树](./graph/mst.md)
 3. [二分图](./graph/bi-graph.md)
 
 ### 字符串
-1. [KMP匹配算法](./string/kmp.md)
+1. [KMP匹配](./string/kmp.md)
 2. [字典树](./string/trie.md)
 3. [字符串哈希](./string/hash.md)
 
 ### 基础算法
-1. [排序算法](./basic/sort.md)
-2. [二分查找](./basic/bsearch.md)
+1. [排序](./basic/sort.md)
+2. [二分](./basic/bsearch.md)
 
 ### 数据结构
 1. [并查集](./structure/dsu.md)
@@ -89,7 +89,7 @@
 3. [快速幂](./math/quick_pow.md)
 4. [欧拉函数](./math/euler.md)
 5. [欧几里得](./math/gcd.md)
-6. [高精度算法](./math/bignum.md)
+6. [高精度](./math/bignum.md)
 
 ### 计算几何
 
