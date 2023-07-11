@@ -89,6 +89,9 @@
 7. [中国剩余定理](./math/crt.md)
 8. [快速幂与快速乘](./math/quick_pow.md)
 
+#### 组合数学
+1. [求组合数](./math/combination.md)
+
 #### 其他
 1. [模拟高精度](./math/bignum.md)
 
