@@ -20,6 +20,8 @@ inline LL quick_pow(LL a, LL b, LL mod) {
 
 时间复杂度 $O(\log b)$
 
+## 乘法取模
+
 ```cpp
 //b 必须是正数
 inline LL quick_mul(LL a, LL b, LL mod) {
@@ -30,5 +32,13 @@ inline LL quick_mul(LL a, LL b, LL mod) {
         b >>= 1;
     }
     return ans;
+}
+```
+
+## `__int128` 的使用
+
+```cpp
+inline LL quick_mul(LL a, LL b, LL mod) {
+    return (LL)((__int128)a * b % mod);
 }
 ```
