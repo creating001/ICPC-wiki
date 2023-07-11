@@ -21,6 +21,7 @@ inline LL quick_pow(LL a, LL b, LL mod) {
 时间复杂度 $O(\log b)$
 
 ```cpp
+//b 必须是正数
 inline LL quick_mul(LL a, LL b, LL mod) {
     LL ans = 0;
     while (b) {
