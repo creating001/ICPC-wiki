@@ -2,6 +2,10 @@
 
 $C_n^m = \frac{n!}{m!(n-m)!}$
 
+> 板子题网址1: https://www.luogu.com.cn/problem/P3414
+>
+> 板子题网址2: https://www.luogu.com.cn/problem/B3717
+
 ## 组合数公式
 
 1. $C_n^m = C_{n-1}^m + C_{n-1}^{m-1}$
@@ -10,13 +14,14 @@ $C_n^m = \frac{n!}{m!(n-m)!}$
 
 ## 递推预处理
 
+> 板子题网址: https://www.acwing.com/problem/content/887
+
 方法: 通过 $C_n^m = C_{n-1}^m + C_{n-1}^{m-1}$ 预处理出全部组合数的值
 
 适用范围: 询问次数 $q$ 多 而 $n$ 和 $m$ 比较小
 
 ```cpp
-inline void get_combinations(int n) {
-    assert(n < N);
+inline void get_comb(int n) {
     for (int i = 1; i <= n; i++) C[i][0] = C[i][i] = 1;
     for (int i = 1; i <= n; i++)
         for (int j = 1; j < i; j++)
@@ -25,6 +30,8 @@ inline void get_combinations(int n) {
 ```
 
 ## 递推预处理 + 逆元
+
+> 板子题网址: https://www.acwing.com/problem/content/888
 
 方法: 通过预处理出 阶乘 以及 阶乘的逆元 来计算组合数
 
@@ -43,6 +50,8 @@ inline void init_fact(int n) {
 
 ## Lucas 定理
 
+> 板子题网址: https://www.acwing.com/problem/content/889
+
 定理内容: $C_n^m \bmod p = C_{n/p}^{m/p} \cdot C_{n\%p}^{m\%p} \bmod p$
 
 适用范围: 询问次数 $q$ 少 而 $n$ 和 $m$ 巨大 且 模数 $p$ 较小
@@ -52,7 +61,7 @@ inline int get_inv(int a, int p) {
     return quick_pow(a, p - 2, p);
 }
 
-inline int Comb(int a, int b, int p) {
+inline int comb(int a, int b, int p) {
     LL ans = 1;
     for (int i = 1, j = a; i <= b; i++, j--) {
         ans = ans * j % p;
@@ -62,7 +71,36 @@ inline int Comb(int a, int b, int p) {
 }
 
 inline int lucas(LL a, LL b, int p) {
-    if (a < p && b < p) return Comb(a, b, p);
-    return Comb(a % p, b % p, p) * lucas(a / p, b / p, p) % p;
+    if (a < p && b < p) return comb(a, b, p);
+    return comb(a % p, b % p, p) * lucas(a / p, b / p, p) % p;
+}
+```
+
+## 高精度组合数
+
+> 板子题网址: https://www.acwing.com/problem/content/890
+
+适用范围: $n$ 和 $m$ 比较大 而且没有模数
+
+```cpp
+inline int get_p(int x, int p) {
+    int ans = 0;
+    while (x) {
+        ans += x / p;
+        x /= p;
+    }
+    return ans;
+}
+
+inline vector<int> comb(int a, int b) {
+    vector<int> ans(1, 1);
+    for (int i = 0; primes[i] <= a; i++) {
+        int p = primes[i];
+        int cnt = get_p(a, p) - get_p(b, p) - get_p(a - b, p);
+        for (int j = 0; j < cnt; j++) {
+            ans = mul(ans, p);
+        }
+    }
+    return ans;
 }
 ```
