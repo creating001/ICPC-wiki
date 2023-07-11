@@ -20,7 +20,7 @@ inline int gauss() {
         int t = r;
         for (int i = r; i < n; i++)//步骤1
             if (fabs(a[i][c]) > fabs(a[t][c])) t = i;
-        if (fabs(a[t][c]) < EPS) continue;
+        if (fabs(a[t][c]) < ESP) continue;
         for (int i = c; i < n + 1; i++) //步骤2
             swap(a[t][i], a[r][i]);
         for (int i = n; i >= c; i--)//步骤3
@@ -32,7 +32,7 @@ inline int gauss() {
     }
     if (r < n) {
         for (int i = r; i < n; i++)
-            if (fabs(a[i][n]) > EPS) return -1;
+            if (fabs(a[i][n]) > ESP) return -1;
         return 1;
     }
     for (int i = n - 1; i >= 0; i--)//步骤5
