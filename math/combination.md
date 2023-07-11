@@ -2,9 +2,7 @@
 
 $C_n^m = \frac{n!}{m!(n-m)!}$
 
-> 板子题网址1: https://www.luogu.com.cn/problem/P3414
->
-> 板子题网址2: https://www.luogu.com.cn/problem/B3717
+> 板子题网址: https://www.luogu.com.cn/problem/B3717
 
 ## 组合数公式
 
