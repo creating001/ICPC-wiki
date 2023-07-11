@@ -102,3 +102,15 @@ inline vector<int> comb(int a, int b) {
     return ans;
 }
 ```
+
+## 卡特兰数
+
+定义: $C_n = C_{2n}^n - C_{2n}^{n-1}  = \frac{1}{n+1} C_{2n}^n$
+
+> 板子题网址: https://www.acwing.com/problem/content/891
+
+```cpp
+inline int catalan(int n) {
+    return comb(2 * n, n) * get_inv(n + 1, P) % P;
+}
+```
