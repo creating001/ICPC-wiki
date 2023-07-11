@@ -107,7 +107,7 @@ inline vector<int> comb(int a, int b) {
 
 定义: $C_n = C_{2n}^n - C_{2n}^{n-1}  = \frac{1}{n+1} C_{2n}^n$
 
-> 板子题网址: https://www.acwing.com/problem/content/891
+> 板子题网址: https://www.luogu.com.cn/problem/P1044
 
 ```cpp
 inline int catalan(int n) {

@@ -85,14 +85,17 @@
 3. [欧拉定理](./math/euler.md)
 4. [欧几里得](./math/gcd.md)
 5. [乘法逆元](./math/inv.md)
-6. [高斯消元](./math/gauss.md)
-7. [中国剩余定理](./math/crt.md)
-8. [快速幂与快速乘](./math/quick_pow.md)
+6. [中国剩余定理](./math/crt.md)
+7. [快速幂与快速乘](./math/quick_pow.md)
+
+#### 线性代数
+1. [高斯消元](./math/gauss.md)
 
 #### 组合数学
 1. [求组合数](./math/combination.md)
+2. [容斥原理](./math/inclusion-exclusion.md)
 
-#### 其他
+#### 其他数学
 1. [模拟高精度](./math/bignum.md)
 
 ### 计算几何
