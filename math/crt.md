@@ -12,7 +12,6 @@ $$
 
 其中 $a_i$ 两两互质。
 
-
 ```cpp
 inline LL crt() {
     LL M = 1, ans = 0;
@@ -39,5 +38,19 @@ $$
 其中 $a_i$ 未必两两互质。
 
 ```cpp
-
+inline LL excrt() {
+    LL A = a[1], B = (b[1] % A + A) % A;
+    for (int i = 2; i <= n; i++) {
+        LL ai = a[i], bi = (b[i] % ai + ai) % ai;
+        LL k1, k2;
+        LL d = exgcd(A, ai, k1, k2);
+        if ((bi - B) % d) return -1;
+        LL t = ai / d;
+        k1 = (LL) ((__int128) (bi - B) / d * k1 % t + t) % t;
+        LL nexA = A / d * ai;
+        B = (k1 * A % nexA + B) % nexA;
+        A = nexA;
+    }
+    return B;
+}
 ```
