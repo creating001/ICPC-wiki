@@ -79,24 +79,26 @@
 
 ### 数学问题
 
+1. [模拟高精度](./math/bignum.md)
+
 #### 数论
-1. [素数](./math/prime.md)
-2. [约数](./math/divisor.md)
-3. [欧拉定理](./math/euler.md)
-4. [欧几里得](./math/gcd.md)
-5. [乘法逆元](./math/inv.md)
-6. [中国剩余定理](./math/crt.md)
-7. [快速幂与快速乘](./math/quick_pow.md)
+1. [素数](./math/number-theory/prime.md)
+2. [约数](./math/number-theory/divisor.md)
+3. [欧拉定理](./math/number-theory/euler.md)
+4. [欧几里得](./math/number-theory/gcd.md)
+5. [乘法逆元](./math/number-theory/inv.md)
+6. [中国剩余定理](./math/number-theory/crt.md)
+7. [快速幂与快速乘](./math/number-theory/quick_pow.md)
 
 #### 线性代数
-1. [高斯消元](./math/gauss.md)
+1. [高斯消元](./math/linear-algebra/gauss.md)
 
 #### 组合数学
-1. [求组合数](./math/combination.md)
-2. [容斥原理](./math/inclusion-exclusion.md)
+1. [求组合数](./math/combinatorics/combination.md)
+2. [容斥原理](./math/combinatorics/inclusion-exclusion.md)
 
-#### 其他数学
-1. [模拟高精度](./math/bignum.md)
+#### 博弈论
+
 
 ### 计算几何
 
