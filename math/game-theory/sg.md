@@ -35,11 +35,7 @@ $SG(G) = SG(G1) \oplus SG(G2) \oplus \dots \oplus SG(Gm)$
 ```cpp
 inline int sg(int x) {
     if (~f[x]) return f[x];
-    map<int, int> memo;
-    for (int i = 0; i < k; i++)
-        if (x >= s[i]) memo[sg(x - s[i])]++;
-    int ans = 0;
-    while (memo[ans]) ans++;
+    // 记忆化搜索
     return f[x] = ans;
 }
 ```
