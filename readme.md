@@ -81,6 +81,7 @@
 6. [平衡树](./structure/balance_tree.md)
 
 ### 动态规划
+1. [背包问题](./dp/knapsack.md)
 
 ### 数学问题
 
