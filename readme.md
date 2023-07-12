@@ -79,7 +79,9 @@
 
 ### 数学问题
 
-1. [模拟高精度](./math/bignum.md)
+#### 基础数学
+1. [高精度计算](./math/basic/high-precision.md)
+2. [快速幂与快速乘](./math/number-theory/quick-pow.md)
 
 #### 数论
 1. [素数](./math/number-theory/prime.md)
@@ -88,7 +90,6 @@
 4. [欧几里得](./math/number-theory/gcd.md)
 5. [乘法逆元](./math/number-theory/inv.md)
 6. [中国剩余定理](./math/number-theory/crt.md)
-7. [快速幂与快速乘](./math/number-theory/quick_pow.md)
 
 #### 线性代数
 1. [高斯消元](./math/linear-algebra/gauss.md)
