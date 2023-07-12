@@ -165,3 +165,37 @@ inline int two_dimension_knapsack() {
     return dp[V][M];
 }
 ```
+
+## 分组背包问题
+
+有 $N$ 组物品和一个容量是 $V$ 的背包。每组物品有若干件，同一组内的物品最多只能选一件。每件物品的体积是 $v_i$，价值是 $w_i$。求解将哪些物品装入背包可使价值总和最大。
+
+```cpp
+inline int group_knapsack() {
+    for (int i = 1; i <= n; i++)
+        for (int j = V; j >= 0; j--)
+            for (int k = 0; k < g[i].size(); k++)
+                if (j >= g[i][k].first)
+                    dp[j] = max(dp[j], dp[j - g[i][k].first] + g[i][k].second);
+    return dp[V];
+}
+```
+
+## 有依赖的背包问题
+
+有 $N$ 件物品和一个容量是 $V$ 的背包。第 $i$ 件物品的体积是 $v_i$，价值是 $w_i$，依赖的物品编号是 $p_i$。求解将哪些物品装入背包可使价值总和最大。
+
+```cpp
+inline void dfs(int u) {
+    for (int i = m; i >= v[u]; i--) dp[u][i] = w[u];
+    for (int i = h[u]; ~i; i = nex[i]) {
+        int to = e[i];
+        dfs(to);
+        for (int j = m; j >= v[u]; j--) {
+            for (int k = v[u]; k <= j; k++) {
+                dp[u][j] = max(dp[u][j], dp[u][k] + dp[to][j - k]);
+            }
+        }
+    }
+}
+```
