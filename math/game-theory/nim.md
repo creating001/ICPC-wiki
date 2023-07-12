@@ -1,6 +1,8 @@
 # nim游戏
 
-> 板子题网址: https://www.luogu.com.cn/problem/P2197
+> 板子题网址1: https://www.luogu.com.cn/problem/P2197
+>
+> 板子题网址2: https://www.acwing.com/problem/content/894
 
 ## 游戏描述
 

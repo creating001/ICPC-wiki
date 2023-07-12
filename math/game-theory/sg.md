@@ -1,5 +1,9 @@
 # SG函数
 
+> 板子题网址: https://www.acwing.com/problem/content/895
+>
+> 板子题网址: https://www.acwing.com/problem/content/896
+
 ## Mex运算
 
 对于一个集合 $S$ ，其 $Mex$ 运算的结果为 $S$ 中不属于 $S$ 的最小非负整数。
@@ -25,3 +29,17 @@ $SG(S)=Mex\{SG(T)|T\in Next(S)\}$
 有向图游戏的和的 $SG$ 函数值等于它包含的各个子游戏 $SG$ 函数值的异或和，即：
 
 $SG(G) = SG(G1) \oplus SG(G2) \oplus \dots \oplus SG(Gm)$
+
+## SG函数的计算
+
+```cpp
+inline int sg(int x) {
+    if (~f[x]) return f[x];
+    map<int, int> memo;
+    for (int i = 0; i < k; i++)
+        if (x >= s[i]) memo[sg(x - s[i])]++;
+    int ans = 0;
+    while (memo[ans]) ans++;
+    return f[x] = ans;
+}
+```
