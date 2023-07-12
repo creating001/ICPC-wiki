@@ -2,8 +2,6 @@
 
 ## 0-1背包问题
 
-> 板子题网址:
-
 有 $N$ 件物品和一个容量为 $V$ 的背包。第 $i$ 件物品的费用是 $c_i$，价值是 $w_i$。求解将哪些物品装入背包可使价值总和最大。
 
 解法一: 二维动态规划
@@ -106,21 +104,64 @@ inline int multiple_knapsack() {
 ```cpp
 inline int multiple_knapsack() {
     for (int i = 1; i <= n; i++) {
-        int v, w, s;
-        cin >> v >> w >> s;
         for (int j = 1; j <= m; j++) dp[i & 1][j] = dp[i - 1 & 1][j];
-        for (int j = 0; j < v; j++) {
+        for (int j = 0; j < v[i]; j++) {
             int tt = -1, hh = 0;
-            for (int k = j; k <= m; k += v) {
-                while (hh <= tt && (k - q[hh]) / v > s)
+            for (int k = j; k <= m; k += v[i]) {
+                while (hh <= tt && (k - q[hh]) / v[i] > s[i])
                     hh++;
-                while (hh <= tt && dp[i - 1 & 1][k] - dp[i - 1 & 1][q[tt]] >= (k - q[tt]) / v * w)
+                while (hh <= tt && dp[i - 1 & 1][k] - dp[i - 1 & 1][q[tt]] >= (k - q[tt]) / v[i] * w[i])
                     tt--;
                 q[++tt] = k;
-                dp[i & 1][k] = max(dp[i & 1][k], dp[i - 1 & 1][q[hh]] + (k - q[hh]) / v * w);
+                dp[i & 1][k] = max(dp[i & 1][k], dp[i - 1 & 1][q[hh]] + (k - q[hh]) / v[i] * w[i]);
             }
         }
     }
     return dp[n & 1][m];
+}
+```
+
+## 混合背包问题
+
+01背包、完全背包、多重背包的混合
+
+```cpp
+inline int mix_knapsack() {
+    for (int i = 1; i <= n; i++) {
+        if (s[i] == -1) {
+            for (int j = v[i]; j <= m; j++)
+                dp[j] = max(dp[j], dp[j - v[i]] + w[i]);
+        } else if (s[i] == 0) {
+            for (int j = v[i]; j <= m; j++)
+                dp[j] = max(dp[j], dp[j - v[i]] + w[i]);
+        } else {
+            int k = 1;
+            while (s[i] >= k) {
+                for (int j = m; j >= k * v[i]; j--)
+                    dp[j] = max(dp[j], dp[j - k * v[i]] + k * w[i]);
+                s[i] -= k;
+                k *= 2;
+            }
+            k = s[i];
+            if (k)
+                for (int j = m; j >= k * v[i]; j--)
+                    dp[j] = max(dp[j], dp[j - k * v[i]] + k * w[i]);
+        }
+    }
+    return dp[m];
+}
+```
+
+## 二维费用背包问题
+
+有 $N$ 件物品和一个容量是 $V$ 的背包，背包能承受的最大重量是 $M$ 。每件物品只能用一次。体积是 $v_i$，重量是 $m_i$ ，价值是 $w_i$ 。输出最大价值。
+
+```cpp
+inline int two_dimension_knapsack() {
+    for (int i = 1; i <= n; i++)
+        for (int j = V; j >= v[i]; j--)
+            for (int k = M; k >= m[i]; k--)
+                dp[j][k] = max(dp[j][k], dp[j - v[i]][k - m[i]] + w[i]);
+    return dp[V][M];
 }
 ```
