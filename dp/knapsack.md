@@ -70,10 +70,12 @@ inline int complete_knapsack() {
 
 ```cpp
 inline int multiple_knapsack() {
-    for (int i = 1; i <= n; i++)
-        for (int j = m; j >= v[i]; j--)
-            for (int k = 1; k <= s[i] && k * v[i] <= j; k++)
-                dp[j] = max(dp[j], dp[j - k * v[i]] + k * w[i]);
+    for (int i = 1; i <= n; i++) {
+        for (int k = 1; k <= s[i]; k++)
+            for (int j = m; j >= v[i]; j--) {
+                dp[j] = max(dp[j], dp[j - v[i]] + w[i]);
+            }
+    }
     return dp[m];
 }
 ```
@@ -102,5 +104,23 @@ inline int multiple_knapsack() {
 解法三: 单调队列优化
 
 ```cpp
-
+inline int multiple_knapsack() {
+    for (int i = 1; i <= n; i++) {
+        int v, w, s;
+        cin >> v >> w >> s;
+        for (int j = 1; j <= m; j++) dp[i & 1][j] = dp[i - 1 & 1][j];
+        for (int j = 0; j < v; j++) {
+            int tt = -1, hh = 0;
+            for (int k = j; k <= m; k += v) {
+                while (hh <= tt && (k - q[hh]) / v > s)
+                    hh++;
+                while (hh <= tt && dp[i - 1 & 1][k] - dp[i - 1 & 1][q[tt]] >= (k - q[tt]) / v * w)
+                    tt--;
+                q[++tt] = k;
+                dp[i & 1][k] = max(dp[i & 1][k], dp[i - 1 & 1][q[hh]] + (k - q[hh]) / v * w);
+            }
+        }
+    }
+    return dp[n & 1][m];
+}
 ```
