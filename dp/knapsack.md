@@ -98,3 +98,9 @@ inline int multiple_knapsack() {
     return dp[m];
 }
 ```
+
+解法三: 单调队列优化
+
+```cpp
+
+```
