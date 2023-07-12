@@ -55,6 +55,8 @@
 ## 算法模板库
 
 ### 搜索
+1. [深度优先搜索](./search/dfs.md)
+2. [广度优先搜索](./search/bfs.md)
 
 ### 图论
 1. [最短路](./graph/shortest_path.md)
