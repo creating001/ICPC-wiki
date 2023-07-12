@@ -53,6 +53,9 @@
 4. [《NOIP普及历史真题》](https://ac.nowcoder.com/acm/noip/fusai-pj)
 
 ## 算法模板库
+
+### 搜索
+
 ### 图论
 1. [最短路](./graph/shortest_path.md)
 2. [最小生成树](./graph/mst.md)
@@ -99,7 +102,6 @@
 2. [容斥原理](./math/combinatorics/inclusion-exclusion.md)
 
 #### 博弈论
-
 
 ### 计算几何
 
