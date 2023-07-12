@@ -102,6 +102,8 @@
 2. [容斥原理](./math/combinatorics/inclusion-exclusion.md)
 
 #### 博弈论
+1. [nim游戏](./math/game-theory/nim.md)
+2. [SG函数](./math/game-theory/sg.md)
 
 ### 计算几何
 
