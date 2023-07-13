@@ -187,7 +187,7 @@ inline int group_knapsack() {
 
 ```cpp
 inline void dfs(int u) {
-    for (int i = m; i >= v[u]; i--) dp[u][i] = w[u];
+    for (int i = v[u]; i <= m; i++) dp[u][i] = w[u];
     for (int i = h[u]; ~i; i = nex[i]) {
         int to = e[i];
         dfs(to);
@@ -198,4 +198,34 @@ inline void dfs(int u) {
         }
     }
 }
+```
+
+## 背包问题求方案数
+
+有 $N$ 件物品和一个容量是 $V$ 的背包。每件物品只能使用一次。第 $i$ 件物品的体积是 $v_i$ ，价值是 $w_i$ 。求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。输出最优选法的方案数。
+
+```cpp
+inline int solution_number() {
+    for (auto& x : num) x = 1;
+    for (int i = 1; i <= n; i++) {
+        for (int j = m; j >= v[i]; j--) {
+            if (dp[j] < dp[j - v[i]] + w[i]) {
+                dp[j] = dp[j - v[i]] + w[i];
+                num[j] = num[j - v[i]];
+            } else if (dp[j] == dp[j - v[i]] + w[i]) {
+                num[j] += num[j - v[i]];
+            }
+            num[j] %= P;
+        }
+    }
+    return num[m];
+}
+```
+
+## 背包问题求具体方案
+
+有 $N$ 件物品和一个容量是 $V$ 的背包。每件物品只能使用一次。第 $i$ 件物品的体积是 $v_i$ ，价值是 $w_i$ 。求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。输出字典序最小的最优选法。
+
+```cpp
+
 ```
