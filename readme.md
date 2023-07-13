@@ -55,8 +55,7 @@
 ## 算法模板库
 
 ### 搜索
-1. [深度优先搜索](./search/dfs.md)
-2. [广度优先搜索](./search/bfs.md)
+1. [折半搜索](./search/meet-in-middle.md)
 
 ### 图论
 1. [最短路](./graph/shortest_path.md)
@@ -84,6 +83,7 @@
 ### 动态规划
 1. [闫氏DP](./dp/yxc-dp.md)
 2. [背包问题](./dp/knapsack.md)
+3. [线性DP](./dp/linear-dp.md)
 
 ### 数学问题
 
