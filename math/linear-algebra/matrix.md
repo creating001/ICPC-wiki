@@ -39,7 +39,7 @@ inline matrix quick_pow(matrix& a, LL k) {
 >
 > 板子题网址: https://www.luogu.com.cn/problem/P1349
 
-斐波那契数列（Fibonacci Sequence）大家应该都非常的熟悉了。在斐波那契数列当中，$F_1 = F_2 = 1$，$F_i = F_{i - 1} + F_{i - 2}(i \geq 3)$
+斐波那契数列（Fibonacci Sequence）大家应该都非常的熟悉了。在斐波那契数列当中，$F_1 = F_2 = 1$ ，$F_i = F_{i - 1} + F_{i - 2}(i \geq 3)$
 
 如果有一道题目让你求斐波那契数列第 $n$ 项的值，最简单的方法莫过于直接递推了。但是如果 $n$ 的范围达到了 $10^{18}$ 级别，递推就不行了，稳 TLE。考虑矩阵加速递推。
 
