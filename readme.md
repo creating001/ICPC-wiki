@@ -79,6 +79,7 @@
 4. [二叉堆](./structure/heap.md)
 5. [哈希表](./structure/hash.md)
 6. [平衡树](./structure/balance_tree.md)
+7. [分块思想](./structure/block.md)
 
 ### 动态规划
 1. [闫氏DP](./dp/yxc-dp.md)
