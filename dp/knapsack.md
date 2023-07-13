@@ -7,7 +7,6 @@
 解法一: 二维动态规划
 
 ```cpp
-// dp[i][j] 表示前 i 件物品恰好装入容量为 j 的背包所能获得的最大价值
 inline int knapsack_01() {
     for (int i = 1; i <= n; i++)
         for (int j = 0; j <= m; j++) {
@@ -38,7 +37,6 @@ inline int knapsack_01() {
 解法三: 一维动态规划
 
 ```cpp
-// dp[i] 表示容量为 i 的背包所能装的最大价值
 inline int knapsack_01() {
     for (int i = 1; i <= n; i++)
         for (int j = m; j >= v[i]; j--)
@@ -68,12 +66,10 @@ inline int complete_knapsack() {
 
 ```cpp
 inline int multiple_knapsack() {
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
         for (int k = 1; k <= s[i]; k++)
-            for (int j = m; j >= v[i]; j--) {
+            for (int j = m; j >= v[i]; j--)
                 dp[j] = max(dp[j], dp[j - v[i]] + w[i]);
-            }
-    }
     return dp[m];
 }
 ```
@@ -191,11 +187,9 @@ inline void dfs(int u) {
     for (int i = h[u]; ~i; i = nex[i]) {
         int to = e[i];
         dfs(to);
-        for (int j = m; j >= v[u]; j--) {
-            for (int k = v[u]; k <= j; k++) {
+        for (int j = m; j >= v[u]; j--)
+            for (int k = v[u]; k <= j; k++)
                 dp[u][j] = max(dp[u][j], dp[u][k] + dp[to][j - k]);
-            }
-        }
     }
 }
 ```
@@ -207,7 +201,7 @@ inline void dfs(int u) {
 ```cpp
 inline int solution_number() {
     for (auto& x : num) x = 1;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
         for (int j = m; j >= v[i]; j--) {
             if (dp[j] < dp[j - v[i]] + w[i]) {
                 dp[j] = dp[j - v[i]] + w[i];
@@ -217,7 +211,6 @@ inline int solution_number() {
             }
             num[j] %= P;
         }
-    }
     return num[m];
 }
 ```
@@ -228,20 +221,17 @@ inline int solution_number() {
 
 ```cpp
 inline vector<int> solution() {
-    //从后向前枚举
-    for (int i = n; i >= 1; i--) {
+    for (int i = n; i >= 1; i--)
         for (int j = 0; j <= m; j++) {
             dp[i][j] = dp[i + 1][j];
             if (j >= v[i])
                 dp[i][j] = max(dp[i][j], dp[i + 1][j - v[i]] + w[i]);
         }
-    }
     int cur_v = m;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
         if (cur_v >= v[i] && dp[i][cur_v] == dp[i + 1][cur_v - v[i]] + w[i]) {
             cout << i << ' ';
             cur_v -= v[i];
         }
-    }
 }
 ```
