@@ -88,7 +88,7 @@
 
 #### 基础数学
 1. [高精度计算](./math/basic/high-precision.md)
-2. [快速幂与快速乘](./math/number-theory/quick-pow.md)
+2. [快速幂与龟速乘](./math/basic/quick-pow.md)
 
 #### 数论
 1. [素数](./math/number-theory/prime.md)
@@ -100,6 +100,7 @@
 
 #### 线性代数
 1. [高斯消元](./math/linear-algebra/gauss.md)
+2. [矩阵运算](./math/linear-algebra/matrix.md)
 
 #### 组合数学
 1. [求组合数](./math/combinatorics/combination.md)
