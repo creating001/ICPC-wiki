@@ -227,5 +227,21 @@ inline int solution_number() {
 有 $N$ 件物品和一个容量是 $V$ 的背包。每件物品只能使用一次。第 $i$ 件物品的体积是 $v_i$ ，价值是 $w_i$ 。求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。输出字典序最小的最优选法。
 
 ```cpp
-
+inline vector<int> solution() {
+    //从后向前枚举
+    for (int i = n; i >= 1; i--) {
+        for (int j = 0; j <= m; j++) {
+            dp[i][j] = dp[i + 1][j];
+            if (j >= v[i])
+                dp[i][j] = max(dp[i][j], dp[i + 1][j - v[i]] + w[i]);
+        }
+    }
+    int cur_v = m;
+    for (int i = 1; i <= n; i++) {
+        if (cur_v >= v[i] && dp[i][cur_v] == dp[i + 1][cur_v - v[i]] + w[i]) {
+            cout << i << ' ';
+            cur_v -= v[i];
+        }
+    }
+}
 ```
