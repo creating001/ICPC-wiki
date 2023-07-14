@@ -84,6 +84,9 @@
 1. [闫氏DP](./dp/yxc-dp.md)
 2. [背包问题](./dp/knapsack.md)
 3. [线性DP](./dp/linear-dp.md)
+4. [区间DP](./dp/interval-dp.md)
+5. [数位DP](./dp/digit-dp.md)
+6. [状压DP](./dp/state-dp.md)
 
 ### 数学问题
 
