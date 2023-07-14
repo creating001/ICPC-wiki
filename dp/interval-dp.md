@@ -32,11 +32,3 @@
 ```cpp
 
 ```
-
-## 石子合并(强化)
-
-> 板子题网址: https://www.luogu.com.cn/problem/P5569
-
-```cpp
-
-```

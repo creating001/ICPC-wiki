@@ -79,7 +79,6 @@
 4. [二叉堆](./structure/heap.md)
 5. [哈希表](./structure/hash.md)
 6. [平衡树](./structure/balance_tree.md)
-7. [分块思想](./structure/block.md)
 
 ### 动态规划
 1. [闫氏DP](./dp/yxc-dp.md)
@@ -98,7 +97,8 @@
 3. [欧拉定理](./math/number-theory/euler.md)
 4. [欧几里得](./math/number-theory/gcd.md)
 5. [乘法逆元](./math/number-theory/inv.md)
-6. [中国剩余定理](./math/number-theory/crt.md)
+6. [数论分块](./math/number-theory/block.md)
+7. [中国剩余定理](./math/number-theory/crt.md)
 
 #### 线性代数
 1. [高斯消元](./math/linear-algebra/gauss.md)

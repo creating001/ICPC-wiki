@@ -20,18 +20,7 @@ inline int LIS(int* a, int n) {
 
 ```cpp
 //时间复杂度O(nlogn)
-inline int LIS(int* a, int n) {
-    int len = 1;
-    dp[1] = a[0];
-    for (int i = 1; i < n; i++)
-        if (a[i] > dp[len])
-            dp[++len] = a[i];
-        else {
-            int pos = lower_bound(dp + 1, dp + len + 1, a[i]) - dp;
-            dp[pos] = a[i];
-        }
-    return len;
-}
+
 ```
 
 ## 最长公共子序列
