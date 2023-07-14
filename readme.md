@@ -87,8 +87,9 @@
 4. [区间DP](./dp/interval-dp.md)
 5. [树形DP](./dp/tree-dp.md)
 6. [状压DP](./dp/state-dp.md)
-7. [数位DP](./dp/digit-dp.md)
-
+7. [计数DP](./dp/count-dp.md)
+8. [数位DP](./dp/digit-dp.md)
+9. [记忆化搜索](./dp/memo-dp.md)
 
 ### 数学问题
 
