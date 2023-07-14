@@ -85,8 +85,10 @@
 2. [背包问题](./dp/knapsack.md)
 3. [线性DP](./dp/linear-dp.md)
 4. [区间DP](./dp/interval-dp.md)
-5. [数位DP](./dp/digit-dp.md)
+5. [树形DP](./dp/tree-dp.md)
 6. [状压DP](./dp/state-dp.md)
+7. [数位DP](./dp/digit-dp.md)
+
 
 ### 数学问题
 
