@@ -53,8 +53,8 @@ inline int LCS(int* a, int* b, int n, int m) {
 ## 编辑距离
 
 ```cpp
-inline int edit_distance(string& a, string& b) {
-    int n = a.size(), m = b.size();
+inline int edit_distance(char* a, char* b) {
+    int n = strlen(a + 1), m = strlen(b + 1);
     for (int i = 0; i <= n; i++) dp[i][0] = i;
     for (int i = 0; i <= m; i++) dp[0][i] = i;
     for (int i = 1; i <= n; i++)
