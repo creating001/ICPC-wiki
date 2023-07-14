@@ -3,6 +3,8 @@
 > 板子题网址: https://www.luogu.com.cn/problem/P4799
 >
 > 板子题网址: https://www.luogu.com.cn/problem/P9234
+>
+> 板子题网址: https://www.luogu.com.cn/problem/P2962
 
 `Meet in the middle` 算法没有正式译名，常见的翻译为「折半搜索」、「双向搜索」或「中途相遇」。
 它适用于输入数据较小，但还没小到能直接使用暴力搜索的情况。
