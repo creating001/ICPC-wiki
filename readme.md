@@ -55,6 +55,7 @@
 ## 算法模板库
 
 ### 搜索
+1. [搜索剪枝](./search/pruning.md)
 1. [折半搜索](./search/meet-in-middle.md)
 
 ### 图论
