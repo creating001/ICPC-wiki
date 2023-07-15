@@ -63,6 +63,10 @@
 2. [最小生成树](./graph/mst.md)
 3. [二分图匹配](./graph/bi-graph.md)
 
+### 贪心
+1. [区间问题](./greedy/interval.md)
+2. [Huffman树](./greedy/huffman.md)
+
 ### 字符串
 1. [字典树](./string/trie.md)
 2. [KMP匹配](./string/kmp.md)
