@@ -49,8 +49,7 @@
 #### nowcoder
 1. [《USACO训练题》](https://ac.nowcoder.com/acm/archive/usaco)
 2. [《USACO月赛题》](https://ac.nowcoder.com/acm/archive/usaco-month)
-3. [《NOIP初赛历史真题》](https://ac.nowcoder.com/acm/noip/chusai-pj)
-4. [《NOIP普及历史真题》](https://ac.nowcoder.com/acm/noip/fusai-pj)
+3. [《NOIP普及历史真题》](https://ac.nowcoder.com/acm/noip/fusai-pj)
 
 ## 算法模板库
 
