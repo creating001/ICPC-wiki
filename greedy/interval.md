@@ -41,7 +41,15 @@ inline int solve(PII* a, int n) {
 > 板子题网址: https://www.acwing.com/problem/content/908
 
 ```cpp
-
+inline int solve(PII* a, int n) {
+    sort(a, a + n);
+    priority_queue<int, vector<int>, greater<>> q;
+    for (int i = 0; i < n; i++) {
+        if (!q.empty() && a[i].F > q.top()) q.pop();
+        q.emplace(a[i].S);
+    }
+    return q.size();
+}
 ```
 
 ## 区间覆盖
@@ -49,5 +57,18 @@ inline int solve(PII* a, int n) {
 > 板子题网址: https://www.acwing.com/problem/content/909
 
 ```cpp
-
+inline int solve(PII* a, int n, int s, int t) {
+    sort(a, a + n);
+    int r = s, ans = 0;
+    for (int i = 0; i < n; i++) {
+        int j = i;
+        while (j < n && a[j].F <= s) r = max(r, a[j].S), j++;
+        if (i == j) return -1;
+        s = r, ans++;
+        if (s >= t) break;
+        i = j - 1;
+    }
+    if (s < t) return -1;
+    return ans;
+}
 ```
