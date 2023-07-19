@@ -107,16 +107,17 @@ inline bool bellman_ford(int s) {
 inline int spfa(int s, int t) {
     memset(dis, 0x3f, sizeof(dis));
     queue<int> q;
-    q.push(s);
-    vis[s] = 1, dis[s] = 0;
+    q.emplace(s);
+    dis[s] = 0;
     while (!q.empty()) {
         int cur = q.front();
-        q.pop(), vis[cur] = 0;
-        if (dis[cur] == INF) continue;
-        for (int i = h[cur]; ~i; i = nex[i]) {
-            int to = e_to[i], w = e_w[i];
-            if (dis[to] > dis[cur] + w) {
-                dis[to] = dis[cur] + w;
+        q.pop();
+        vis[cur] = 0;
+        if (dis[cur] == inf) continue;
+        for (int i = h[cur]; i; i = nex[i]) {
+            int to = e[i], c = w[i];
+            if (dis[to] > dis[cur] + c) {
+                dis[to] = dis[cur] + c;
                 if (!vis[to]) q.emplace(to), vis[to] = 1;
             }
         }
