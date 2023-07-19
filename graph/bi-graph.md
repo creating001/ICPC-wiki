@@ -27,10 +27,10 @@ inline bool dfs(int u, int c) {
 
 ```cpp
 inline bool dfs(int u) {
-    for (int i = h[u]; ~i; i = nex[i]) {
+    for (int i = h[u]; i; i = nex[i]) {
         int to = e[i];
         if (vis[to]) continue;
-        vis[to] = true;
+        vis[to] = 1;
         if (!match[to] || dfs(match[to])) {
             match[to] = u;
             return true;
