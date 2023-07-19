@@ -38,13 +38,12 @@ inline int prim() {
 ```cpp
 inline int kruskal() {
     int ans = 0;
-    int cnt = 0;
-    for (int i = 1; i <= m; i++)
-        if (find(e[i].x) != find(e[i].y)) {
-            unite(e[i].x, e[i].y);
-            ans += e[i].w, cnt++;
-        }
-    if(cnt != n - 1) return INF;
+    for (int i = 0; i < m; i++) {
+        int px = find(e[i].x), py = find(e[i].y);
+        if (px != py) p[px] = py, ans += e[i].w;
+    }
+    for (int i = 1; i < n; i++)
+        if (find(i) != find(i + 1)) return inf;
     return ans;
 }
 ```
