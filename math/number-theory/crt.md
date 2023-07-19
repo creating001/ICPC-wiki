@@ -39,18 +39,17 @@ $$
 
 ```cpp
 inline LL excrt() {
-    LL A = a[1], B = (b[1] % A + A) % A;
-    for (int i = 2; i <= n; i++) {
-        LL ai = a[i], bi = (b[i] % ai + ai) % ai;
+    LL A = a[0], M = b[0];
+    for (int i = 1; i < n; i++) {
         LL k1, k2;
-        LL d = exgcd(A, ai, k1, k2);
-        if ((bi - B) % d) return -1;
-        LL t = ai / d;
-        k1 = (LL) ((__int128) (bi - B) / d * k1 % t + t) % t;
-        LL nexA = A / d * ai;
-        B = (k1 * A % nexA + B) % nexA;
-        A = nexA;
+        LL d = exgcd(A, a[i], k1, k2);
+        if ((b[i] - M) % d) return -1;
+        LL t = a[i] / d;
+        LL nex_A = A / d * a[i];
+        k1 = ((b[i] - M) / d * k1 % t + t) % t;
+        M = (k1 * A % nex_A + M) % nex_A;
+        A = nex_A;
     }
-    return B;
+    return M;
 }
 ```
