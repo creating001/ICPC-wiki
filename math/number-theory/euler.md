@@ -35,19 +35,18 @@ inline int get_phi(int x) {
 时间复杂度：$O(N)$
 
 ```cpp
-inline void get_euler(int n) {
-    memset(is_prime, 1, sizeof(is_prime));
+inline void get_primes(int n) {
     phi[1] = 1;
+    memset(is_prime, 1, sizeof(is_prime));
     for (int i = 2; i <= n; i++) {
-        if (is_prime[i])
-            primes[cnts++] = i, phi[i] = i - 1;
+        if (is_prime[i]) primes[cnts++] = i, phi[i] = i - 1;
         for (int j = 0; primes[j] <= n / i; j++) {
             is_prime[primes[j] * i] = false;
             if (i % primes[j] == 0) {
-                phi[primes[j] * i] = primes[j] * phi[i];
+                phi[primes[j] * i] = phi[i] * primes[j];
                 break;
             }
-            phi[primes[j] * i] = (primes[j] - 1) * phi[i];
+            phi[primes[j] * i] = phi[i] * (primes[j] - 1);
         }
     }
 }

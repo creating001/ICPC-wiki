@@ -7,12 +7,12 @@
 时间复杂度 $O(\log b)$
 
 ```cpp
-inline LL quick_pow(LL a, LL b, LL mod) {
-    LL ans = 1;
-    while (b) {
-        if (b & 1) ans = ans * a % mod;
-        a = a * a % mod;
-        b >>= 1;
+inline int qpow(int a, int k, int p) {
+    int ans = 1;
+    while (k) {
+        if (k & 1) ans = 1ll * ans * a % p;
+        a = 1ll * a * a % p;
+        k >>= 1;
     }
     return ans;
 }
@@ -26,7 +26,7 @@ inline LL quick_pow(LL a, LL b, LL mod) {
 
 ```cpp
 //b 必须是正数
-inline LL quick_mul(LL a, LL b, LL mod) {
+inline LL qmul(LL a, LL b, LL mod) {
     LL ans = 0;
     while (b) {
         if (b & 1) ans = (ans + a) % mod;
@@ -40,7 +40,7 @@ inline LL quick_mul(LL a, LL b, LL mod) {
 ### `__int128` 的使用
 
 ```cpp
-inline LL quick_mul(LL a, LL b, LL mod) {
+inline LL qmul(LL a, LL b, LL mod) {
     return (LL)((__int128)a * b % mod);
 }
 ```
