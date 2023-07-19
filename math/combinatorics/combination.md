@@ -21,9 +21,9 @@ $C_n^m = \frac{n!}{m!(n-m)!}$
 ```cpp
 inline void get_comb(int n) {
     for (int i = 1; i <= n; i++) C[i][0] = C[i][i] = 1;
-    for (int i = 1; i <= n; i++)
-        for (int j = 1; j < i; j++)
-            C[i][j] = (C[i - 1][j] + C[i - 1][j - 1]) % P;
+    for (int i = 2; i <= n; i++)
+        for (int j = 1; j <= i; j++)
+            C[i][j] = (C[i - 1][j - 1] + C[i - 1][j]) % P;
 }
 ```
 
@@ -48,7 +48,7 @@ inline void init_fact(int n) {
 
 ## Lucas 定理
 
-> 板子题网址: https://www.acwing.com/problem/content/889
+> 板子题网址: https://www.luogu.com.cn/problem/P3807
 
 定理内容: $C_n^m \bmod p = C_{n/p}^{m/p} \cdot C_{n\%p}^{m\%p} \bmod p$
 
@@ -111,6 +111,6 @@ inline vector<int> comb(int a, int b) {
 
 ```cpp
 inline int catalan(int n) {
-    return comb(2 * n, n) * get_inv(n + 1, P) % P;
+    return 1ll * comb(2 * n, n) * get_inv(n + 1, P) % P;
 }
 ```
