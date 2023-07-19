@@ -15,8 +15,8 @@ $$
 ```cpp
 inline LL crt() {
     LL M = 1, ans = 0;
-    for (int i = 1; i <= n; i++) M *= a[i];
-    for (int i = 1; i <= n; i++) {
+    for (int i = 0; i < n; i++) M *= a[i];
+    for (int i = 0; i < n; i++) {
         LL Mi = M / a[i];
         LL ti = get_inv(Mi, a[i]);
         ans = (ans + Mi * ti % M * b[i] % M) % M;
