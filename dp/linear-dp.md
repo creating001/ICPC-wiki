@@ -1,5 +1,7 @@
 # 线性DP
 
+## 数字三角形模型
+
 ## 最长上升子序列
 
 > 板子题网址: https://www.acwing.com/problem/content/898
