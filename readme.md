@@ -84,15 +84,14 @@
 6. [平衡树](./structure/balance_tree.md)
 
 ### 动态规划
-1. [闫氏DP](./dp/yxc-dp.md)
-2. [背包问题](./dp/knapsack.md)
-3. [线性DP](./dp/linear-dp.md)
-4. [区间DP](./dp/interval-dp.md)
-5. [树形DP](./dp/tree-dp.md)
-6. [状压DP](./dp/state-dp.md)
-7. [计数DP](./dp/count-dp.md)
-8. [数位DP](./dp/digit-dp.md)
-9. [记忆化搜索](./dp/memo-dp.md)
+1. [背包问题](./dp/knapsack.md)
+2. [线性DP](./dp/linear-dp.md)
+3. [区间DP](./dp/interval-dp.md)
+4. [树形DP](./dp/tree-dp.md)
+5. [状压DP](./dp/state-dp.md)
+6. [计数DP](./dp/count-dp.md)
+7. [数位DP](./dp/digit-dp.md)
+8. [记忆化搜索](./dp/memo-dp.md)
 
 ### 数学问题
 
