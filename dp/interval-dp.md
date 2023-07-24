@@ -13,33 +13,10 @@
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1775
 
-```cpp
-inline int stone_merge(int* a, int n) {
-    for (int i = 1; i <= n; i++) s[i] = s[i - 1] + a[i];
-    memset(dp, 0x3f, sizeof(dp));
-    for (int i = 1; i <= n; i++) dp[i][i] = 0;
-    for (int len = 2; len <= n; len++)
-        for (int i = 1; i + len - 1 <= n; i++) {
-            int j = i + len - 1;
-            for (int k = i; k <= j - 1; k++)
-                dp[i][j] = min(dp[i][j], dp[i][k] + dp[k + 1][j] + s[j] - s[i - 1]);
-        }
-    return dp[1][n];
-}
-```
-
 ## 石子合并(环形)
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1880
 
-```cpp
-
-```
-
 ## 石子合并(K个)
 
 > 板子题网址: https://leetcode.cn/problems/minimum-cost-to-merge-stones
-
-```cpp
-
-```
