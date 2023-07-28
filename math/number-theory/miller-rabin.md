@@ -39,9 +39,11 @@ inline bool miller_rabin(LL p) {
 
 # Pollard-Rho
 
-> 板子题网址: https://www.luogu.com.cn/problem/P3383
+> 板子题网址: https://www.luogu.com.cn/problem/P4718
 
 ```cpp
+static mt19937_64 engine;
+
 inline LL f(LL x, LL c, LL p) {
     return ((LLL) x * x + c) % p;
 }
