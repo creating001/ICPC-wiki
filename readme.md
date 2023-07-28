@@ -102,11 +102,12 @@
 #### 数论
 1. [素数](./math/number-theory/prime.md)
 2. [约数](./math/number-theory/divisor.md)
-3. [欧拉定理](./math/number-theory/euler.md)
-4. [欧几里得](./math/number-theory/gcd.md)
-5. [乘法逆元](./math/number-theory/inv.md)
-6. [数论分块](./math/number-theory/block.md)
-7. [中国剩余定理](./math/number-theory/crt.md)
+3. [随机判素](./math/number-theory/miller-rabin.md)
+4. [欧拉定理](./math/number-theory/euler.md)
+5. [欧几里得](./math/number-theory/gcd.md)
+6. [乘法逆元](./math/number-theory/inv.md)
+7. [数论分块](./math/number-theory/block.md)
+8. [中国剩余定理](./math/number-theory/crt.md)
 
 #### 线性代数
 1. [高斯消元](./math/linear-algebra/gauss.md)
