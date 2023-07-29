@@ -54,7 +54,7 @@
 
 ### 搜索
 1. [搜索剪枝](./search/pruning.md)
-1. [折半搜索](./search/meet-in-middle.md)
+2. [折半搜索](./search/meet-in-middle.md)
 
 ### 图论
 1. [最短路](./graph/shortest_path.md)
@@ -63,8 +63,7 @@
 4. [二分图匹配](./graph/bi-graph.md)
 
 ### 贪心
-1. [区间问题](./greedy/interval.md)
-2. [Huffman树](./greedy/huffman.md)
+1. [Huffman树](./greedy/huffman.md)
 
 ### 字符串
 1. [字典树](./string/trie.md)
@@ -83,6 +82,7 @@
 5. [哈希表](./structure/hash.md)
 6. [平衡树](./structure/balance_tree.md)
 7. [树状数组](./structure/fenwick.md)
+8. [可持久化数据结构](./structure/persistent.md)
 
 ### 动态规划
 1. [背包问题](./dp/knapsack.md)

@@ -20,7 +20,7 @@ void quick_sort(int* a, int l, int r) {
 }
 ```
 
-## 快速选择
+## 快速选择第K大数
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1923
 
@@ -43,6 +43,8 @@ int quick_find(int* a, int l, int r, int k) {
 ## 归并排序
 
 > 应用: **求逆序对**, 时间复杂度: $O(N \times \log N)$
+
+> 板子题网址: https://www.luogu.com.cn/problem/P1908
 
 ```cpp
 void merge_sort(int* a, int l, int r) {
