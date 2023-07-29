@@ -82,6 +82,7 @@
 4. [二叉堆](./structure/heap.md)
 5. [哈希表](./structure/hash.md)
 6. [平衡树](./structure/balance_tree.md)
+7. [树状数组](./structure/fenwick.md)
 
 ### 动态规划
 1. [背包问题](./dp/knapsack.md)
