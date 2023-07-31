@@ -83,7 +83,8 @@
 6. [线段树](./structure/segment_tree.md)
 7. [平衡树](./structure/balance_tree.md)
 8. [树状数组](./structure/fenwick.md)
-9. [可持久化数据结构](./structure/persistent.md)
+9. [AC自动机](./structure/ac-automaton.md)
+10. [可持久化数据结构](./structure/persistent.md)
 
 ### 动态规划
 1. [背包问题](./dp/knapsack.md)
