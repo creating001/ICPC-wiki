@@ -34,7 +34,7 @@ inline int query(int p, int l, int x) {
 
 ```
 
-## 可持久化线段树(主席树)
+## 可持久化权值线段树(主席树)
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3834
 
