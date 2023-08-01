@@ -36,13 +36,28 @@ inline void get_comb(int n) {
 适用范围: 询问次数 $q$ 多 而 $n$ 和 $m$ 比较大
 
 ```cpp
-inline void init_fact(int n) {
-    fact[0] = 1;
-    for (int i = 1; i <= n; i++)
-        fact[i] = fact[i - 1] * i % P;
-    inv_fact[n] = get_inv(fact[n], P);
-    for (int i = n - 1; i >= 0; i--)
-        inv_fact[i] = inv_fact[i + 1] * (i + 1) % P;
+inline LL qpow(LL a, int k, int p) {
+    LL ans = 1;
+    while (k) {
+        if (k & 1) ans = ans * a % p;
+        a = a * a % p;
+        k >>= 1;
+    }
+    return ans;
+}
+
+auto __ = []() {
+    fac[0] = 1;
+    for (int i = 1; i < N; i++)
+        fac[i] = fac[i - 1] * i % P;
+    ifac[N - 1] = qpow(fac[N - 1], P - 2, P);
+    for (int i = N - 2; i >= 0; i--)
+        ifac[i] = ifac[i + 1] * (i + 1) % P;
+    return 0;
+}();
+
+inline LL C(int a, int b) {
+    return fac[a] * ifac[a - b] % P * ifac[b] % P;
 }
 ```
 

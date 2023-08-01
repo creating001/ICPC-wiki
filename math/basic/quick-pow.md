@@ -7,11 +7,11 @@
 时间复杂度 $O(\log b)$
 
 ```cpp
-inline int qpow(int a, int k, int p) {
-    int ans = 1;
+inline LL qpow(LL a, int k, int p) {
+    LL ans = 1;
     while (k) {
-        if (k & 1) ans = 1ll * ans * a % p;
-        a = 1ll * a * a % p;
+        if (k & 1) ans = ans * a % p;
+        a = a * a % p;
         k >>= 1;
     }
     return ans;
