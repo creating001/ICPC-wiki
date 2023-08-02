@@ -44,6 +44,8 @@ inline int sg(int x) {
 
 ## 树上SG函数
 
+> 板子题网址: https://www.luogu.com.cn/problem/AT_agc017_d
+
 $SG(X) = (SG(X_1)+1) \oplus (SG(X_2)+1) \oplus \cdots \oplus (SG(X_k)+1)$
 
 证明:

@@ -1,8 +1,8 @@
 # 树状数组
 
-> 板子题网址1: https://www.luogu.com.cn/problem/P3374
+> 板子题网址: https://www.luogu.com.cn/problem/P3374
 >
-> 板子题网址2: https://www.luogu.com.cn/problem/P3368
+> 板子题网址: https://www.luogu.com.cn/problem/P3368
 
 ## $lowbit$ 操作
 
