@@ -54,7 +54,9 @@
 
 ### 搜索
 1. [搜索剪枝](./search/pruning.md)
-2. [折半搜索](./search/meet-in-middle.md)
+2. [BFS优化](./search/bfs.md)
+3. [DFS优化](./search/dfs.md)
+4. [折半搜索](./search/meet-in-middle.md)
 
 ### 图论
 1. [最短路](./graph/shortest_path.md)
