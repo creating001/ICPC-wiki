@@ -57,6 +57,7 @@ auto __ = []() {
 }();
 
 inline LL C(int a, int b) {
+    if (a < b) return 0;
     return fac[a] * ifac[a - b] % P * ifac[b] % P;
 }
 ```
