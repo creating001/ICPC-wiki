@@ -1,4 +1,4 @@
-# 欧几里得算法
+# 欧几里得
 
 时间复杂度: $O(\log{N})$
 
@@ -45,3 +45,13 @@ inline int exgcd(int a, int b, int &x, int &y) {
 1. $b = 0$ 时 $ax + by = d$ , 则 $x = 1, y = 0$
 2. - $b \neq 0$ 时，我们已经已知 $by + (a \bmod b)x = d$ 成立, 我们需要构造 $ax' + by' = d$ 成立
    - 所以可得 $x' = x$, $y' = y - a / b * x$
+
+## 类欧几里得算法
+
+证明: https://oi-wiki.org/math/number-theory/euclidean
+
+> 板子题网址: https://www.luogu.com.cn/problem/P5170
+
+```cpp
+
+```

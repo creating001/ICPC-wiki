@@ -25,7 +25,6 @@ inline int get_phi(int x) {
     if (x > 1) ans = ans / x * (x - 1);
     return ans;
 }
-
 ```
 
 ## 线性筛法求欧拉函数
@@ -87,4 +86,14 @@ inline int quick_pow(LL a, int b, int p) {
     }
     return ans;
 }
+```
+
+## 欧拉几何公式
+
+公式: V-E+F = 2
+
+板子题网址: https://www.luogu.com.cn/problem/U323480
+
+```cpp
+
 ```

@@ -27,6 +27,8 @@
 ## A*
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1379
+>
+> 板子题网址: https://www.acwing.com/problem/content/180
 
 ```cpp
 
