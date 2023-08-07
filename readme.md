@@ -132,3 +132,4 @@
 ### 其他杂项
 1. [快读快写](./misc/fastio.md)
 2. [离散化处理](./misc/discrete.md)
+3. [模板的妙用](./misc/template.md)
