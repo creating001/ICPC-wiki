@@ -3,8 +3,6 @@
 ## DFS剪枝
 
 > 板子题网址: https://www.luogu.com.cn/problem/U56447
->
-> 板子题网址: https://www.luogu.com.cn/problem/P1120
 
 1. 优化搜索顺序
 2. 排除等效冗余
@@ -17,14 +15,8 @@
 
 ## 双向DFS
 
-
-
-```cpp
-
-```
+> 板子题网址: https://www.luogu.com.cn/problem/P3067
 
 ## IDA*
 
-```cpp
-
-```
+> 板子题网址: https://www.luogu.com.cn/problem/UVA11212
