@@ -10,17 +10,17 @@
 
 ```cpp
 inline int prim() {
+    memset(d, 0x3f, sizeof(d));
+    d[1] = 0;
     int ans = 0;
-    memset(dis, 0x3f, sizeof(dis));
-    dis[1] = 0;
     for (int i = 1; i <= n; i++) {
         int u = -1;
         for (int j = 1; j <= n; j++)
-            if (!vis[j] && (u == -1 || dis[j] < dis[u])) u = j;
-        if (dis[u] == inf) return inf;
-        ans += dis[u], vis[u] = 1;
+            if (!vis[j] && (u == -1 || d[j] < d[u])) u = j;
+        if (d[u] == INF) return INF;
+        ans += d[u], vis[u] = 1;
         for (int j = 1; j <= n; j++)
-            if (!vis[j]) dis[j] = min(dis[j], g[j][u]);
+            d[j] = min(d[j], g[u][j]);
     }
     return ans;
 }
