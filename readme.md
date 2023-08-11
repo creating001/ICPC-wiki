@@ -58,10 +58,9 @@
 
 ### 图论
 1. [最短路](./graph/shortest_path.md)
-2. [拓扑排序](./graph/topo.md)
-3. [最小生成树](./graph/mst.md)
-4. [二分图匹配](./graph/bi-graph.md)
-5. [树上公共祖先](./graph/lca.md)
+2. [最小生成树](./graph/mst.md)
+3. [二分图匹配](./graph/bi-graph.md)
+4. [树上公共祖先](./graph/lca.md)
 
 ### 字符串
 1. [字典树](./string/trie.md)
