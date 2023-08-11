@@ -4,10 +4,6 @@
 
 ## Prim算法
 
-> prim算法流程是: 选取一个点作为起点, 然后每次选取一个与当前集合距离最小的点加入集合, 直到所有点都加入集合为止。
-
-时间复杂度: $O(N^2)$
-
 ```cpp
 inline int prim() {
     memset(d, 0x3f, sizeof(d));
@@ -27,10 +23,6 @@ inline int prim() {
 ```
 
 ## Kruskal算法
-
-> kruskal 算法流程是: 每次选取一条最短的边, 如果这条边的两个端点不在同一个集合中, 则将这条边加入最小生成树中, 直到最小生成树中有 $n-1$ 条边为止。
-
-时间复杂度: $O(M \log M)$
 
 ```cpp
 inline int kruskal() {
