@@ -6,8 +6,6 @@
 
 ### 朴素Dijkstra算法
 
-时间复杂度为$O(V^2)$
-
 ```cpp
 inline int dijkstra(int s, int t) {
     memset(dis, 0x3f, sizeof(dis));
@@ -27,8 +25,6 @@ inline int dijkstra(int s, int t) {
 
 ### 堆优化Dijkstra算法
 
-时间复杂度为$O(ElogV)$。
-
 ```cpp
 inline int dijkstra(int s, int t) {
     memset(dis, 0x3f, sizeof dis);
@@ -36,7 +32,7 @@ inline int dijkstra(int s, int t) {
     q.emplace(0, s);
     dis[s] = 0;
     while (!q.empty()) {
-        int cur = q.top().second;
+        int cur = q.top().S;
         q.pop();
         if (vis[cur]) continue;
         vis[cur] = 1;
@@ -53,8 +49,6 @@ inline int dijkstra(int s, int t) {
 ```
 
 ## Bellman-Ford算法
-
-时间复杂度为$O(VE)$。
 
 > 板子题网址: https://www.acwing.com/problem/content/855
 
@@ -99,8 +93,6 @@ inline bool bellman_ford(int s) {
 
 ## SPFA算法
 
-时间复杂度为$O(kE)$, $k$为最短路的平均长度。
-
 > 板子题网址: https://www.luogu.com.cn/problem/P3385
 
 ```cpp
@@ -128,7 +120,7 @@ inline bool spfa() {
 
 ## Floyd算法
 
-时间复杂度为$O(V^3)$。
+### 朴素Floyd
 
 > 板子题网址: https://www.luogu.com.cn/problem/B3647
 
@@ -143,9 +135,33 @@ inline void floyd() {
 }
 ```
 
-## Johnson算法
+## 扩展Floyd
 
-时间复杂度为$O(V^2logV+VE)$。
+> 板子题网址: https://www.luogu.com.cn/problem/P2886
+
+```cpp
+inline void mul(int a[][N], int b[][N], int c[][N]) {
+    static int tmp[N][N];
+    memset(tmp, 0x3f, sizeof(tmp));
+    for (int k = 0; k < idx; k++)
+        for (int i = 0; i < idx; i++)
+            for (int j = 0; j < idx; j++)
+                tmp[i][j] = min(tmp[i][j], b[i][k] + c[k][j]);
+    memcpy(a, tmp, sizeof(tmp));
+}
+
+inline void qpow(int k) {
+    memset(ans, 0x3f, sizeof(ans));
+    for (int i = 0; i < idx; i++) ans[i][i] = 0;
+    while (k) {
+        if (k & 1) mul(ans, ans, g);
+        mul(g, g, g);
+        k >>= 1;
+    }
+}
+```
+
+## Johnson算法
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5905
 
