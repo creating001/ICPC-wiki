@@ -66,7 +66,8 @@
 ### 字符串
 1. [字典树](./string/trie.md)
 2. [KMP匹配](./string/kmp.md)
-3. [字符串哈希](./string/hash.md)
+3. [马拉车算法](./string/manacher.md)
+4. [字符串哈希](./string/hash.md)
 
 ### 基础算法
 1. [排序](./basic/sort.md)
