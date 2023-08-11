@@ -143,16 +143,16 @@ inline void floyd() {
 inline void mul(int a[][N], int b[][N], int c[][N]) {
     static int tmp[N][N];
     memset(tmp, 0x3f, sizeof(tmp));
-    for (int k = 0; k < idx; k++)
-        for (int i = 0; i < idx; i++)
-            for (int j = 0; j < idx; j++)
+    for (int k = 0; k < n; k++)
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
                 tmp[i][j] = min(tmp[i][j], b[i][k] + c[k][j]);
     memcpy(a, tmp, sizeof(tmp));
 }
 
 inline void qpow(int k) {
     memset(ans, 0x3f, sizeof(ans));
-    for (int i = 0; i < idx; i++) ans[i][i] = 0;
+    for (int i = 0; i < n; i++) ans[i][i] = 0;
     while (k) {
         if (k & 1) mul(ans, ans, g);
         mul(g, g, g);
