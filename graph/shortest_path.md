@@ -101,31 +101,6 @@ inline bool bellman_ford(int s) {
 
 时间复杂度为$O(kE)$, $k$为最短路的平均长度。
 
-> 板子题网址: https://www.acwing.com/problem/content/853
-
-```cpp
-inline int spfa(int s, int t) {
-    memset(dis, 0x3f, sizeof(dis));
-    queue<int> q;
-    q.emplace(s);
-    dis[s] = 0;
-    while (!q.empty()) {
-        int cur = q.front();
-        q.pop();
-        vis[cur] = 0;
-        if (dis[cur] == inf) continue;
-        for (int i = h[cur]; i; i = nex[i]) {
-            int to = e[i], c = w[i];
-            if (dis[to] > dis[cur] + c) {
-                dis[to] = dis[cur] + c;
-                if (!vis[to]) q.emplace(to), vis[to] = 1;
-            }
-        }
-    }
-    return dis[t];
-}
-```
-
 > 板子题网址: https://www.luogu.com.cn/problem/P3385
 
 ```cpp
