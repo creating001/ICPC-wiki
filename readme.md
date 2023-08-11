@@ -61,9 +61,7 @@
 2. [拓扑排序](./graph/topo.md)
 3. [最小生成树](./graph/mst.md)
 4. [二分图匹配](./graph/bi-graph.md)
-
-### 贪心
-1. [Huffman树](./greedy/huffman.md)
+5. [树上公共祖先](./graph/lca.md)
 
 ### 字符串
 1. [字典树](./string/trie.md)
@@ -73,18 +71,20 @@
 ### 基础算法
 1. [排序](./basic/sort.md)
 2. [二分](./basic/bsearch.md)
+3. [Huffman树](./basic/huffman.md)
 
 ### 数据结构
 1. [栈](./structure/stack.md)
 2. [队列](./structure/queue.md)
-3. [并查集](./structure/dsu.md)
-4. [二叉堆](./structure/heap.md)
-5. [哈希表](./structure/hash.md)
-6. [线段树](./structure/segment_tree.md)
-7. [平衡树](./structure/balance_tree.md)
-8. [树状数组](./structure/fenwick.md)
-9. [AC自动机](./structure/ac-automaton.md)
-10. [可持久化数据结构](./structure/persistent.md)
+3. [ST表](./structure/st.md)
+4. [并查集](./structure/dsu.md)
+5. [二叉堆](./structure/heap.md)
+6. [哈希表](./structure/hash.md)
+7. [线段树](./structure/segment_tree.md)
+8. [平衡树](./structure/balance_tree.md)
+9. [树状数组](./structure/fenwick.md)
+10. [AC自动机](./structure/ac-automaton.md)
+11. [可持久化数据结构](./structure/persistent.md)
 
 ### 动态规划
 1. [背包问题](./dp/knapsack.md)
@@ -106,13 +106,14 @@
 1. [素数](./math/number-theory/prime.md)
 2. [约数](./math/number-theory/divisor.md)
 3. [随机判素](./math/number-theory/miller-rabin.md)
-4. [欧拉定理](./math/number-theory/euler.md)
-5. [乘法逆元](./math/number-theory/inv.md)
-6. [数论分块](./math/number-theory/block.md)
-7. [中国剩余定理](./math/number-theory/crt.md)
-8. [欧几里得及扩展](./math/number-theory/gcd.md)
+4. [乘法逆元](./math/number-theory/inv.md)
+5. [数论分块](./math/number-theory/block.md)
+6. [中国剩余定理](./math/number-theory/crt.md)
+7. [欧几里得及扩展](./math/number-theory/gcd.md)
+8. [欧拉定理及扩展](./math/number-theory/euler.md)
 
 #### 线性代数
+1. [线性基](./math/linear-algebra/linear-basis.md)
 1. [高斯消元](./math/linear-algebra/gauss.md)
 2. [矩阵运算](./math/linear-algebra/matrix.md)
 
