@@ -69,11 +69,11 @@ inline void get_primes(int n) {
 3. 所以 $a^{ k \times \varphi(n) + x \bmod \varphi(n)} \equiv a^{x \bmod \varphi(n)} \pmod{n}$
 4. 所以 $a^x \equiv a^{x \bmod \varphi(n)} \pmod{n}$
 
-## 欧拉降幂(扩展欧拉定理)
+## 扩展欧拉定理
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5091
 
-欧拉降幂定理: 若 $a$ 和 $n$ 互质，则 $a^x \equiv a^{x \bmod \varphi(n) + \varphi(n)} \pmod{n}$。
+扩展欧拉定理: 若 $a$ 和 $n$ 互质，则 $a^x \equiv a^{x \bmod \varphi(n) + \varphi(n)} \pmod{n}$。
 
 ```cpp
 inline int quick_pow(LL a, int b, int p) {

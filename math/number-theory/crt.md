@@ -1,6 +1,6 @@
 # 中国剩余定理
 
-## 定理代码实现
+## CRT
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1495
 
@@ -25,7 +25,7 @@ inline LL crt() {
 }
 ```
 
-## 扩展中国剩余定理
+## EXCRT
 
 > 板子题网址: https://www.luogu.com.cn/problem/P4777
 

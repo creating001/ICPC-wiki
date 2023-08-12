@@ -1,4 +1,6 @@
-# Miller-Rabin
+# 随机判素
+
+## Miller-Rabin
 
 > 板子题网址: https://www.luogu.com.cn/problem/U161288
 
@@ -37,7 +39,7 @@ inline bool miller_rabin(LL p) {
 }
 ```
 
-# Pollard-Rho
+## Pollard-Rho
 
 > 板子题网址: https://www.luogu.com.cn/problem/P4718
 

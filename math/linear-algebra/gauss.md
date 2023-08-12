@@ -18,14 +18,14 @@ inline int gauss() {
     int r, c;
     for (r = 0, c = 0; c < n; c++) {
         int t = r;
-        for (int i = r; i < n; i++)//步骤1
+        for (int i = r; i < n; i++)
             if (fabs(a[i][c]) > fabs(a[t][c])) t = i;
         if (fabs(a[t][c]) < ESP) continue;
-        for (int i = c; i < n + 1; i++) //步骤2
+        for (int i = c; i < n + 1; i++)
             swap(a[t][i], a[r][i]);
-        for (int i = n; i >= c; i--)//步骤3
+        for (int i = n; i >= c; i--)
             a[r][i] /= a[r][c];
-        for (int i = r + 1; i < n; i++)//步骤4
+        for (int i = r + 1; i < n; i++)
             for (int j = n; j >= c; j--)
                 a[i][j] -= a[i][c] * a[r][j];
         r++;
@@ -35,7 +35,7 @@ inline int gauss() {
             if (fabs(a[i][n]) > ESP) return -1;
         return 1;
     }
-    for (int i = n - 1; i >= 0; i--)//步骤5
+    for (int i = n - 1; i >= 0; i--)
         for (int j = i + 1; j < n; j++) {
             a[i][n] -= a[i][j] * a[j][n];
         }

@@ -16,9 +16,7 @@ $$
 4. 右边界 $r$ 怎么算出来的呢？ 右边界 $r$ 是通过 $k/ \lfloor \frac{k}{i} \rfloor$ 来算的。**其实我们是通过了这么一个 向下取整再乘回除数的方法得到了**。
 
 ```cpp
-inline void solve(){
-    LL n, k;
-    cin >> n >> k;
+inline void solve(LL n, LL k){
     LL ans = n * k;
     for (LL l = 1, r; l <= n; l = r + 1) {
         if (k / l != 0) r = min(k / (k / l), n);

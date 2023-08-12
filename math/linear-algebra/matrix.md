@@ -1,25 +1,31 @@
 # 矩阵运算
 
+## 矩阵乘法
+
+> 板子题网址: https://loj.ac/p/100
+
+```cpp
+struct matrix {
+    LL a[N][N]{};
+    inline LL* operator[](int k) { return a[k]; }
+};
+
+inline matrix operator*(matrix& x, matrix& y) {
+    matrix z;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            for (int k = 0; k < p; k++)
+                z[i][j] = (z[i][j] + x[i][k] * y[k][j]) % P;
+    return z;
+}
+```
+
 ## 矩阵的快速幂
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3390
 
 ```cpp
-struct matrix {
-    LL a[N][N]{};
-    LL* operator[](int x) { return a[x];}
-};
-
-matrix operator*(matrix& a, matrix& b) {
-    matrix c;
-    for (int i = 0; i < n; i++)
-        for (int j = 0; j < n; j++)
-            for (int k = 0; k < n; k++)
-                c[i][j] = (c[i][j] + a[i][k] * b[k][j]) % P;
-    return c;
-}
-
-inline matrix quick_pow(matrix& a, LL k) {
+inline matrix quick_pow(matrix& a, int k) {
     matrix ans;
     for (int i = 0; i < n; i++) ans[i][i] = 1;
     while (k) {
@@ -37,7 +43,7 @@ inline matrix quick_pow(matrix& a, LL k) {
 >
 > 板子题网址: https://www.luogu.com.cn/problem/P1349
 
-这是一个稍微复杂一些的例子。
+这是一个稍微复杂一些的例子: 
 
 $$
 \begin{gathered}
@@ -74,10 +80,10 @@ $$
 
 $$
 \begin{bmatrix}
-7 & 1 & 0 & 0 & 0\\
-6 & 0 & 0 & 0 & 0\\
-5 & 0 & 1 & 0 & 0\\
+7  & 1 & 0 & 0 & 0\\
+6  & 0 & 0 & 0 & 0\\
+5  & 0 & 1 & 0 & 0\\
 12 & 0 & 0 & 3 & 0\\
-5 & 0 & 1 & 0 & 1
+5  & 0 & 1 & 0 & 1\\
 \end{bmatrix}
 $$
