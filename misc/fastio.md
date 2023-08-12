@@ -1,8 +1,6 @@
 # 快读快写
 
 > 板子题网址: https://www.luogu.com.cn/problem/U183572
->
-> 板子题网址: https://loj.ac/p/7
 
 ```cpp
 struct IO {
