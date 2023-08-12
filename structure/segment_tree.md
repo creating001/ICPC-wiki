@@ -2,8 +2,6 @@
 
 ## 线段树基础
 
-> 板子题网址: https://www.luogu.com.cn/problem/P3372
->
 > 板子题网址: https://www.luogu.com.cn/problem/P3373
 
 ```cpp
@@ -113,6 +111,15 @@ inline void modify(int u, int l, int r, int k) {
 ## 线段树分治
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5787
+
+```cpp
+
+```
+
+
+## 可持久化线段树
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3834
 
 ```cpp
 

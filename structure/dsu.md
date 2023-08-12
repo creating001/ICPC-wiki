@@ -1,35 +1,35 @@
 # 并查集
 
+## 普通并查集
+
 > 板子题网址: https://www.luogu.com.cn/problem/P3367
-
-## 数据存储
-
-```cpp
-int p[N], siz[N];
-```
-
-## 初始化
-
-```cpp
-inline void init() {
-    for (int i = 0; i < N; i++) p[i] = i, siz[i] = 1;
-}
-```
-
-## 查找
 
 ```cpp
 inline int find(int x) {
-    return (p[x] == x ? x : p[x] = find(p[x]));
+    return p[x] == x ? p[x] : p[x] = find(p[x]);
 }
 ```
 
-## 合并
+## 带权并查集
+
+> 板子题网址: https://www.luogu.com.cn/problem/P2024
 
 ```cpp
-inline void unite(int x, int y) {
-    int px = find(x), py = find(y);
-    if (find(x) == find(y)) return;
-    siz[py] += siz[px], p[px] = py;
-}
+
+```
+
+## 扩展域并查集
+
+> 板子题网址: https://www.acwing.com/problem/content/241
+
+```cpp
+
+```
+
+## 可持久化并查集
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3402
+
+```cpp
+
 ```

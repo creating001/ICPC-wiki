@@ -2,8 +2,6 @@
 
 ## Treap
 
-> 板子题网址: https://www.luogu.com.cn/problem/P3369
->
 > 板子题网址: https://www.luogu.com.cn/problem/P6136
 
 ```cpp

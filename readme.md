@@ -58,8 +58,8 @@
 
 ### 图论
 1. [最短路](./graph/shortest_path.md)
-2. [最小生成树](./graph/mst.md)
-3. [二分图匹配](./graph/bi-graph.md)
+2. [二分图](./graph/bi-graph.md)
+3. [最小生成树](./graph/mst.md)
 4. [树上公共祖先](./graph/lca.md)
 
 ### 字符串
@@ -74,26 +74,24 @@
 3. [Huffman树](./basic/huffman.md)
 
 ### 数据结构
-1. [栈](./structure/stack.md)
-2. [队列](./structure/queue.md)
-3. [ST表](./structure/st.md)
-4. [并查集](./structure/dsu.md)
-5. [二叉堆](./structure/heap.md)
-6. [哈希表](./structure/hash.md)
-7. [线段树](./structure/segment_tree.md)
-8. [平衡树](./structure/balance_tree.md)
-9. [树状数组](./structure/fenwick.md)
-10. [AC自动机](./structure/ac-automaton.md)
-11. [可持久化数据结构](./structure/persistent.md)
+1. [ST表](./structure/st.md)
+2. [并查集](./structure/dsu.md)
+3. [二叉堆](./structure/heap.md)
+4. [哈希表](./structure/hash.md)
+5. [线段树](./structure/segment_tree.md)
+6. [平衡树](./structure/balance_tree.md)
+7. [栈和队列](./structure/stack.md)
+8. [树状数组](./structure/fenwick.md)
+9. [AC自动机](./structure/ac-automaton.md)
 
 ### 动态规划
-1. [背包问题](./dp/knapsack.md)
-2. [线性DP](./dp/linear-dp.md)
-3. [区间DP](./dp/interval-dp.md)
-4. [树形DP](./dp/tree-dp.md)
-5. [状压DP](./dp/state-dp.md)
-6. [计数DP](./dp/count-dp.md)
-7. [数位DP](./dp/digit-dp.md)
+1. [线性DP](./dp/linear-dp.md)
+2. [区间DP](./dp/interval-dp.md)
+3. [树形DP](./dp/tree-dp.md)
+4. [状压DP](./dp/state-dp.md)
+5. [计数DP](./dp/count-dp.md)
+6. [数位DP](./dp/digit-dp.md)
+7. [背包问题](./dp/knapsack.md)
 8. [记忆化搜索](./dp/memo-dp.md)
 
 ### 数学问题

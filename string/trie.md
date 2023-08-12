@@ -1,38 +1,54 @@
 # 字典树
 
+## Trie树
+
 > 板子题网址: https://www.luogu.com.cn/problem/P8306
 >
 > 板子题网址: https://www.luogu.com.cn/problem/P4551
 
-## 数据存储
 ```cpp
-int son[N][M], idx, cnts[N];
-```
-
-## 字典树操作
-```cpp
-inline int getIndex(char ch) {
-    if (isdigit(ch)) return ch - '0';
-    if (islower(ch)) return ch - 'a' + 10;
-    return ch - 'A' + 36;
-}
-
-inline void insert(char* str) {
+inline void insert(const char* str) {
     for (int i = 0, p = 0; str[i]; i++) {
-        int u = getIndex(str[i]);
-        if (!son[p][u]) son[p][u] = ++idx;
-        p = son[p][u];
+        int u = str[i] - 'a';
+        if (!tr[p][u]) tr[p][u] = ++idx;
+        p = tr[p][u];
         cnts[p]++;
     }
 }
 
-inline int query(char* str) {
+inline int query(const char* str) {
     int p = 0;
     for (int i = 0; str[i]; i++) {
-        int u = getIndex(str[i]);
-        if (!son[p][u]) return 0;
-        p = son[p][u];
+        int u = str[i] - 'a';
+        if (!tr[p][u]) return 0;
+        p = tr[p][u];
     }
     return cnts[p];
+}
+```
+
+## 可持久化Trie树
+
+> 板子题网址: https://www.luogu.com.cn/problem/P4735
+
+```cpp
+inline void insert(int k, int x, int p, int q) {
+    id[q] = k;
+    for (int i = 24; i >= 0; i--) {
+        int u = x >> i & 1;
+        if (tr[p][u ^ 1]) tr[q][u ^ 1] = tr[p][u ^ 1];
+        tr[q][u] = ++idx;
+        id[tr[q][u]] = k;
+        p = tr[p][u], q = tr[q][u];
+    }
+}
+
+inline int query(int p, int l, int x) {
+    for (int i = 24; i >= 0; i--) {
+        int u = x >> i & 1;
+        if (id[tr[p][u ^ 1]] >= l) p = tr[p][u ^ 1];
+        else p = tr[p][u];
+    }
+    return s[id[p]] ^ x;
 }
 ```
