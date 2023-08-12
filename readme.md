@@ -58,8 +58,8 @@
 ### 图论
 1. [最短路](./graph/shortest_path.md)
 2. [二分图](./graph/bi-graph.md)
-3. [最小生成树](./graph/mst.md)
-4. [树上DFS](./graph/tree-dfs.md)
+3. [树上DFS序](./graph/tree-dfs.md)
+4. [最小生成树](./graph/mst.md)
 5. [树上公共祖先](./graph/lca.md)
 
 ### 字符串
