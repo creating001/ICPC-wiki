@@ -105,10 +105,10 @@
 2. [约数](./math/number-theory/divisor.md)
 3. [随机判素](./math/number-theory/miller-rabin.md)
 4. [乘法逆元](./math/number-theory/inv.md)
-5. [数论分块](./math/number-theory/block.md)
-6. [中国剩余定理](./math/number-theory/crt.md)
-7. [欧几里得及扩展](./math/number-theory/gcd.md)
-8. [欧拉定理及扩展](./math/number-theory/euler.md)
+5. [欧几里得](./math/number-theory/gcd.md)
+6. [欧拉定理](./math/number-theory/euler.md)
+7. [数论分块](./math/number-theory/block.md)
+8. [中国剩余定理](./math/number-theory/crt.md)
 
 #### 线性代数
 1. [线性基](./math/linear-algebra/linear-basis.md)
