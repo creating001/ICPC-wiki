@@ -59,7 +59,8 @@
 1. [最短路](./graph/shortest_path.md)
 2. [二分图](./graph/bi-graph.md)
 3. [最小生成树](./graph/mst.md)
-4. [树上公共祖先](./graph/lca.md)
+4. [树上DFS](./graph/tree-dfs.md)
+5. [树上公共祖先](./graph/lca.md)
 
 ### 字符串
 1. [字典树](./string/trie.md)

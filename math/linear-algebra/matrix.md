@@ -7,9 +7,7 @@
 ```cpp
 struct matrix {
     LL a[N][N]{};
-    LL* operator[](int x) {
-        return a[x];
-    }
+    LL* operator[](int x) { return a[x];}
 };
 
 matrix operator*(matrix& a, matrix& b) {
@@ -17,7 +15,7 @@ matrix operator*(matrix& a, matrix& b) {
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             for (int k = 0; k < n; k++)
-                c[i][j] = (c[i][j] + a[i][k] * b[k][j] % P) % P;
+                c[i][j] = (c[i][j] + a[i][k] * b[k][j]) % P;
     return c;
 }
 
