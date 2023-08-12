@@ -25,12 +25,11 @@
 
 #### vjudge
 1. [《算法竞赛》](https://vjudge.net/article/3284)
-2. [《POJ题目分类推荐》](https://vjudge.net/article/6)
-3. [《kuangbin带你飞》](https://vjudge.net/article/752)
-4. [《挑战程序设计竞赛》](https://vjudge.net/article/46)
-5. [《算法竞赛入门到进阶》](https://vjudge.net/article/2033)
-6. [《算法训练营:海量图解+竞赛刷题(入门)》](https://vjudge.net/article/2642)
-7. [《算法训练营:海量图解+竞赛刷题(进阶)》](https://vjudge.net/article/2652)
+2. [《kuangbin带你飞》](https://vjudge.net/article/752)
+3. [《挑战程序设计竞赛》](https://vjudge.net/article/46)
+4. [《算法竞赛入门到进阶》](https://vjudge.net/article/2033)
+5. [《算法训练营:海量图解+竞赛刷题(入门)》](https://vjudge.net/article/2642)
+6. [《算法训练营:海量图解+竞赛刷题(进阶)》](https://vjudge.net/article/2652)
 
 #### nowcoder
 1. [《算法竞赛进阶指南》](https://ac.nowcoder.com/acm/archive/oi-advance)
