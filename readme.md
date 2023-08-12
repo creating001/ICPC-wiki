@@ -120,11 +120,11 @@
 2. [容斥原理](./math/combinatorics/inclusion-exclusion.md)
 
 #### 博弈论
-1. [nim游戏](./math/game-theory/nim.md)
-2. [SG函数](./math/game-theory/sg.md)
+1. [SG函数](./math/game-theory/sg.md)
+2. [nim游戏](./math/game-theory/nim.md)
 
 ### 计算几何
-1. [点到线段距离](./geometry/point-segment-distance.md)
+1. [点到线段](./geometry/point-segment-distance.md)
 
 ### 其他杂项
 1. [快读快写](./misc/fastio.md)
