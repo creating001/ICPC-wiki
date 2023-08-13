@@ -56,6 +56,7 @@
 2. [DFS](./search/dfs.md)
 
 ### 图论
+1. [环](./graph/cycle.md)
 1. [最短路](./graph/shortest_path.md)
 2. [二分图](./graph/bi-graph.md)
 3. [树上DFS序](./graph/tree-dfs.md)
