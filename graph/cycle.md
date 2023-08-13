@@ -28,9 +28,9 @@ inline bool bellman_ford(int s) {
                 if (dis[to] > dis[from] + c)
                     dis[to] = dis[from] + c, flag = true;
             }
-        if (!flag) break;
+        if (!flag) return false;
     }
-    return flag;
+    return true;
 }
 ```
 
@@ -38,19 +38,20 @@ inline bool bellman_ford(int s) {
 
 ```cpp
 inline bool spfa() {
-    memset(dis, 0x3f, sizeof(dis));
+    memset(cnts, 0, sizeof(cnts));
     queue<int> q;
-    q.emplace(1), vis[1] = 1, dis[1] = 0;
+    for (int i = 1; i <= n; i++)
+        q.emplace(i), vis[i] = 1, dis[i] = 0;
     while (!q.empty()) {
         int cur = q.front();
         q.pop();
         vis[cur] = 0;
-        for (int i = h[cur]; ~i; i = nex[i]) {
-            int to = e_to[i], w = e_w[i];
+        for (int i = h[cur]; i; i = nex[i]) {
+            int to = e[i], w = ew[i];
             if (dis[to] > dis[cur] + w) {
                 dis[to] = dis[cur] + w;
-                cnt[to] = cnt[cur] + 1;
-                if (cnt[to] >= n) return true;
+                cnts[to] = cnts[cur] + 1;
+                if (cnts[to] >= n) return true;
                 if (!vis[to]) q.emplace(to), vis[to] = 1;
             }
         }
@@ -58,3 +59,7 @@ inline bool spfa() {
     return false;
 }
 ```
+
+## 01分数规划
+
+> 板子题网址: https://www.luogu.com.cn/problem/P2868
