@@ -4,8 +4,6 @@
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1226
 
-时间复杂度 $O(\log b)$
-
 ```cpp
 inline LL qpow(LL a, int k, int p) {
     LL ans = 1;
@@ -20,17 +18,14 @@ inline LL qpow(LL a, int k, int p) {
 
 ## 龟速乘
 
-时间复杂度 $O(\log b)$
-
 ### 乘法取模
 
 ```cpp
-//b 必须是正数
-inline LL qmul(LL a, LL b, LL mod) {
+inline LL qmul(LL a, LL b, LL p) {
     LL ans = 0;
     while (b) {
-        if (b & 1) ans = (ans + a) % mod;
-        a = (a + a) % mod;
+        if (b & 1) ans = (ans + a) % p;
+        a = (a + a) % p;
         b >>= 1;
     }
     return ans;
@@ -40,7 +35,7 @@ inline LL qmul(LL a, LL b, LL mod) {
 ### `__int128` 的使用
 
 ```cpp
-inline LL qmul(LL a, LL b, LL mod) {
-    return (LL)((__int128)a * b % mod);
+inline LL qmul(LL a, LL b, LL p) {
+    return (LL)((__int128)a * b % p);
 }
 ```
