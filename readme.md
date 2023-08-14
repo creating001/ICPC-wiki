@@ -61,7 +61,8 @@
 3. [DFS序](./graph/tree-dfs.md)
 4. [最短路](./graph/shortest_path.md)
 5. [二分图](./graph/bi-graph.md)
-6. [最小生成树](./graph/mst.md)
+6. [Tarjan](./graph/tarjan.md)
+7. [最小生成树](./graph/mst.md)
 
 ### 字符串
 1. [字典树](./string/trie.md)
