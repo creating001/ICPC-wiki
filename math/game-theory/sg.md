@@ -3,8 +3,6 @@
 > 板子题网址: https://www.acwing.com/problem/content/895
 >
 > 板子题网址: https://www.acwing.com/problem/content/896
->
-> 板子题网址: https://www.luogu.com.cn/problem/AT_agc017_d
 
 ## Mex运算
 

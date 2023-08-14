@@ -1,7 +1,5 @@
 # 容斥原理
 
-> 板子题网址: https://www.acwing.com/problem/content/892
->
 > 板子题网址: https://www.luogu.com.cn/problem/P3197
 >
 > 板子题网址: https://www.luogu.com.cn/problem/P1450

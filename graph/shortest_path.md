@@ -137,10 +137,6 @@ inline bool johnson() {
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5960
 
-```cpp
-
-```
-
 ## 拓扑排序
 
 > 板子题网址: https://www.luogu.com.cn/problem/B3644

@@ -57,11 +57,11 @@
 
 ### 图论
 1. [环](./graph/cycle.md)
-1. [最短路](./graph/shortest_path.md)
-2. [二分图](./graph/bi-graph.md)
-3. [树上DFS序](./graph/tree-dfs.md)
-4. [最小生成树](./graph/mst.md)
-5. [树上公共祖先](./graph/lca.md)
+2. [LCA](./graph/lca.md)
+3. [DFS序](./graph/tree-dfs.md)
+4. [最短路](./graph/shortest_path.md)
+5. [二分图](./graph/bi-graph.md)
+6. [最小生成树](./graph/mst.md)
 
 ### 字符串
 1. [字典树](./string/trie.md)
