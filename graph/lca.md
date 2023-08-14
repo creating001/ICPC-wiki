@@ -49,8 +49,8 @@ inline int lca(int a, int b) {
 inline void bfs(int root) {
     memset(dep, 0x3f, sizeof(dep));
     int hh = 0, tt = -1;
-    dep[0] = 0, dep[root] = 1;
     q[++tt] = root;
+    dep[0] = 0, dep[root] = 1;
     while (hh <= tt) {
         int cur = q[hh++];
         for (int i = h[cur]; i; i = nex[i]) {
@@ -65,7 +65,7 @@ inline void bfs(int root) {
     }
 }
 
-inline int k_lca(int a, int k) {
+inline int k_fa(int a, int k) {
     for (int i = S - 1; i >= 0; i--)
         if (k >> i & 1) a = fa[a][i];
     return a;
