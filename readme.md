@@ -57,12 +57,12 @@
 
 ### 图论
 1. [环](./graph/cycle.md)
-2. [LCA](./graph/lca.md)
-3. [DFS序](./graph/tree-dfs.md)
-4. [最短路](./graph/shortest_path.md)
-5. [二分图](./graph/bi-graph.md)
-6. [Tarjan](./graph/tarjan.md)
-7. [最小生成树](./graph/mst.md)
+2. [DFS序](./graph/tree-dfs.md)
+3. [最短路](./graph/shortest_path.md)
+4. [二分图](./graph/bi-graph.md)
+5. [最小生成树](./graph/mst.md)
+6. [Tarjan算法](./graph/tarjan.md)
+7. [最近公共祖先](./graph/lca.md)
 
 ### 字符串
 1. [字典树](./string/trie.md)

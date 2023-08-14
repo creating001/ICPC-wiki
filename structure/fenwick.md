@@ -5,7 +5,10 @@
 > 板子题网址: https://www.luogu.com.cn/problem/P3374
 
 ```cpp
-for (int i = 1; i <= n; i++) tr[i] = s[i] - s[i - lowbit(i)];
+inline void init() {
+    for (int i = 1; i <= n; i++)
+        tr[i] = s[i] - s[i - lowbit(i)];
+}
 
 inline void add(int p, int c) {
     for (int i = p; i <= n; i += lowbit(i)) tr[i] += c;

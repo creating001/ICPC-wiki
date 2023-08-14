@@ -37,10 +37,6 @@ inline int lca(int a, int b) {
 }
 ```
 
-## 树链剖分
-
-> 板子题网址: https://www.luogu.com.cn/problem/P3384
-
 ## 第K级祖先
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5903
@@ -70,4 +66,12 @@ inline int k_fa(int a, int k) {
         if (k >> i & 1) a = fa[a][i];
     return a;
 }
+```
+
+## 树链剖分
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3384
+
+```cpp
+
 ```
