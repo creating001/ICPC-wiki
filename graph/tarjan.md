@@ -23,7 +23,7 @@ inline void tarjan(int u) {
 }
 ```
 
-## 有向图的强连通分量
+## 强连通分量
 
 > 板子题网址: https://www.luogu.com.cn/problem/B3609
 
@@ -31,11 +31,33 @@ inline void tarjan(int u) {
 
 ```
 
-## 无向图的双连通分量
+## 缩点
+
+板子题网址: https://www.luogu.com.cn/problem/P3387
+
+```cpp
+
+```
+
+## 点双连通分量
 
 > 板子题网址: https://www.luogu.com.cn/problem/P8435
->
+
+```cpp
+
+```
+
+## 边双连通分量
+
 > 板子题网址: https://www.luogu.com.cn/problem/P8436
+
+```cpp
+
+```
+
+## 割点
+
+板子题网址: https://www.luogu.com.cn/problem/P3388
 
 ```cpp
 
