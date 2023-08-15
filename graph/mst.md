@@ -44,5 +44,37 @@ inline int kruskal() {
 > 板子题网址: https://www.luogu.com.cn/problem/P4180
 
 ```cpp
-
+inline int lca(int a, int b, int w) {
+    static int dis[N * 2];
+    int cnt = 0;
+    if (dep[a] < dep[b]) swap(a, b);
+    for (int i = S - 1; i >= 0; i--) {
+        if (dep[fa[a][i]] >= dep[b]) {
+            dis[cnt++] = d1[a][i];
+            dis[cnt++] = d2[a][i];
+            a = fa[a][i];
+        }
+    }
+    for (int i = S - 1; i >= 0; i--) {
+        if (fa[a][i] != fa[b][i]) {
+            dis[cnt++] = d1[a][i];
+            dis[cnt++] = d2[a][i];
+            dis[cnt++] = d1[b][i];
+            dis[cnt++] = d2[b][i];
+            a = fa[a][i], b = fa[b][i];
+        }
+    }
+    if (a != b) {
+        dis[cnt++] = d1[a][0];
+        dis[cnt++] = d1[b][0];
+    }
+    int ans1 = -INF, ans2 = -INF;
+    for (int i = 0; i < cnt; i++) {
+        if (dis[i] > ans1) ans2 = ans1, ans1 = dis[i];
+        if (dis[i] != ans1 && dis[i] > ans2) ans2 = dis[i];
+    }
+    if (w > ans1) return w - ans1;
+    if (w > ans2) return w - ans2;
+    return INF;
+}
 ```
