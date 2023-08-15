@@ -1,6 +1,6 @@
 # Tarjan
 
-## Tarjan-LCA
+## 离线求LCA
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5838
 
@@ -21,4 +21,22 @@ inline void tarjan(int u) {
     }
     vis[u] = 2;
 }
+```
+
+## 有向图的强连通分量
+
+> 板子题网址: https://www.luogu.com.cn/problem/B3609
+
+```cpp
+
+```
+
+## 无向图的双连通分量
+
+> 板子题网址: https://www.luogu.com.cn/problem/P8435
+>
+> 板子题网址: https://www.luogu.com.cn/problem/P8436
+
+```cpp
+
 ```

@@ -1,6 +1,5 @@
 # 生成树
 
-
 ## 最小生成树
 
 > 板子题链接: https://www.luogu.com.cn/problem/P3366
