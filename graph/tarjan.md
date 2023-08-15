@@ -28,7 +28,28 @@ inline void tarjan(int u) {
 > 板子题网址: https://www.luogu.com.cn/problem/B3609
 
 ```cpp
-
+inline void tarjan(int u) {
+    dfn[u] = low[u] = ++tot;
+    stk[++top] = u, ins[u] = 1;
+    for (int i = h[u]; i; i = nex[i]) {
+        int to = e[i];
+        if (dfn[to]) {
+            if (ins[to]) low[u] = min(low[u], dfn[to]);
+            continue;
+        }
+        tarjan(to);
+        low[u] = min(low[u], low[to]);
+    }
+    if (dfn[u] == low[u]) {
+        scc++;
+        int v;
+        do {
+            v = stk[top--];
+            ins[v] = 0;
+            id[v] = scc;
+        } while (v != u);
+    }
+}
 ```
 
 ## 缩点
@@ -36,7 +57,17 @@ inline void tarjan(int u) {
 板子题网址: https://www.luogu.com.cn/problem/P3387
 
 ```cpp
-
+inline void tarjan() {
+    for (int i = 1; i <= n; i++)
+        if (!dfn[i]) tarjan(i);
+    for (int i = 1; i <= n; i++)
+        for (int j = h[i]; j; j = nex[j]) {
+            int to = e[j];
+            if (id[i] == id[to]) continue;
+            g[id[i]].emplace_back(id[to]);
+            ind[id[to]]++;
+        }
+}
 ```
 
 ## 点双连通分量
