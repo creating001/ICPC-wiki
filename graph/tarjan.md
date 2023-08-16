@@ -100,10 +100,11 @@ inline void tarjan(int u) {
         }
         tarjan(to);
         low[u] = min(low[u], low[to]);
-        if (low[to] >= dfn[u]) cnt++;
+        if (low[to] >= dfn[u]) {
+            cnt++;
+            if (u != root || cnt > 1) cut[u] = 1;
+        }
     }
-    if (u != root && cnt) cnt++;
-    isc[u] = cnt >= 2;
 }
 ```
 
@@ -112,5 +113,33 @@ inline void tarjan(int u) {
 > 板子题网址: https://www.luogu.com.cn/problem/P8435
 
 ```cpp
+inline void tarjan(int u) {
+    dfn[u] = low[u] = ++tot;
+    stk[++top] = u;
 
+    if (u == root && h[u] == 0)
+        return g[++dcc].emplace_back(u), void();
+
+    int cnt = 0;
+    for (int i = h[u]; i; i = nex[i]) {
+        int to = e[i];
+        if (dfn[to]) {
+            low[u] = min(low[u], dfn[to]);
+            continue;
+        }
+        tarjan(to);
+        low[u] = min(low[u], low[to]);
+        if (dfn[u] <= low[to]) {
+            cnt++;
+            if (u != root || cnt > 1) cut[u] = 1;
+            dcc++;
+            int v;
+            do {
+                v = stk[top--];
+                g[dcc].emplace_back(v);
+            } while (v != to);
+            g[dcc].emplace_back(u);
+        }
+    }
+}
 ```
