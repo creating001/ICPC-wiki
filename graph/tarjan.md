@@ -23,9 +23,11 @@ inline void tarjan(int u) {
 }
 ```
 
-## 强连通分量
+## 强连通分量和缩点
 
 > 板子题网址: https://www.luogu.com.cn/problem/B3609
+>
+> 板子题网址: https://www.luogu.com.cn/problem/P3387
 
 ```cpp
 inline void tarjan(int u) {
@@ -52,35 +54,39 @@ inline void tarjan(int u) {
 }
 ```
 
-## 缩点
 
-板子题网址: https://www.luogu.com.cn/problem/P3387
+## 边双连通分量
+
+> 板子题网址: https://www.luogu.com.cn/problem/P8436
 
 ```cpp
-inline void tarjan() {
-    for (int i = 1; i <= n; i++)
-        if (!dfn[i]) tarjan(i);
-    for (int i = 1; i <= n; i++)
-        for (int j = h[i]; j; j = nex[j]) {
-            int to = e[j];
-            if (id[i] == id[to]) continue;
-            g[id[i]].emplace_back(id[to]);
-            ind[id[to]]++;
+inline void tarjan(int u, int fa) {
+    dfn[u] = low[u] = ++tot;
+    stk[++top] = u;
+    for (int i = h[u]; ~i; i = nex[i]) {
+        int to = e[i];
+        if (dfn[to]) {
+            if (i != (fa ^ 1)) low[u] = min(low[u], dfn[to]);
+            continue;
         }
+        tarjan(to, i);
+        low[u] = min(low[u], low[to]);
+        if (dfn[u] < low[to]) vis[i] = vis[i ^ 1] = true;
+    }
+    if (dfn[u] == low[u]) {
+        dcc++;
+        int v;
+        do {
+            v = stk[top--];
+            id[v] = dcc;
+        } while (v != u);
+    }
 }
 ```
 
 ## 点双连通分量
 
 > 板子题网址: https://www.luogu.com.cn/problem/P8435
-
-```cpp
-
-```
-
-## 边双连通分量
-
-> 板子题网址: https://www.luogu.com.cn/problem/P8436
 
 ```cpp
 
