@@ -84,14 +84,6 @@ inline void tarjan(int u, int fa) {
 }
 ```
 
-## 点双连通分量
-
-> 板子题网址: https://www.luogu.com.cn/problem/P8435
-
-```cpp
-
-```
-
 ## 割点
 
 板子题网址: https://www.luogu.com.cn/problem/P3388
@@ -113,4 +105,12 @@ inline void tarjan(int u) {
     if (u != root && cnt) cnt++;
     isc[u] = cnt >= 2;
 }
+```
+
+## 点双连通分量
+
+> 板子题网址: https://www.luogu.com.cn/problem/P8435
+
+```cpp
+
 ```
