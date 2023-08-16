@@ -97,5 +97,20 @@ inline void tarjan(int u, int fa) {
 板子题网址: https://www.luogu.com.cn/problem/P3388
 
 ```cpp
-
+inline void tarjan(int u) {
+    dfn[u] = low[u] = ++tot;
+    int cnt = 0;
+    for (int i = h[u]; i; i = nex[i]) {
+        int to = e[i];
+        if (dfn[to]) {
+            low[u] = min(low[u], dfn[to]);
+            continue;
+        }
+        tarjan(to);
+        low[u] = min(low[u], low[to]);
+        if (low[to] >= dfn[u]) cnt++;
+    }
+    if (u != root && cnt) cnt++;
+    isc[u] = cnt >= 2;
+}
 ```
