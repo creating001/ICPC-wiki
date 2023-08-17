@@ -5,13 +5,12 @@
 > 板子题链接: https://www.acwing.com/problem/content/862
 
 ```cpp
-inline bool dfs(int u, int c) {
-    color[u] = c;
+inline bool dfs(int u, int c, int k) {
+    col[u] = c;
     for (int i = h[u]; i; i = nex[i]) {
         int to = e[i];
-        if (!color[to] && !dfs(to, 3 - c))
-            return false;
-        if (color[to] != 3 - c) return false;
+        if (!col[to] && !dfs(to, 3 - c, k)) return false;
+        if (col[to] == c) return false;
     }
     return true;
 }
