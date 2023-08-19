@@ -19,6 +19,17 @@ inline int sum(int p) {
     for (int i = p; i; i -= lowbit(i)) ans += tr[i];
     return ans;
 }
+
+inline int find_kth(int k) {
+    int rank = 0, ans = 0;
+    for (int i = 20; i >= 0; i--) {
+        if (ans + (1 << i) <= n && rank + tr[ans + (1 << i)] < k) {
+            ans += (1 << i);
+            rank += tr[ans];
+        }
+    }
+    return ans + 1;
+}
 ```
 
 ## 二维树状数组
