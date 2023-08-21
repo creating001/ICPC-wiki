@@ -3,8 +3,6 @@
 ## Trie树
 
 > 板子题网址: https://www.luogu.com.cn/problem/P8306
->
-> 板子题网址: https://www.luogu.com.cn/problem/P4551
 
 ```cpp
 inline void insert(const char* str) {

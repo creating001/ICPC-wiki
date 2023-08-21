@@ -66,9 +66,9 @@
 
 ### 字符串
 1. [字典树](./string/trie.md)
-2. [KMP匹配](./string/kmp.md)
-3. [马拉车算法](./string/manacher.md)
-4. [字符串哈希](./string/hash.md)
+2. [自动机](./string/automaton.md)
+3. [字符串匹配](./string/kmp.md)
+4. [马拉车算法](./string/manacher.md)
 
 ### 基础算法
 1. [排序](./basic/sort.md)
@@ -84,7 +84,6 @@
 6. [平衡树](./structure/balance_tree.md)
 7. [栈和队列](./structure/stack.md)
 8. [树状数组](./structure/fenwick.md)
-9. [AC自动机](./structure/ac-automaton.md)
 
 ### 动态规划
 1. [线性DP](./dp/linear-dp.md)
