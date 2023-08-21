@@ -120,13 +120,14 @@
 #### 组合数学
 1. [求组合数](./math/combinatorics/combination.md)
 2. [容斥原理](./math/combinatorics/inclusion-exclusion.md)
+3. [康托展开](./math/combinatorics/cantor.md)
 
 #### 博弈论
 1. [SG函数](./math/game-theory/sg.md)
 2. [nim游戏](./math/game-theory/nim.md)
 
 ### 计算几何
-1. [点到线段](./geometry/point-segment-distance.md)
+1. [凸包](./geometry/convex-hull.md)
 
 ### 其他杂项
 1. [快读快写](./misc/fastio.md)
