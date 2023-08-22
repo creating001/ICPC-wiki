@@ -49,5 +49,10 @@ inline double bsearch(double l, double r) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3382
 
 ```cpp
-
+while (r - l > EPS) {
+    double lm = l + (r - l) / 3;
+    double rm = l + (r - l) / 3 * 2;
+    if (f(lm) > f(rm)) r = rm;
+    else l = lm;
+}
 ```
