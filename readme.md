@@ -56,78 +56,78 @@
 2. [DFS](./search/dfs.md)
 
 ### 图论
-1. [环](./graph/cycle.md)
-2. [DFS序](./graph/tree-dfs.md)
-3. [最短路](./graph/shortest_path.md)
-4. [二分图](./graph/bi-graph.md)
-5. [最小生成树](./graph/mst.md)
-6. [Tarjan算法](./graph/tarjan.md)
-7. [最近公共祖先](./graph/lca.md)
+1. [DFS](./graph/tree-dfs.md)
+2. [MST](./graph/mst.md)
+3. [Cycle](./graph/cycle.md)
+4. [LCA](./graph/lca.md)
+5. [Tarjan](./graph/tarjan.md)
+6. [Bi-Graph](./graph/bi-graph.md)
+7. [Shortest-Path](./graph/shortest_path.md)
 
 ### 字符串
-1. [字典树](./string/trie.md)
-2. [自动机](./string/automaton.md)
-3. [字符串匹配](./string/kmp.md)
-4. [马拉车算法](./string/manacher.md)
+1. [KMP](./string/kmp.md)
+2. [Trie](./string/trie.md)
+3. [Manacher](./string/manacher.md)
+4. [Automation](./string/automaton.md)
 
 ### 基础算法
-1. [排序](./basic/sort.md)
-2. [二分](./basic/bsearch.md)
-3. [Huffman树](./basic/huffman.md)
+1. [Sort](./basic/sort.md)
+2. [Bearch](./basic/bsearch.md)
+3. [Huffman](./basic/huffman.md)
 
 ### 数据结构
-1. [ST表](./structure/st.md)
-2. [并查集](./structure/dsu.md)
-3. [二叉堆](./structure/heap.md)
-4. [哈希表](./structure/hash.md)
-5. [线段树](./structure/segment_tree.md)
-6. [平衡树](./structure/balance_tree.md)
-7. [栈和队列](./structure/stack.md)
-8. [树状数组](./structure/fenwick.md)
+1. [ST](./structure/st.md)
+2. [DSU](./structure/dsu.md)
+3. [BIT](./structure/fenwick.md)
+4. [Heap](./structure/heap.md)
+5. [Hash-Table](./structure/hash.md)
+6. [Stack-Queue](./structure/stack.md)
+7. [Segment-Tree](./structure/segment_tree.md)
+8. [Balance-Tree](./structure/balance_tree.md)
 
 ### 动态规划
-1. [线性DP](./dp/linear-dp.md)
-2. [区间DP](./dp/interval-dp.md)
-3. [树形DP](./dp/tree-dp.md)
-4. [状压DP](./dp/state-dp.md)
-5. [计数DP](./dp/count-dp.md)
-6. [数位DP](./dp/digit-dp.md)
-7. [背包问题](./dp/knapsack.md)
-8. [记忆化搜索](./dp/memo-dp.md)
+1. [Memo-Dp](./dp/memo-dp.md)
+2. [Tree-Dp](./dp/tree-dp.md)
+3. [State-Dp](./dp/state-dp.md)
+4. [Count-Dp](./dp/count-dp.md)
+5. [Digit-Dp](./dp/digit-dp.md)
+6. [Knaspack](./dp/knapsack.md)
+7. [Linear-Dp](./dp/linear-dp.md)
+8. [Interval-Dp](./dp/interval-dp.md)
 
 ### 数学问题
 
 #### 基础数学
-1. [高精度计算](./math/basic/high-precision.md)
-2. [快速幂与龟速乘](./math/basic/quick-pow.md)
+1. [Qpow](./math/basic/quick-pow.md)
+2. [High-Precision](./math/basic/high-precision.md)
 
 #### 数论
-1. [素数](./math/number-theory/prime.md)
-2. [约数](./math/number-theory/divisor.md)
-3. [随机判素](./math/number-theory/miller-rabin.md)
-4. [乘法逆元](./math/number-theory/inv.md)
-5. [欧几里得](./math/number-theory/gcd.md)
-6. [欧拉定理](./math/number-theory/euler.md)
-7. [数论分块](./math/number-theory/block.md)
-8. [中国剩余定理](./math/number-theory/crt.md)
+1. [Inv](./math/number-theory/inv.md)
+2. [GCD](./math/number-theory/gcd.md)
+3. [CRT](./math/number-theory/crt.md)
+4. [Euler](./math/number-theory/euler.md)
+5. [Prime](./math/number-theory/prime.md)
+6. [Chunks](./math/number-theory/block.md)
+7. [Random](./math/number-theory/miller-rabin.md)
+8. [Divisor](./math/number-theory/divisor.md)
 
 #### 线性代数
-1. [线性基](./math/linear-algebra/linear-basis.md)
-1. [高斯消元](./math/linear-algebra/gauss.md)
-2. [矩阵运算](./math/linear-algebra/matrix.md)
+1. [Gauss](./math/linear-algebra/gauss.md)
+2. [Matrix](./math/linear-algebra/matrix.md)
+3. [Linear-Basis](./math/linear-algebra/linear-basis.md)
 
 #### 组合数学
-1. [求组合数](./math/combinatorics/combination.md)
-2. [容斥原理](./math/combinatorics/inclusion-exclusion.md)
-3. [康托展开](./math/combinatorics/cantor.md)
+1. [PIE](./math/combinatorics/inclusion-exclusion.md)
+2. [Cantor](./math/combinatorics/cantor.md)
+3. [Combination](./math/combinatorics/combination.md)
 
 #### 博弈论
-1. [SG函数](./math/game-theory/sg.md)
-2. [nim游戏](./math/game-theory/nim.md)
+1. [SG](./math/game-theory/sg.md)
+2. [Nim](./math/game-theory/nim.md)
 
 ### 计算几何
-1. [凸包](./geometry/convex-hull.md)
+1. [Convex-Hull](./geometry/convex-hull.md)
 
 ### 其他杂项
-1. [快读快写](./misc/fastio.md)
-2. [模板的妙用](./misc/template.md)
+1. [FASTIO](./misc/fastio.md)
+2. [Template](./misc/template.md)
