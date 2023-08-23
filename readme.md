@@ -56,10 +56,10 @@
 2. [DFS](./search/dfs.md)
 
 ### 图论
-1. [DFS](./graph/tree-dfs.md)
+1. [DFS](./graph/dfs.md)
 2. [MST](./graph/mst.md)
-3. [Cycle](./graph/cycle.md)
-4. [LCA](./graph/lca.md)
+3. [LCA](./graph/lca.md)
+4. [Cycle](./graph/cycle.md)
 5. [Tarjan](./graph/tarjan.md)
 6. [Bi-Graph](./graph/bi-graph.md)
 7. [Shortest-Path](./graph/shortest_path.md)
@@ -108,7 +108,7 @@
 4. [Euler](./math/number-theory/euler.md)
 5. [Prime](./math/number-theory/prime.md)
 6. [Chunks](./math/number-theory/block.md)
-7. [Random](./math/number-theory/miller-rabin.md)
+7. [Random](./math/number-theory/random.md)
 8. [Divisor](./math/number-theory/divisor.md)
 
 #### 线性代数
@@ -117,9 +117,9 @@
 3. [Linear-Basis](./math/linear-algebra/linear-basis.md)
 
 #### 组合数学
-1. [PIE](./math/combinatorics/inclusion-exclusion.md)
-2. [Cantor](./math/combinatorics/cantor.md)
-3. [Combination](./math/combinatorics/combination.md)
+1. [Cantor](./math/combinatorics/cantor.md)
+2. [Combination](./math/combinatorics/combination.md)
+3. [Inclusion-Exclusion](./math/combinatorics/inclusion-exclusion.md)
 
 #### 博弈论
 1. [SG](./math/game-theory/sg.md)
