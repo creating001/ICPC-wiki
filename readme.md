@@ -123,7 +123,7 @@
 
 #### 博弈论
 1. [SG](./math/game-theory/sg.md)
-2. [Nim](./math/game-theory/nim.md)
+2. [Gambling](./math/game-theory/gambling.md)
 
 ### 计算几何
 1. [Convex-Hull](./geometry/convex-hull.md)
