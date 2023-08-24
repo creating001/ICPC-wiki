@@ -62,7 +62,7 @@
 4. [Cycle](./graph/cycle.md)
 5. [Tarjan](./graph/tarjan.md)
 6. [Bi-Graph](./graph/bi-graph.md)
-7. [Shortest-Path](./graph/shortest_path.md)
+7. [Shortest-Path](./graph/shortest-path.md)
 
 ### 字符串
 1. [KMP](./string/kmp.md)
@@ -78,12 +78,12 @@
 ### 数据结构
 1. [ST](./structure/st.md)
 2. [DSU](./structure/dsu.md)
-3. [BIT](./structure/fenwick.md)
+3. [BIT](./structure/bit.md)
 4. [Heap](./structure/heap.md)
-5. [Hash-Table](./structure/hash.md)
-6. [Stack-Queue](./structure/stack.md)
-7. [Segment-Tree](./structure/segment_tree.md)
-8. [Balance-Tree](./structure/balance_tree.md)
+5. [Hash-Table](./structure/hash-table.md)
+6. [Stack-Queue](./structure/stack-queue.md)
+7. [Segment-Tree](./structure/segment-tree.md)
+8. [Balance-Tree](./structure/balance-tree.md)
 
 ### 动态规划
 1. [Memo-Dp](./dp/memo-dp.md)
@@ -98,7 +98,7 @@
 ### 数学问题
 
 #### 基础数学
-1. [Qpow](./math/basic/quick-pow.md)
+1. [Qpow](./math/basic/qpow.md)
 2. [High-Precision](./math/basic/high-precision.md)
 
 #### 数论
