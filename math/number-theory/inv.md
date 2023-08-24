@@ -7,8 +7,8 @@
 ## 欧拉定理求逆元
 
 ```cpp
-inline int inv(int a, int p) {
-    return quick_pow(a, phi[p], p);
+inline int inv(int a) {
+    return quick_pow(a, phi[P]);
 }
 ```
 
@@ -27,10 +27,10 @@ inline int inv(int a, int p) {
 $i$ 模 $p$ 意义下的逆元可以表示为 $inv[i] = (p - p / i) * inv[p \pmod{i}]  \pmod{p}$。
 
 ```cpp
-inline void init_inv(int n, int p) {
+inline void init_inv(int n) {
     inv[1] = 1;
     for (int i = 2; i <= n; ++i) {
-        inv[i] = (long long)(p - p / i) * inv[p % i] % p;
+        inv[i] = (P - P / i) * inv[P % i] % P;
     }
 }
 ```
@@ -49,14 +49,14 @@ inline void init_inv(int n, int p) {
 4. 最后得到 `inv[a[i]] = g[i] * f[i - 1]`
 
 ```cpp
-inline void init_inv(int n, int p) {
+inline void init_inv(int n) {
     f[0] = 1;
     for (int i = 1; i <= n; ++i)
-        f[i] = (LL)f[i - 1] * a[i] % p;
-    g[n] = inv(f[n], p);
+        f[i] = f[i - 1] * a[i] % P;
+    g[n] = inv(f[n], P);
     for (int i = n - 1; i >= 1; --i)
-        g[i] = (LL)g[i + 1] * a[i + 1] % p;
+        g[i] = g[i + 1] * a[i + 1] % P;
     for (int i = 1; i <= n; ++i)
-        inv[a[i]] = (LL)g[i] * f[i - 1] % p;
+        inv[a[i]] = g[i] * f[i - 1] % P;
 }
 ```

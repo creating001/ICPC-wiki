@@ -5,13 +5,10 @@
 > 板子题网址: https://www.luogu.com.cn/problem/P1226
 
 ```cpp
-inline LL qpow(LL a, int k, int p) {
-    LL ans = 1;
-    while (k) {
-        if (k & 1) ans = ans * a % p;
-        a = a * a % p;
-        k >>= 1;
-    }
+inline LL qpow(LL a, int k) {
+    LL ans;
+    for (ans = 1; k; k >>= 1, a = a * a % P)
+        if (k & 1) ans = ans * a % P;
     return ans;
 }
 ```
