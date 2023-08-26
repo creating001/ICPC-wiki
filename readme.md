@@ -72,8 +72,10 @@
 
 ### 基础算法
 1. [Sort](./basic/sort.md)
-2. [Bearch](./basic/bsearch.md)
-3. [Huffman](./basic/huffman.md)
+2. [FASTIO](./basic/fastio.md)
+3. [Bearch](./basic/bsearch.md)
+4. [Huffman](./basic/huffman.md)
+5. [Template](./basic/template.md)
 
 ### 数据结构
 1. [ST](./structure/st.md)
@@ -127,7 +129,3 @@
 
 ### 计算几何
 1. [Convex-Hull](./geometry/convex-hull.md)
-
-### 其他杂项
-1. [FASTIO](./misc/fastio.md)
-2. [Template](./misc/template.md)
