@@ -1,7 +1,5 @@
 # 高斯消元
 
-时间复杂度: $O(n^3)$
-
 ## 高斯消元求解方程组
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3389

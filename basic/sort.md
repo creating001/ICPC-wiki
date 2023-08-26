@@ -4,8 +4,6 @@
 
 ## 快速排序
 
-时间复杂度: $O(N \times \log N)$
-
 ```cpp
 void quick_sort(int* a, int l, int r) {
     if (l >= r) return;
@@ -23,8 +21,6 @@ void quick_sort(int* a, int l, int r) {
 ## 快速选择第K大数
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1923
-
-时间复杂度: $O(N)$
 
 ```cpp
 int quick_find(int* a, int l, int r, int k) {

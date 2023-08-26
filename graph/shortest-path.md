@@ -112,14 +112,6 @@ inline void qpow(int k) {
 }
 ```
 
-## 传递闭包
-
-> 板子题网址: https://www.luogu.com.cn/problem/B3611
-
-```cpp
-
-```
-
 ## Johnson算法
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5905

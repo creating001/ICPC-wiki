@@ -1,8 +1,6 @@
 # 容斥原理
 
-> 板子题网址: https://www.luogu.com.cn/problem/P3197
->
-> 板子题网址: https://www.luogu.com.cn/problem/P1450
+> 板子题网址: https://codeforces.com/problemset/problem/451/E
 
 公式: 设 U 中元素有 n 种不同的属性，而第 i 种属性称为 $P_i$，拥有属性 $P_i$ 的元素构成集合 $S_i$，那么
 

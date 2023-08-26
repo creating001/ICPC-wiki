@@ -5,9 +5,18 @@
 > 板子题网址: https://www.luogu.com.cn/problem/P3367
 
 ```cpp
-inline int find(int x) {
-    return p[x] == x ? p[x] : p[x] = find(p[x]);
-}
+struct DSU {
+    vector<int> p;
+    inline DSU(int n) : p(n) {
+        for (int i = 0; i < n; i++) p[i] = i;
+    }
+    inline int find(int x) {
+        return (p[x] == x ? x : p[x] = find(p[x]));
+    }
+    inline void unite(int x, int y) {
+        p[find(x)] = find(y);
+    }
+} dsu(N);
 ```
 
 ## 带权并查集

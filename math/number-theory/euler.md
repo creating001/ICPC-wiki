@@ -12,8 +12,6 @@
 
 ```cpp
 
-时间复杂度: $O(\sqrt{N})$
-
 ```cpp
 inline int get_phi(int x) {
     int ans = x;
@@ -30,8 +28,6 @@ inline int get_phi(int x) {
 ## 线性筛法求欧拉函数
 
 > 板子题网址：https://www.acwing.com/problem/content/876
-
-时间复杂度：$O(N)$
 
 ```cpp
 inline void get_primes(int n) {

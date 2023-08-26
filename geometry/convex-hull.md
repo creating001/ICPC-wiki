@@ -20,9 +20,8 @@ inline double andrew() {
     }
     double ans = 0;
     for (int i = 1; i < top; i++) {
-        ans += dis(stk[i], stk[i + 1]);
+        ans += dist(stk[i], stk[i + 1]);
     }
     return ans;
 }
 ```
-

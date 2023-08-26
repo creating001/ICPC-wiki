@@ -30,9 +30,6 @@ for (int i = 1, j = 0; i <= m; i++) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3370
 
 ```cpp
-typedef unsigned long long ULL;
-const int N = 1e5 + 5, P = 131;
-
 char str[N];
 ULL h[N], p[N];
 

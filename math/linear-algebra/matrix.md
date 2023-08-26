@@ -25,7 +25,7 @@ inline matrix operator*(matrix& x, matrix& y) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3390
 
 ```cpp
-inline matrix quick_pow(matrix& a, int k) {
+inline matrix quick_pow(matrix a, int k) {
     matrix ans;
     for (int i = 0; i < n; i++) ans[i][i] = 1;
     while (k) {
@@ -40,10 +40,8 @@ inline matrix quick_pow(matrix& a, int k) {
 ## 矩阵加速数列
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1939
->
-> 板子题网址: https://www.luogu.com.cn/problem/P1349
 
-这是一个稍微复杂一些的例子: 
+这是一个稍微复杂一些的例子:
 
 $$
 \begin{gathered}

@@ -1,7 +1,5 @@
 # 二分查找
 
-时间复杂度: $O(\log N)$
-
 ## 整数二分
 
 > 板子题网址: https://www.acwing.com/problem/content/791

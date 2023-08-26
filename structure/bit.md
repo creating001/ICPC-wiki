@@ -5,31 +5,26 @@
 > 板子题网址: https://www.luogu.com.cn/problem/P3374
 
 ```cpp
-inline void init() {
-    for (int i = 1; i <= n; i++)
-        tr[i] = s[i] - s[i - lowbit(i)];
-}
-
-inline void add(int p, int c) {
-    for (int i = p; i <= n; i += lowbit(i)) tr[i] += c;
-}
-
-inline int sum(int p) {
-    int ans = 0;
-    for (int i = p; i; i -= lowbit(i)) ans += tr[i];
-    return ans;
-}
-
-inline int find_kth(int k) {
-    int rank = 0, ans = 0;
-    for (int i = 20; i >= 0; i--) {
-        if (ans + (1 << i) <= n && rank + tr[ans + (1 << i)] < k) {
-            ans += (1 << i);
-            rank += tr[ans];
-        }
+struct BIT {
+    vector<int> tr;
+    inline BIT(int n) : tr(n) {}
+    inline void add(int p, int c) {
+        for (int i = p; i < tr.size(); i += i & (-i))
+            tr[i] += c;
     }
-    return ans + 1;
-}
+    inline int sum(int p) {
+        int sum = 0;
+        for (int i = p; i; i -= i & (-i)) sum += tr[i];
+        return sum;
+    }
+    inline int findKth(int k) {
+        int rank = 0, ans = 0;
+        for (int i = 20; i >= 0; i--)
+            if (ans + (1 << i) < tr.size() && rank + tr[ans + (1 << i)] < k)
+                ans += (1 << i), rank += tr[ans];
+        return ans + 1;
+    }
+} bit(N);
 ```
 
 ## 二维树状数组
