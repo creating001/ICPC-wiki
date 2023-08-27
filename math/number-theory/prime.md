@@ -19,14 +19,15 @@ inline void divide(int x) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3383
 
 ```cpp
-inline void get_primes(int n) {
+const int init = [](int n) {
     memset(is_prime, 1, sizeof(is_prime));
     for (int i = 2; i <= n; i++) {
         if (!is_prime[i]) continue;
-        primes[cnt++] = i;
+        prime[cnts++] = i;
         for (int j = i + i; j <= n; j += i) is_prime[j] = false;
     }
-}
+    return 0;
+}(N - 1);
 ```
 
 ## 欧拉筛
@@ -34,16 +35,17 @@ inline void get_primes(int n) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3912
 
 ```cpp
-inline void get_prime(int n) {
+const int init = [](int n) {
     memset(is_prime, 1, sizeof(is_prime));
     for (int i = 2; i <= n; i++) {
-        if (is_prime[i]) primes[cnts++] = i;
-        for (int j = 0; primes[j] <= n / i; j++) {
-            is_prime[primes[j] * i] = false;
-            if (i % primes[j] == 0) break;
+        if (is_prime[i]) prime[cnts++] = i;
+        for (int j = 0; prime[j] <= n / i; j++) {
+            is_prime[prime[j] * i] = false;
+            if (i % prime[j] == 0) break;
         }
     }
-}
+    return 0;
+}(N - 1);
 ```
 
 ## 哥德巴赫猜想
