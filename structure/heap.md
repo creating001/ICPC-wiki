@@ -24,5 +24,5 @@ struct Heap {
     inline void remove() {
         swap(h[1], h.back()), h.pop_back(), down(1);
     }
-} h;
+} heap;
 ```

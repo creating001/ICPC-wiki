@@ -3,6 +3,7 @@
 > 板子题网址: https://www.acwing.com/problem/content/842
 
 ## 链表法
+
 ```cpp
 int h[N], e[N], nex[N], idx;
 
@@ -36,6 +37,7 @@ inline void remove(int x) {
 ```
 
 ## 开放寻址法
+
 ```cpp
 int h[N], null = 0x3f3f3f3f;
 

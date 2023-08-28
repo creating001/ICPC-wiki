@@ -76,16 +76,17 @@
 3. [Bearch](./basic/bsearch.md)
 4. [Huffman](./basic/huffman.md)
 5. [Template](./basic/template.md)
+6. [Hash-Table](./basic/hash-table.md)
 
 ### 数据结构
 1. [ST](./structure/st.md)
 2. [DSU](./structure/dsu.md)
 3. [BIT](./structure/bit.md)
 4. [Heap](./structure/heap.md)
-5. [Hash-Table](./structure/hash-table.md)
-6. [Stack-Queue](./structure/stack-queue.md)
-7. [Segment-Tree](./structure/segment-tree.md)
-8. [Balance-Tree](./structure/balance-tree.md)
+5. [Stack-Queue](./structure/stack-queue.md)
+6. [Segment-Tree](./structure/segment-tree.md)
+7. [Balance-Tree](./structure/balance-tree.md)
+8. [Tree-In-Tree](./structure/tree-in-tree.md)
 
 ### 动态规划
 1. [Memo-Dp](./dp/memo-dp.md)

@@ -1,99 +1,6 @@
-# 平衡树
+# Splay
 
-## Treap
-
-> 板子题网址: https://www.luogu.com.cn/problem/P6136
-
-```cpp
-inline int get_node(int key) {
-    tr[++idx].key = key;
-    tr[idx].val = rand();
-    tr[idx].cnt = tr[idx].siz = 1;
-    return idx;
-}
-
-inline void pushup(int p) {
-    tr[p].siz = tr[tr[p].l].siz + tr[tr[p].r].siz + tr[p].cnt;
-}
-
-inline void zig(int& p) {
-    int q = tr[p].l;
-    tr[p].l = tr[q].r, tr[q].r = p, p = q;
-    pushup(tr[p].r), pushup(p);
-}
-
-inline void zag(int& p) {
-    int q = tr[p].r;
-    tr[p].r = tr[q].l, tr[q].l = p, p = q;
-    pushup(tr[p].l), pushup(p);
-}
-
-inline void build() {
-    get_node(-INF), get_node(INF);
-    root = 1, tr[1].r = 2;
-    pushup(root);
-    if (tr[root].val < tr[2].val) zag(root);
-}
-
-inline void insert(int& p, int key) {
-    if (!p) p = get_node(key);
-    else if (tr[p].key == key) tr[p].cnt++;
-    else if (tr[p].key > key) {
-        insert(tr[p].l, key);
-        if (tr[tr[p].l].val > tr[p].val) zig(p);
-    } else {
-        insert(tr[p].r, key);
-        if (tr[tr[p].r].val > tr[p].val) zag(p);
-    }
-    pushup(p);
-}
-
-inline void remove(int& p, int key) {
-    if (!p) return;
-    if (tr[p].key == key) {
-        if (tr[p].cnt > 1) tr[p].cnt--;
-        else if (tr[p].l || tr[p].r) {
-            if (!tr[p].r || tr[tr[p].l].val > tr[tr[p].r].val) {
-                zig(p);
-                remove(tr[p].r, key);
-            } else {
-                zag(p);
-                remove(tr[p].l, key);
-            }
-        } else p = 0;
-    } else if (tr[p].key > key) remove(tr[p].l, key);
-    else remove(tr[p].r, key);
-    pushup(p);
-}
-
-inline int get_rank(int p, int key) {
-    if (!p) return 1;
-    if (tr[p].key == key) return tr[tr[p].l].siz + 1;
-    if (tr[p].key > key) return get_rank(tr[p].l, key);
-    return tr[tr[p].l].siz + tr[p].cnt + get_rank(tr[p].r, key);
-}
-
-inline int get_key(int p, int rank) {
-    if (!p) return INF;
-    if (tr[tr[p].l].siz >= rank) return get_key(tr[p].l, rank);
-    if (tr[tr[p].l].siz + tr[p].cnt >= rank) return tr[p].key;
-    return get_key(tr[p].r, rank - tr[tr[p].l].siz - tr[p].cnt);
-}
-
-inline int get_pre(int p, int key) {
-    if (!p) return -INF;
-    if (tr[p].key >= key) return get_pre(tr[p].l, key);
-    return max(tr[p].key, get_pre(tr[p].r, key));
-}
-
-inline int get_nex(int p, int key) {
-    if (!p) return INF;
-    if (tr[p].key <= key) return get_nex(tr[p].r, key);
-    return min(tr[p].key, get_nex(tr[p].l, key));
-}
-```
-
-## Splay
+## Splay平衡树
 
 > 板子题网址: https://www.luogu.com.cn/problem/P6136
 
@@ -177,7 +84,7 @@ inline int get_k(int k) {
     int u = root;
     while (true) {
         if (tr[tr[u].s[0]].size >= k) u = tr[u].s[0];
-        else if (tr[tr[u].s[0]].size + tr[u].cnt >= k) return splay(u, 0), u;
+        else if (tr[tr[u].s[0]].size + tr[u].cnt >= k) return u;
         else k -= tr[tr[u].s[0]].size + tr[u].cnt, u = tr[u].s[1];
     }
 }
@@ -195,6 +102,8 @@ inline void remove(int x) {
     tr[r].s[0] = 0;
 }
 ```
+
+## Splay线段树
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3391
 
@@ -262,5 +171,99 @@ inline void print(int u) {
     if (tr[u].s[0]) print(tr[u].s[0]);
     if (tr[u].v >= 1 && tr[u].v <= n) cout << tr[u].v << " ";
     if (tr[u].s[1]) print(tr[u].s[1]);
+}
+```
+
+## Splay终极
+
+> 板子题网址: https://www.luogu.com.cn/problem/P2042
+
+```cpp
+struct Splay {
+    int s[2], p, v;
+    int same, rev, size, sum, ms, ls, rs;
+    inline void init(int _v, int _p) {
+        s[0] = s[1] = 0;
+        v = _v, p = _p;
+        same = rev = 0, size = 1;
+        sum = ms = v, ls = rs = max(v, 0);
+    }
+} tr[N];
+int stk[N], top, root, a[N];
+
+inline void pushup(int u) {
+    auto& c = tr[u], & l = tr[tr[u].s[0]], & r = tr[tr[u].s[1]];
+    c.size = l.size + r.size + 1;
+    c.sum = l.sum + r.sum + c.v;
+    c.ls = max(l.ls, l.sum + c.v + r.ls);
+    c.rs = max(r.rs, r.sum + c.v + l.rs);
+    c.ms = max(l.rs + c.v + r.ls, max(l.ms, r.ms));
+}
+
+inline void pushdown(int u) {
+    auto& c = tr[u], & l = tr[tr[u].s[0]], & r = tr[tr[u].s[1]];
+    if (c.same) {
+        c.same = c.rev = 0;
+        if (c.s[0]) l.same = 1, l.v = c.v, l.sum = l.v * l.size;
+        if (c.s[1]) r.same = 1, r.v = c.v, r.sum = r.v * r.size;
+        if (c.v > 0) {
+            if (c.s[0]) l.ls = l.rs = l.ms = l.sum;
+            if (c.s[1]) r.ls = r.rs = r.ms = r.sum;
+        } else {
+            if (c.s[0]) l.ls = l.rs = 0, l.ms = l.v;
+            if (c.s[1]) r.ls = r.rs = 0, r.ms = r.v;
+        }
+    } else if (c.rev) {
+        c.rev = 0;
+        l.rev ^= 1, swap(l.s[0], l.s[1]), swap(l.ls, l.rs);
+        r.rev ^= 1, swap(r.s[0], r.s[1]), swap(r.ls, r.rs);
+    }
+}
+
+inline void rotate(int u) {
+    int y = tr[u].p, z = tr[y].p;
+    int k = tr[y].s[1] == u;
+    tr[z].s[tr[z].s[1] == y] = u, tr[u].p = z;
+    tr[y].s[k] = tr[u].s[k ^ 1], tr[tr[u].s[k ^ 1]].p = y;
+    tr[u].s[k ^ 1] = y, tr[y].p = u;
+    pushup(y), pushup(u);
+}
+
+inline void splay(int u, int v) {
+    while (tr[u].p != v) {
+        int y = tr[u].p, z = tr[y].p;
+        if (z != v) {
+            if ((tr[z].s[1] == y) != (tr[y].s[1] == u)) rotate(u);
+            else rotate(y);
+        }
+        rotate(u);
+    }
+    if (!v) root = u;
+}
+
+inline int build(int l, int r, int p) {
+    int mid = (l + r) >> 1;
+    int u = stk[top--];
+    tr[u].init(a[mid], p);
+    if (l < mid) tr[u].s[0] = build(l, mid - 1, u);
+    if (r > mid) tr[u].s[1] = build(mid + 1, r, u);
+    pushup(u);
+    return u;
+}
+
+inline int get_k(int k) {
+    int u = root;
+    while (true) {
+        pushdown(u);
+        if (k <= tr[tr[u].s[0]].size) u = tr[u].s[0];
+        else if (k == tr[tr[u].s[0]].size + 1) return u;
+        else k -= tr[tr[u].s[0]].size + 1, u = tr[u].s[1];
+    }
+}
+
+inline void gc(int u) {
+    if (tr[u].s[0]) gc(tr[u].s[0]);
+    if (tr[u].s[1]) gc(tr[u].s[1]);
+    stk[++top] = u;
 }
 ```
