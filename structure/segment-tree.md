@@ -57,6 +57,14 @@ inline LL query(int u, int l, int r) {
 }
 ```
 
+## 主席树
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3834
+
+```cpp
+
+```
+
 ## 线段树合并
 
 > 板子题网址: https://www.luogu.com.cn/problem/P4556
@@ -68,14 +76,6 @@ inline LL query(int u, int l, int r) {
 ## 线段树分治
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5787
-
-```cpp
-
-```
-
-## 可持久化线段树
-
-> 板子题网址: https://www.luogu.com.cn/problem/P3834
 
 ```cpp
 
