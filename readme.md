@@ -83,10 +83,11 @@
 2. [DSU](./structure/dsu.md)
 3. [BIT](./structure/bit.md)
 4. [Heap](./structure/heap.md)
-5. [Stack-Queue](./structure/stack-queue.md)
-6. [Segment-Tree](./structure/segment-tree.md)
-7. [Balance-Tree](./structure/balance-tree.md)
-8. [Tree-In-Tree](./structure/tree-in-tree.md)
+5. [Block](./structure/block.md)
+6. [Stack-Queue](./structure/stack-queue.md)
+7. [Segment-Tree](./structure/segment-tree.md)
+8. [Balance-Tree](./structure/balance-tree.md)
+9. [Tree-In-Tree](./structure/tree-in-tree.md)
 
 ### 动态规划
 1. [Memo-Dp](./dp/memo-dp.md)
