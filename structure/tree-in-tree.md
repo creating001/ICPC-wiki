@@ -217,10 +217,58 @@ inline int query(int u, int l, int r, LL c) {
 }
 ```
 
-## 树状数组套主席树
+## 树状数组套权值线段树
 
 > 板子题网址: https://www.luogu.com.cn/problem/P2617
 
 ```cpp
+struct node {
+    int l, r, v;
+} tr[M];
+int n, root[N], idx, tmp[N][2], n1, n2, tot;
 
+inline void modify(int& u, int l, int r, int c, int v) {
+    if (!u) u = ++idx;
+    tr[u].v += v;
+    if (l == r) return;
+    int mid = (l + r) >> 1;
+    if (c <= mid) modify(tr[u].l, l, mid, c, v);
+    else modify(tr[u].r, mid + 1, r, c, v);
+}
+
+inline void modify(int p, int num, int v) {
+    for (int i = p; i <= n; i += lowbit(i))
+        modify(root[i], 1, tot, num, v);
+}
+
+inline int query(int l, int r, int k) {
+    if (l == r) return l;
+    int sum = 0, mid = (l + r) >> 1;
+    for (int i = 1; i <= n1; i++)
+        sum -= tr[tr[tmp[i][0]].l].v;
+    for (int i = 1; i <= n2; i++)
+        sum += tr[tr[tmp[i][1]].l].v;
+    if (sum >= k) {
+        for (int i = 1; i <= n1; i++)
+            tmp[i][0] = tr[tmp[i][0]].l;
+        for (int i = 1; i <= n2; i++)
+            tmp[i][1] = tr[tmp[i][1]].l;
+        return query(l, mid, k);
+    } else {
+        for (int i = 1; i <= n1; i++)
+            tmp[i][0] = tr[tmp[i][0]].r;
+        for (int i = 1; i <= n2; i++)
+            tmp[i][1] = tr[tmp[i][1]].r;
+        return query(mid + 1, r, k - sum);
+    }
+}
+
+inline int query_pre(int l, int r, int k) {
+    n1 = n2 = 0;
+    for (int i = l - 1; i; i -= lowbit(i))
+        tmp[++n1][0] = root[i];
+    for (int i = r; i; i -= lowbit(i))
+        tmp[++n2][1] = root[i];
+    return query(1, tot, k);
+}
 ```
