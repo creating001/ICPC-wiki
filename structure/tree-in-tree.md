@@ -1,13 +1,5 @@
 # 树套树
 
-## 线段树套线段树
-
-> 板子题网址: https://www.luogu.com.cn/problem/P3332
-
-```cpp
-
-```
-
 ## 线段树套平衡树
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3380
@@ -149,7 +141,83 @@ inline int query_nex(int u, int l, int r, int x) {
 }
 ```
 
-## 整体二分套线段树
+## 权值线段树套线段树
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3332
+
+```cpp
+struct node {
+    int l, r, add; LL sum;
+} tr[M];
+int n, m;
+int L[N << 2], R[N << 2], V[N << 2], idx;
+
+inline void pushup(int u) {
+    tr[u].sum = tr[tr[u].l].sum + tr[tr[u].r].sum;
+}
+
+inline void pushdown(int u, int l, int r) {
+    if (!tr[u].add) return;
+    if (!tr[u].l) tr[u].l = ++idx;
+    if (!tr[u].r) tr[u].r = ++idx;
+    node& c = tr[u], & ls = tr[c.l], & rs = tr[c.r];
+    int mid = (l + r) >> 1;
+    ls.sum += (mid - l + 1) * c.add, ls.add += c.add;
+    rs.sum += (r - (mid + 1) + 1) * c.add, rs.add += c.add;
+    c.add = 0;
+}
+
+inline void modify(int u, int l, int r, int ql, int qr) {
+    tr[u].sum += min(qr, r) - max(l, ql) + 1;
+    if (l >= ql && r <= qr) return tr[u].add++, void();
+    pushdown(u, l, r);
+    int mid = (l + r) >> 1;
+    if (ql <= mid) {
+        if (!tr[u].l) tr[u].l = ++idx;
+        modify(tr[u].l, l, mid, ql, qr);
+    }
+    if (qr >= mid + 1) {
+        if (!tr[u].r) tr[u].r = ++idx;
+        modify(tr[u].r, mid + 1, r, ql, qr);
+    }
+    pushup(u);
+}
+
+inline LL get_sum(int u, int l, int r, int ql, int qr) {
+    if (l >= ql && r <= qr) return tr[u].sum;
+    pushdown(u, l, r);
+    LL sum = 0;
+    int mid = (l + r) >> 1;
+    if (ql <= mid && tr[u].l) sum += get_sum(tr[u].l, l, mid, ql, qr);
+    if (qr >= mid + 1 && tr[u].r) sum += get_sum(tr[u].r, mid + 1, r, ql, qr);
+    return sum;
+}
+
+inline void build(int u, int l, int r) {
+    L[u] = l, R[u] = r, V[u] = ++idx;
+    if (l == r) return;
+    int mid = (L[u] + R[u]) >> 1;
+    build(u << 1, l, mid);
+    build(u << 1 | 1, mid + 1, r);
+}
+
+inline void modify(int u, int l, int r, int c) {
+    modify(V[u], 1, n, l, r);
+    if (L[u] == R[u]) return;
+    int mid = (L[u] + R[u]) >> 1;
+    if (c <= mid) modify(u << 1, l, r, c);
+    else modify(u << 1 | 1, l, r, c);
+}
+
+inline int query(int u, int l, int r, LL c) {
+    if (L[u] == R[u]) return L[u];
+    LL k = get_sum(V[u << 1 | 1], 1, n, l, r);
+    if (k >= c) return query(u << 1 | 1, l, r, c);
+    return query(u << 1, l, r, c - k);
+}
+```
+
+## 树状数组套主席树
 
 > 板子题网址: https://www.luogu.com.cn/problem/P2617
 

@@ -62,7 +62,36 @@ inline LL query(int u, int l, int r) {
 > 板子题网址: https://www.luogu.com.cn/problem/P3834
 
 ```cpp
+struct node {
+    int l, r, v;
+} tr[M];
+int a[N], root[N], idx;
 
+inline int build(int l, int r) {
+    int u = ++idx;
+    if (l == r) return tr[u].v = a[l], u;
+    int mid = (l + r) >> 1;
+    tr[u].l = build(l, mid);
+    tr[u].r = build(mid + 1, r);
+    return u;
+}
+
+inline int modify(int o, int l, int r, int p, int x) {
+    int u = ++idx;
+    tr[u] = tr[o];
+    if (l == r) return tr[u].v = x, u;
+    int mid = (l + r) >> 1;
+    if (p <= mid) tr[u].l = modify(tr[u].l, l, mid, p, x);
+    else tr[u].r = modify(tr[u].r, mid + 1, r, p, x);
+    return u;
+}
+
+inline int query(int o, int l, int r, int p) {
+    if (l == r) return tr[o].v;
+    int mid = (l + r) >> 1;
+    if (p <= mid) return query(tr[o].l, l, mid, p);
+    return query(tr[o].r, mid + 1, r, p);
+}
 ```
 
 ## 线段树合并
