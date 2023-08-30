@@ -225,7 +225,7 @@ inline int query(int u, int l, int r, LL c) {
 struct node {
     int l, r, v;
 } tr[M];
-int n, root[N], idx, tmp[N][2], n1, n2, tot;
+int n, root[N], idx, t[N][2], n1, n2, tot;
 
 inline void modify(int& u, int l, int r, int c, int v) {
     if (!u) u = ++idx;
@@ -245,20 +245,20 @@ inline int query(int l, int r, int k) {
     if (l == r) return l;
     int sum = 0, mid = (l + r) >> 1;
     for (int i = 1; i <= n1; i++)
-        sum -= tr[tr[tmp[i][0]].l].v;
+        sum -= tr[tr[t[i][0]].l].v;
     for (int i = 1; i <= n2; i++)
-        sum += tr[tr[tmp[i][1]].l].v;
+        sum += tr[tr[t[i][1]].l].v;
     if (sum >= k) {
         for (int i = 1; i <= n1; i++)
-            tmp[i][0] = tr[tmp[i][0]].l;
+            t[i][0] = tr[t[i][0]].l;
         for (int i = 1; i <= n2; i++)
-            tmp[i][1] = tr[tmp[i][1]].l;
+            t[i][1] = tr[t[i][1]].l;
         return query(l, mid, k);
     } else {
         for (int i = 1; i <= n1; i++)
-            tmp[i][0] = tr[tmp[i][0]].r;
+            t[i][0] = tr[t[i][0]].r;
         for (int i = 1; i <= n2; i++)
-            tmp[i][1] = tr[tmp[i][1]].r;
+            t[i][1] = tr[t[i][1]].r;
         return query(mid + 1, r, k - sum);
     }
 }
@@ -266,9 +266,9 @@ inline int query(int l, int r, int k) {
 inline int query_pre(int l, int r, int k) {
     n1 = n2 = 0;
     for (int i = l - 1; i; i -= lowbit(i))
-        tmp[++n1][0] = root[i];
+        t[++n1][0] = root[i];
     for (int i = r; i; i -= lowbit(i))
-        tmp[++n2][1] = root[i];
+        t[++n2][1] = root[i];
     return query(1, tot, k);
 }
 ```
