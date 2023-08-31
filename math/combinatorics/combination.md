@@ -53,7 +53,9 @@ inline LL C(int a, int b) {
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3807
 
-定理: $C_n^m \bmod p = C_{n/p}^{m/p} \cdot C_{n\%p}^{m\%p} \bmod p$
+$$
+C_n^m \bmod p = C_{n/p}^{m/p} \cdot C_{n\%p}^{m\%p} \bmod p
+$$
 
 ```cpp
 inline int comb(int a, int b, int p) {
