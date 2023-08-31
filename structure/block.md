@@ -93,7 +93,7 @@ inline void solve() {
 }
 ```
 
-## 待修改莫队
+## 带修改莫队
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1903
 
@@ -159,6 +159,85 @@ inline void solve() {
 ```
 
 ## 回滚莫队
+
+> 板子题网址: https://www.luogu.com.cn/problem/P5906
+
+```cpp
+struct Query {
+    int id, l, r;
+} q[N];
+vector<int> nums;
+int n, m, len, a[N], ans[N], L[N], R[N];
+
+inline int get(int x) {
+    return (x - 1) / len;
+}
+
+inline bool cmp(const Query& x, const Query& y) {
+    int i = get(x.l), j = get(y.l);
+    if (i != j) return i < j;
+    return x.r < y.r;
+}
+
+inline void solve() {
+    cin >> n;
+    len = sqrt(n);
+    for (int i = 1; i <= n; i++) cin >> a[i], nums.emplace_back(a[i]);
+
+    sort(nums.begin(), nums.end());
+    nums.erase(unique(nums.begin(), nums.end()), nums.end());
+    for (int i = 1; i <= n; i++)
+        a[i] = lower_bound(nums.begin(), nums.end(), a[i]) - nums.begin();
+
+    cin >> m;
+    for (int i = 1; i <= m; i++) cin >> q[i].l >> q[i].r, q[i].id = i;
+    sort(q + 1, q + 1 + m, cmp);
+
+    for (int x = 1; x <= m;) {
+        int y = x;
+        while (y <= m && get(q[x].l) == get(q[y].l)) y++;
+        int right = get(q[x].l) * len + len - 1;
+
+        while (x < y && q[x].r <= right) {
+            auto [id, l, r] = q[x];
+            int res = 0;
+            static int pre[N];
+            for (int i = l; i <= r; i++) pre[a[i]] = 0;
+            for (int i = l; i <= r; i++)
+                if (pre[a[i]]) res = max(res, i - pre[a[i]]);
+                else pre[a[i]] = i;
+            ans[id] = res, x++;
+        }
+
+        int res = 0, j = right + 1, k = right;
+        while (x < y) {
+            auto [id, l, r] = q[x];
+            while (k < r) {
+                k++;
+                if (L[a[k]]) res = max(res, k - L[a[k]]);
+                else L[a[k]] = k;
+                R[a[k]] = k;
+            }
+            int backup = res;
+            while (j > l) {
+                j--;
+                if (R[a[j]]) res = max(res, R[a[j]] - j);
+                else R[a[j]] = j;
+            }
+            ans[id] = res;
+            while (j < right + 1) {
+                if (R[a[j]] == j) R[a[j]] = 0;
+                j++;
+            }
+            res = backup, x++;
+        }
+        memset(L, 0, sizeof(L));
+        memset(R, 0, sizeof(R));
+    }
+
+    for (int i = 1; i <= m; i++) cout << ans[i] << '\n';
+}
+```
 
 ## 树上莫队
 
