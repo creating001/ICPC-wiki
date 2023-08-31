@@ -18,3 +18,7 @@ $$
 ## 组合数学中的容斥
 
 > 板子题网址: https://codeforces.com/problemset/problem/451/E
+
+```cpp
+
+```

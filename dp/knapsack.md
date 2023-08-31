@@ -2,40 +2,6 @@
 
 ## 0-1背包问题
 
-有 $N$ 件物品和一个容量为 $V$ 的背包。第 $i$ 件物品的费用是 $c_i$，价值是 $w_i$。求解将哪些物品装入背包可使价值总和最大。
-
-解法一: 二维动态规划
-
-```cpp
-inline int knapsack_01() {
-    for (int i = 1; i <= n; i++)
-        for (int j = 0; j <= m; j++) {
-            dp[i][j] = dp[i - 1][j];
-            if (j >= v[i])
-                dp[i][j] = max(dp[i][j], dp[i - 1][j - v[i]] + w[i]);
-        }
-    int ans = 0;
-    for (int i = 1; i <= m; i++) ans = max(ans, dp[n][i]);
-    return ans;
-}
-```
-
-解法二: 滚动数组优化
-
-```cpp
-inline int knapsack_01() {
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= m; j++)
-            dp[i & 1][j] = dp[i - 1 & 1][j];
-        for (int j = v[i]; j <= m; j++)
-            dp[i & 1][j] = max(dp[i & 1][j], dp[i - 1 & 1][j - v[i]] + w[i]);
-    }
-    return dp[n & 1][m];
-}
-```
-
-解法三: 一维动态规划
-
 ```cpp
 inline int knapsack_01() {
     for (int i = 1; i <= n; i++)
@@ -46,8 +12,6 @@ inline int knapsack_01() {
 ```
 
 ## 完全背包问题
-
-有 $N$ 种物品和一个容量为 $V$ 的背包，每种物品都有无限件可用。第 $i$ 种物品的费用是 $c_i$，价值是 $w_i$。求解将哪些物品装入背包可使价值总和最大。
 
 ```cpp
 inline int complete_knapsack() {
@@ -60,10 +24,6 @@ inline int complete_knapsack() {
 
 ## 多重背包问题
 
-有 $N$ 种物品和一个容量为 $V$ 的背包。第 $i$ 种物品最多有 $s_i$ 件可用，每件费用是 $c_i$，价值是 $w_i$。求解将哪些物品装入背包可使价值总和最大。
-
-解法一: 多次01背包
-
 ```cpp
 inline int multiple_knapsack() {
     for (int i = 1; i <= n; i++)
@@ -74,7 +34,7 @@ inline int multiple_knapsack() {
 }
 ```
 
-解法二: 二进制优化
+二进制优化
 
 ```cpp
 inline int multiple_knapsack() {
@@ -95,7 +55,7 @@ inline int multiple_knapsack() {
 }
 ```
 
-解法三: 单调队列优化
+单调队列优化
 
 ```cpp
 inline int multiple_knapsack() {
@@ -118,8 +78,6 @@ inline int multiple_knapsack() {
 ```
 
 ## 混合背包问题
-
-01背包、完全背包、多重背包的混合
 
 ```cpp
 inline int mix_knapsack() {
@@ -150,8 +108,6 @@ inline int mix_knapsack() {
 
 ## 二维费用背包问题
 
-有 $N$ 件物品和一个容量是 $V$ 的背包，背包能承受的最大重量是 $M$ 。每件物品只能用一次。体积是 $v_i$，重量是 $m_i$ ，价值是 $w_i$ 。输出最大价值。
-
 ```cpp
 inline int two_dimension_knapsack() {
     for (int i = 1; i <= n; i++)
@@ -163,8 +119,6 @@ inline int two_dimension_knapsack() {
 ```
 
 ## 分组背包问题
-
-有 $N$ 组物品和一个容量是 $V$ 的背包。每组物品有若干件，同一组内的物品最多只能选一件。每件物品的体积是 $v_i$，价值是 $w_i$。求解将哪些物品装入背包可使价值总和最大。
 
 ```cpp
 inline int group_knapsack() {
@@ -178,8 +132,6 @@ inline int group_knapsack() {
 ```
 
 ## 有依赖的背包问题
-
-有 $N$ 件物品和一个容量是 $V$ 的背包。第 $i$ 件物品的体积是 $v_i$，价值是 $w_i$，依赖的物品编号是 $p_i$。求解将哪些物品装入背包可使价值总和最大。
 
 ```cpp
 inline void dfs(int u) {
@@ -195,8 +147,6 @@ inline void dfs(int u) {
 ```
 
 ## 背包问题求方案数
-
-有 $N$ 件物品和一个容量是 $V$ 的背包。每件物品只能使用一次。第 $i$ 件物品的体积是 $v_i$ ，价值是 $w_i$ 。求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。输出最优选法的方案数。
 
 ```cpp
 inline int solution_number() {
@@ -216,8 +166,6 @@ inline int solution_number() {
 ```
 
 ## 背包问题求具体方案
-
-有 $N$ 件物品和一个容量是 $V$ 的背包。每件物品只能使用一次。第 $i$ 件物品的体积是 $v_i$ ，价值是 $w_i$ 。求解将哪些物品装入背包，可使这些物品的总体积不超过背包容量，且总价值最大。输出字典序最小的最优选法。
 
 ```cpp
 inline vector<int> solution() {

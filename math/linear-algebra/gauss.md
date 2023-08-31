@@ -41,7 +41,7 @@ inline int gauss() {
 }
 ```
 
-## 高斯消元解异或方程组
+## 高斯消元解异或方程
 
 > 板子题网址: https://www.acwing.com/problem/content/886
 

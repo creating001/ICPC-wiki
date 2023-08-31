@@ -86,7 +86,7 @@ inline void floyd() {
 }
 ```
 
-## 扩展Floyd
+### 扩展Floyd
 
 > 板子题网址: https://www.luogu.com.cn/problem/P2886
 
@@ -136,6 +136,10 @@ inline bool johnson() {
 ## 差分约束系统
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5960
+
+```cpp
+
+```
 
 ## 拓扑排序
 

@@ -21,10 +21,10 @@
 
 ## 基础算法
 1. [Sort](./basic/sort.md)
-2. [FASTIO](./basic/fastio.md)
-3. [Bearch](./basic/bsearch.md)
-4. [Huffman](./basic/huffman.md)
-5. [Template](./basic/template.md)
+2. [Trick](./basic/trick.md)
+3. [FASTIO](./basic/fastio.md)
+4. [Bearch](./basic/bsearch.md)
+5. [Huffman](./basic/huffman.md)
 6. [Hash-Table](./basic/hash-table.md)
 
 ## 数据结构

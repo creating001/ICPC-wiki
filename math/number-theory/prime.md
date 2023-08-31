@@ -51,3 +51,9 @@ const int init = [](int n) {
 ## 哥德巴赫猜想
 
 任一大于2的偶数都可写成两个质数之和。
+
+> 板子题网址: https://www.luogu.com.cn/problem/P1579
+
+```cpp
+
+```

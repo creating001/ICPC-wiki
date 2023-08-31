@@ -1,6 +1,6 @@
 # 环
 
-## 无向图最小环
+## 最小环
 
 > 板子题网址: https://www.luogu.com.cn/problem/P6175
 
@@ -63,3 +63,7 @@ inline bool spfa() {
 ## 01分数规划
 
 > 板子题网址: https://www.luogu.com.cn/problem/P2868
+
+```cpp
+
+```

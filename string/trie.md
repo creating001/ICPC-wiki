@@ -9,8 +9,7 @@ inline void insert(const char* str) {
     for (int i = 0, p = 0; str[i]; i++) {
         int u = str[i] - 'a';
         if (!tr[p][u]) tr[p][u] = ++idx;
-        p = tr[p][u];
-        cnts[p]++;
+        p = tr[p][u], cnts[p]++;
     }
 }
 

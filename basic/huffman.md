@@ -1,6 +1,6 @@
 # Huffman树
 
-## 石子合并(不相邻) - 一般版
+## 果子合并 一般版
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1090
 
@@ -21,7 +21,7 @@ inline int solve(){
 }
 ```
 
-## 石子合并(不相邻) - 强化版
+## 果子合并 强化版
 
 > 板子题网址: https://www.luogu.com.cn/problem/P6033
 

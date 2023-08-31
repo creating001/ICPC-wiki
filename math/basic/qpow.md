@@ -15,8 +15,6 @@ inline LL qpow(LL a, int k) {
 
 ## 龟速乘
 
-### 乘法取模
-
 ```cpp
 inline LL qmul(LL a, LL b, LL p) {
     LL ans = 0;
@@ -28,8 +26,6 @@ inline LL qmul(LL a, LL b, LL p) {
     return ans;
 }
 ```
-
-### `__int128` 的使用
 
 ```cpp
 inline LL qmul(LL a, LL b, LL p) {

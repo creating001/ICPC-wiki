@@ -111,6 +111,6 @@ inline vector<int> comb(int a, int b) {
 
 ```cpp
 inline int catalan(int n) {
-    return 1ll * comb(2 * n, n) * qpow(n + 1, P - 2, P) % P;
+    return 1LL * comb(2 * n, n) * qpow(n + 1, P - 2, P) % P;
 }
 ```

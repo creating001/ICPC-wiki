@@ -28,8 +28,6 @@ inline int number_triangle(int n, int m) {
 
 > 板子题网址: https://www.acwing.com/problem/content/898
 
-给定一个长度为 $n$ 的序列 $a$，求它的最长上升子序列的长度。
-
 ```cpp
 inline int LIS(int* a, int n) {
     for (int i = 0; i < n; i++) dp[i] = 1;
@@ -55,7 +53,7 @@ inline int LIS(int* a, int n) {
 
 ## 最长公共子序列
 
-> 板子题网址: https://www.acwing.com/problem/content/899
+> 板子题网址: https://www.luogu.com.cn/problem/P1439
 
 ```cpp
 inline int LCS(int* a, int* b, int n, int m) {
