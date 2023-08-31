@@ -95,6 +95,69 @@ inline void solve() {
 
 ## 待修改莫队
 
+> 板子题网址: https://www.luogu.com.cn/problem/P1903
+
+```cpp
+struct Query {
+    int id, l, r, t;
+} q[N];
+struct Change {
+    int p, x;
+} c[N];
+int n, m, mq, mc, len, a[N], cnts[M], ans[N];
+
+inline int get(int x) {
+    return x / len;
+}
+
+inline bool cmp(const Query& x, const Query& y) {
+    int i = get(x.l), j = get(y.l);
+    if (i != j) return i < j;
+    i = get(x.r), j = get(y.r);
+    if (i != j) return i < j;
+    return x.t < y.t;
+}
+
+inline void solve() {
+    cin >> n >> m;
+    for (int i = 1; i <= n; i++) cin >> a[i];
+    for (int i = 1; i <= m; i++) {
+        char o;
+        int l, r;
+        cin >> o >> l >> r;
+        if (o == 'Q') q[++mq] = {mq, l, r, mc};
+        else c[++mc] = {l, r};
+    }
+    len = cbrt(1.0 * n * max(mc, 1)) + 1;
+    sort(q + 1, q + 1 + mq, cmp);
+    for (int i = 1, j = 1, k = 0, tt = 0, num = 0; i <= mq; i++) {
+        auto [id, l, r, t] = q[i];
+        while (j < l) num -= (--cnts[a[j++]]) == 0;
+        while (j > l) num += (cnts[a[--j]]++) == 0;
+        while (k < r) num += (cnts[a[++k]]++) == 0;
+        while (k > r) num -= (--cnts[a[k--]]) == 0;
+        while (tt < t) {
+            tt++;
+            if (c[tt].p >= l && c[tt].p <= r) {
+                num -= (--cnts[a[c[tt].p]]) == 0;
+                num += (cnts[c[tt].x]++) == 0;
+            }
+            swap(a[c[tt].p], c[tt].x);
+        }
+        while (tt > t) {
+            if (c[tt].p >= l && c[tt].p <= r) {
+                num -= (--cnts[a[c[tt].p]]) == 0;
+                num += (cnts[c[tt].x]++) == 0;
+            }
+            swap(a[c[tt].p], c[tt].x);
+            tt--;
+        }
+        ans[id] = num;
+    }
+    for (int i = 1; i <= mq; i++) cout << ans[i] << '\n';
+}
+```
+
 ## 回滚莫队
 
 ## 树上莫队
