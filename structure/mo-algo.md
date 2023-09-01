@@ -316,5 +316,3 @@ inline void solve() {
     for (int i = 1; i <= m; i++) cout << ans[i] << '\n';
 }
 ```
-
-## 二次离线莫队
