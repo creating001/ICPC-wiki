@@ -32,5 +32,12 @@ struct Heap {
 > 板子题网址: https://www.luogu.com.cn/problem/P3377
 
 ```cpp
-
+inline int merge(int x, int y) {
+    if (!x || !y) return x + y;
+    if (val[x] > val[y]) swap(x, y);
+    R[x] = merge(R[x], y);
+    if (dis[R[x]] > dis[L[x]]) swap(L[x], R[x]);
+    dis[x] = dis[L[x]] + 1;
+    return x;
+}
 ```
