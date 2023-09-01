@@ -32,7 +32,7 @@
 2. [DSU](./structure/dsu.md)
 3. [BIT](./structure/bit.md)
 4. [Heap](./structure/heap.md)
-5. [Block](./structure/block.md)
+5. [Mo-Algo](./structure/mo-algo.md)
 6. [Stack-Queue](./structure/stack-queue.md)
 7. [Segment-Tree](./structure/segment-tree.md)
 8. [Balance-Tree](./structure/balance-tree.md)

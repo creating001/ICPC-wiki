@@ -1,43 +1,4 @@
-# 分块及莫队
-
-## 基础分块
-
-> 板子题网址: https://www.luogu.com.cn/problem/P3372
-
-```cpp
-struct Block {
-    LL add, sum;
-} b[M];
-int a[N], s[N], len;
-
-inline void modify(int l, int r, int c) {
-    if (s[l] == s[r]) {
-        for (int i = l; i <= r; i++)
-            a[i] += c, b[s[i]].sum += c;
-    } else {
-        int i = l, j = r;
-        while (s[i] == s[l]) a[i] += c, b[s[i]].sum += c, i++;
-        while (s[j] == s[r]) a[j] += c, b[s[j]].sum += c, j--;
-        for (int k = s[i]; k <= s[j]; k++)
-            b[k].sum += len * c, b[k].add += c;
-    }
-}
-
-inline LL query(int l, int r) {
-    if (s[l] == s[r]) {
-        LL ans = 0;
-        for (int i = l; i <= r; i++) ans += a[i] + b[s[i]].add;
-        return ans;
-    } else {
-        LL ans = 0;
-        int i = l, j = r;
-        while (s[i] == s[l]) ans += a[i] + b[s[i]].add, i++;
-        while (s[j] == s[r]) ans += a[j] + b[s[j]].add, j--;
-        for (int k = s[i]; k <= s[j]; k++) ans += b[k].sum;
-        return ans;
-    }
-}
-```
+# 莫队
 
 ## 基础莫队
 
@@ -231,8 +192,7 @@ inline void solve() {
             }
             res = backup, x++;
         }
-        memset(L, 0, sizeof(L));
-        memset(R, 0, sizeof(R));
+        memset(L, 0, sizeof(L)), memset(R, 0, sizeof(R));
     }
 
     for (int i = 1; i <= m; i++) cout << ans[i] << '\n';
@@ -240,5 +200,121 @@ inline void solve() {
 ```
 
 ## 树上莫队
+
+> 板子题网址: https://www.luogu.com.cn/problem/SP10707
+
+```cpp
+struct Query {
+    int id, l, r, p;
+} q[N];
+vector<int> nums;
+int h[N], e[N], nex[N], idx = 1;
+int n, m, len, a[N], cnts[N], vis[N], ans[N];
+int L[N], R[N], stk[N], top, dep[N], fa[N][S];
+
+inline void add_edge(int x, int y) {
+    e[idx] = y, nex[idx] = h[x], h[x] = idx++;
+}
+
+inline void dfs(int u, int p) {
+    stk[++top] = u, L[u] = top;
+    for (int i = h[u]; i; i = nex[i]) {
+        int to = e[i];
+        if (to == p) continue;
+        dfs(to, u);
+    }
+    stk[++top] = u, R[u] = top;
+}
+
+inline void bfs(int u) {
+    memset(dep, 0x3f, sizeof(dep));
+    dep[0] = 0, dep[u] = 1;
+    queue<int> que;
+    que.emplace(u);
+    while (!que.empty()) {
+        int cur = que.front();
+        que.pop();
+        for (int i = h[cur]; i; i = nex[i]) {
+            int to = e[i];
+            if (dep[to] > dep[cur] + 1) {
+                dep[to] = dep[cur] + 1;
+                fa[to][0] = cur;
+                for (int j = 1; j < S; j++)
+                    fa[to][j] = fa[fa[to][j - 1]][j - 1];
+                que.emplace(to);
+            }
+        }
+    }
+}
+
+inline int lca(int x, int y) {
+    if (dep[x] < dep[y]) swap(x, y);
+    for (int i = S - 1; i >= 0; i--)
+        if (dep[fa[x][i]] >= dep[y]) x = fa[x][i];
+    if (x == y) return x;
+    for (int i = S - 1; i >= 0; i--)
+        if (fa[x][i] != fa[y][i]) x = fa[x][i], y = fa[y][i];
+    return fa[x][0];
+}
+
+inline int get(int x) {
+    return (x - 1) / len;
+}
+
+inline bool cmp(const Query& x, const Query& y) {
+    int i = get(x.l), j = get(y.l);
+    return i != j ? i < j : x.r < y.r;
+}
+
+inline void add(int x, int& res) {
+    vis[x] ^= 1;
+    if (!vis[x]) res -= (--cnts[a[x]]) == 0;
+    else res += (cnts[a[x]]++) == 0;
+}
+
+inline void solve() {
+    cin >> n >> m;
+    for (int i = 1; i <= n; i++) cin >> a[i], nums.emplace_back(a[i]);
+
+    sort(nums.begin(), nums.end());
+    nums.erase(unique(nums.begin(), nums.end()), nums.end());
+    for (int i = 1; i <= n; i++)
+        a[i] = lower_bound(nums.begin(), nums.end(), a[i]) - nums.begin();
+
+    for (int i = 1; i <= n - 1; i++) {
+        int x, y;
+        cin >> x >> y;
+        add_edge(x, y), add_edge(y, x);
+    }
+
+    dfs(1, 1);
+    bfs(1);
+
+    for (int i = 1; i <= m; i++) {
+        int x, y;
+        cin >> x >> y;
+        if (L[x] > L[y]) swap(x, y);
+        int p = lca(x, y);
+        if (p == x) q[i] = {i, L[x], L[y], 0};
+        else q[i] = {i, R[x], L[y], p};
+    }
+
+    len = sqrt(top);
+    sort(q + 1, q + 1 + m, cmp);
+
+    for (int i = 1, j = 1, k = 0, res = 0; i <= m; i++) {
+        auto [id, l, r, p] = q[i];
+        while (j < l) add(stk[j++], res);
+        while (j > l) add(stk[--j], res);
+        while (k < r) add(stk[++k], res);
+        while (k > r) add(stk[k--], res);
+        if (p) add(p, res);
+        ans[id] = res;
+        if (p) add(p, res);
+    }
+
+    for (int i = 1; i <= m; i++) cout << ans[i] << '\n';
+}
+```
 
 ## 二次离线莫队
