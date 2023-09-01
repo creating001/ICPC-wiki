@@ -1,6 +1,6 @@
-# 二叉堆
+# 堆
 
-## 普通二叉堆
+## 二叉堆
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3378
 
@@ -25,4 +25,12 @@ struct Heap {
         swap(h[1], h.back()), h.pop_back(), down(1);
     }
 } heap;
+```
+
+## 可并堆(左偏树)
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3377
+
+```cpp
+
 ```

@@ -8,10 +8,11 @@
 1. [DFS](./graph/dfs.md)
 2. [MST](./graph/mst.md)
 3. [LCA](./graph/lca.md)
-4. [Cycle](./graph/cycle.md)
-5. [Tarjan](./graph/tarjan.md)
-6. [Bi-Graph](./graph/bi-graph.md)
-7. [Shortest-Path](./graph/shortest-path.md)
+4. [LCT](./graph/lct.md)
+5. [Cycle](./graph/cycle.md)
+6. [Tarjan](./graph/tarjan.md)
+7. [Bi-Graph](./graph/bi-graph.md)
+8. [Shortest-Path](./graph/shortest-path.md)
 
 ## 字符串
 1. [KMP](./string/kmp.md)
