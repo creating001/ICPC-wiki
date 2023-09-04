@@ -61,7 +61,7 @@
 3. [CRT](./math/number-theory/crt.md)
 4. [Euler](./math/number-theory/euler.md)
 5. [Prime](./math/number-theory/prime.md)
-6. [Chunks](./math/number-theory/block.md)
+6. [Mobius](./math/number-theory/mobius.md)
 7. [Random](./math/number-theory/random.md)
 8. [Divisor](./math/number-theory/divisor.md)
 

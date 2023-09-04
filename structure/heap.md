@@ -41,3 +41,28 @@ inline int merge(int x, int y) {
     return x;
 }
 ```
+
+## 对顶堆
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3871
+
+```cpp
+struct THeap {
+    priority_queue<int> q1;
+    priority_queue<int, vector<int>, greater<>> q2;
+    inline void add(int x) {
+        if (q1.empty() || x < q1.top()) {
+            q1.emplace(x);
+            if (q1.size() > q2.size() + 1)
+                q2.emplace(q1.top()), q1.pop();
+        } else {
+            q2.emplace(x);
+            if (q2.size() > q1.size())
+                q1.emplace(q2.top()), q2.pop();
+        }
+    }
+    inline int get() const {
+        return q1.top();
+    }
+} h;
+```

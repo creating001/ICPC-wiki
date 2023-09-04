@@ -9,12 +9,12 @@ struct BIT {
     vector<int> tr;
     inline BIT(int n) : tr(n) {}
     inline void add(int p, int c) {
-        for (int i = p; i < tr.size(); i += i & (-i))
+        for (int i = p; i < tr.size(); i += i & -i)
             tr[i] += c;
     }
     inline int sum(int p) {
         int sum = 0;
-        for (int i = p; i; i -= i & (-i)) sum += tr[i];
+        for (int i = p; i; i -= i & -i) sum += tr[i];
         return sum;
     }
     inline int findKth(int k) {
