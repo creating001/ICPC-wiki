@@ -32,11 +32,10 @@ inline int get_phi(int x) {
 ```cpp
 inline void get_primes(int n) {
     phi[1] = 1;
-    memset(is_prime, 1, sizeof(is_prime));
     for (int i = 2; i <= n; i++) {
-        if (is_prime[i]) primes[cnts++] = i, phi[i] = i - 1;
+        if (!vis[i]) primes[cnts++] = i, phi[i] = i - 1;
         for (int j = 0; primes[j] <= n / i; j++) {
-            is_prime[primes[j] * i] = false;
+            vis[primes[j] * i] = true;
             if (i % primes[j] == 0) {
                 phi[primes[j] * i] = phi[i] * primes[j];
                 break;
@@ -52,18 +51,6 @@ inline void get_primes(int n) {
 定理: 若 $a$ 和 $n$ 互质，则 $a^{\varphi(n)} \equiv 1 \pmod{n}$。
 
 推论: 若 $a$ 和 $n$ 互质，则 $a^x \equiv a^{x \bmod \varphi(n)} \pmod{n}$。
-
-证明过程:
-1. 假设 $[1, n]$ 中与 $n$ 互质的数为 $p_1, p_2, \cdots, p_{\varphi(n)}$
-2. 因为 $a$ 与 $n$ 互质, 所以 $a \times p_1, a \times p_2, \cdots, a \times p_{\varphi(n)}$ 与 $p_1, p_2, \cdots, p_{\varphi(n)}$ 在模 $n$ 意义下相等
-3. 因为 $p_1, p_2, \cdots, p_{\varphi(n)}$ 两两互质，所以 $a^{\varphi(n)} \times p_1 \times p_2 \times \cdots \times p_{\varphi(n)} \equiv p_1 \times p_2 \times \cdots \times p_{\varphi(n)} \pmod{n}$
-4. 所以 $a^{\varphi(n)} \equiv 1 \pmod{n}$
-
-推论证明:
-1. 易知 $a^x$ 可以改写为 $a^{ k \times \varphi(n) + x \bmod \varphi(n)}$
-2. 因为 $a^{\varphi(n)} \equiv 1 \pmod{n}$
-3. 所以 $a^{ k \times \varphi(n) + x \bmod \varphi(n)} \equiv a^{x \bmod \varphi(n)} \pmod{n}$
-4. 所以 $a^x \equiv a^{x \bmod \varphi(n)} \pmod{n}$
 
 ## 扩展欧拉定理
 
@@ -89,7 +76,3 @@ inline int quick_pow(LL a, int b, int p) {
 公式: V-E+F = 2
 
 板子题网址: https://www.luogu.com.cn/problem/U323480
-
-```cpp
-
-```

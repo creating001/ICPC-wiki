@@ -20,11 +20,10 @@ inline void divide(int x) {
 
 ```cpp
 const int init = [](int n) {
-    memset(is_prime, 1, sizeof(is_prime));
     for (int i = 2; i <= n; i++) {
-        if (!is_prime[i]) continue;
+        if (vis[i]) continue;
         prime[cnts++] = i;
-        for (int j = i + i; j <= n; j += i) is_prime[j] = false;
+        for (int j = i + i; j <= n; j += i) vis[j] = true;
     }
     return 0;
 }(N - 1);
@@ -36,11 +35,10 @@ const int init = [](int n) {
 
 ```cpp
 const int init = [](int n) {
-    memset(is_prime, 1, sizeof(is_prime));
     for (int i = 2; i <= n; i++) {
-        if (is_prime[i]) prime[cnts++] = i;
+        if (!vis[i]) prime[cnts++] = i;
         for (int j = 0; prime[j] <= n / i; j++) {
-            is_prime[prime[j] * i] = false;
+            vis[prime[j] * i] = true;
             if (i % prime[j] == 0) break;
         }
     }

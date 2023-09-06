@@ -51,19 +51,19 @@
 
 ## 数学问题
 
-### 基础数学
-1. [Qpow](./math/basic/qpow.md)
-2. [High-Precision](./math/basic/high-precision.md)
-
 ### 数论
-1. [Inv](./math/number-theory/inv.md)
-2. [GCD](./math/number-theory/gcd.md)
-3. [CRT](./math/number-theory/crt.md)
-4. [Euler](./math/number-theory/euler.md)
-5. [Prime](./math/number-theory/prime.md)
-6. [Mobius](./math/number-theory/mobius.md)
-7. [Random](./math/number-theory/random.md)
-8. [Divisor](./math/number-theory/divisor.md)
+1.  [Inv](./math/number-theory/inv.md)
+2.  [GCD](./math/number-theory/gcd.md)
+3.  [CRT](./math/number-theory/crt.md)
+4.  [FFT](./math/number-theory/fft.md)
+5.  [Qpow](./math/number-theory/qpow.md)
+6.  [BSGS](./math/number-theory/bsgs.md)
+7.  [Euler](./math/number-theory/euler.md)
+8.  [Prime](./math/number-theory/prime.md)
+9.  [Mobius](./math/number-theory/mobius.md)
+10. [Random](./math/number-theory/random.md)
+11. [Divisor](./math/number-theory/divisor.md)
+12. [High-Precision](./math/basic/high-precision.md)
 
 ### 线性代数
 1. [Gauss](./math/linear-algebra/gauss.md)
