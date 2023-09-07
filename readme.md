@@ -62,6 +62,7 @@
 9.  [Mobius](./math/number-theory/mobius.md)
 10. [Random](./math/number-theory/random.md)
 11. [Divisor](./math/number-theory/divisor.md)
+12. [Permutation-Group](./math/number-theory/permutation-group.md)
 
 ### 博弈论
 1. [SG](./math/game-theory/sg.md)
@@ -78,8 +79,8 @@
 3. [Inclusion-Exclusion](./math/combinatorics/inclusion-exclusion.md)
 
 ### 多项式与生成函数
-1. [FFT](./math/number-theory/fft.md)
-2. [High-Precision](./math/basic/high-precision.md)
+1. [FFT](./math/poly/fft.md)
+2. [High-Precision](./math/poly/high-precision.md)
 
 ## 计算几何
 1. [Convex-Hull](./geometry/convex-hull.md)
