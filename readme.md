@@ -76,7 +76,8 @@
 ### 组合数学
 1. [Cantor](./math/combinatorics/cantor.md)
 2. [Combination](./math/combinatorics/combination.md)
-3. [Inclusion-Exclusion](./math/combinatorics/inclusion-exclusion.md)
+3. [Stirling-Number](./math/combinatorics/stirling-number.md)
+4. [Inclusion-Exclusion](./math/combinatorics/inclusion-exclusion.md)
 
 ### 多项式与生成函数
 1. [FFT](./math/poly/fft.md)
