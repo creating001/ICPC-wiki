@@ -3,6 +3,7 @@
 ## 搜索
 1. [BFS](./search/bfs.md)
 2. [DFS](./search/dfs.md)
+3. [Rand-Technique](./search/rand-technique.md)
 
 ## 图论
 1. [DFS](./graph/dfs.md)
