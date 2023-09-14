@@ -64,5 +64,5 @@ struct THeap {
     inline int get() const {
         return q1.top();
     }
-} h;
+} heap;
 ```

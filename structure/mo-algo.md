@@ -110,8 +110,7 @@ inline void solve() {
                 num -= (--cnts[a[c[tt].p]]) == 0;
                 num += (cnts[c[tt].x]++) == 0;
             }
-            swap(a[c[tt].p], c[tt].x);
-            tt--;
+            swap(a[c[tt].p], c[tt].x), tt--;
         }
         ans[id] = num;
     }

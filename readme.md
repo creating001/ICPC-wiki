@@ -22,23 +22,23 @@
 4. [Automation](./string/automaton.md)
 
 ## 基础算法
-1. [Sort](./basic/sort.md)
-2. [Trick](./basic/trick.md)
-3. [FASTIO](./basic/fastio.md)
-4. [Bearch](./basic/bsearch.md)
-5. [Huffman](./basic/huffman.md)
-6. [Hash-Table](./basic/hash-table.md)
+1. [DSU](./structure/dsu.md)
+2. [Sort](./basic/sort.md)
+3. [Trick](./basic/trick.md)
+4. [FASTIO](./basic/fastio.md)
+5. [Bearch](./basic/bsearch.md)
+6. [Huffman](./basic/huffman.md)
+7. [Hash-Table](./basic/hash-table.md)
 
 ## 数据结构
 1. [ST](./structure/st.md)
-2. [DSU](./structure/dsu.md)
-3. [BIT](./structure/bit.md)
-4. [Heap](./structure/heap.md)
-5. [Mo-Algo](./structure/mo-algo.md)
-6. [Stack-Queue](./structure/stack-queue.md)
-7. [Segment-Tree](./structure/segment-tree.md)
-8. [Balance-Tree](./structure/balance-tree.md)
-9. [Tree-In-Tree](./structure/tree-in-tree.md)
+2. [BIT](./structure/bit.md)
+3. [Heap](./structure/heap.md)
+4. [Mo-Algo](./structure/mo-algo.md)
+5. [Stack-Queue](./structure/stack-queue.md)
+6. [Segment-Tree](./structure/segment-tree.md)
+7. [Balance-Tree](./structure/balance-tree.md)
+8. [Tree-In-Tree](./structure/tree-in-tree.md)
 
 ## 动态规划
 1. [Memo-Dp](./dp/memo-dp.md)
