@@ -69,16 +69,16 @@ inline int LCS(int* a, int* b, int n, int m) {
 
 ## 编辑距离
 
+> 板子题网址: https://www.luogu.com.cn/problem/P2758
+
 ```cpp
 inline int edit_distance(char* a, char* b) {
     int n = strlen(a + 1), m = strlen(b + 1);
-    for (int i = 0; i <= n; i++) dp[i][0] = i;
-    for (int i = 0; i <= m; i++) dp[0][i] = i;
+    for (int i = 0; i <= max(n, m); i++) dp[i][0] = dp[0][i] = i;
     for (int i = 1; i <= n; i++)
-        for (int j = 1; j <= m; j++) {
-            dp[i][j] = min(dp[i - 1][j] + 1, dp[i][j - 1] + 1);
-            dp[i][j] = min(dp[i][j], dp[i - 1][j - 1] + a[i] != a[j])
-        }
+        for (int j = 1; j <= m; j++)
+            dp[i][j] = min(dp[i - 1][j - 1] + (a[i] != b[j]),
+                        min(dp[i - 1][j], dp[i][j - 1]) + 1);
     return dp[n][m];
 }
 ```

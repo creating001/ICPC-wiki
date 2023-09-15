@@ -1,7 +1,5 @@
 # 计数DP
 
-## 整数划分
-
 > 板子题网址: https://www.acwing.com/problem/content/902
 
 ```cpp

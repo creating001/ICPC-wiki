@@ -1,10 +1,10 @@
 # 最短路算法
 
-## Dijkstra算法
+## Dijkstra
 
 > 板子题网址: https://www.luogu.com.cn/problem/P4779
 
-### 朴素Dijkstra算法
+### 朴素Dijkstra
 
 ```cpp
 inline int dijkstra(int s, int t) {
@@ -23,7 +23,7 @@ inline int dijkstra(int s, int t) {
 }
 ```
 
-### 堆优化Dijkstra算法
+### 堆优化Dijkstra
 
 ```cpp
 inline int dijkstra(int s, int t) {
@@ -48,7 +48,7 @@ inline int dijkstra(int s, int t) {
 }
 ```
 
-## Bellman-Ford算法
+## Bellman-Ford
 
 > 板子题网址: https://www.acwing.com/problem/content/855
 
@@ -69,7 +69,7 @@ inline int bellman_ford(int s, int t) {
 }
 ```
 
-## Floyd算法
+## Floyd
 
 ### 朴素Floyd
 
@@ -112,7 +112,7 @@ inline void qpow(int k) {
 }
 ```
 
-## Johnson算法
+## Johnson全源最短路
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5905
 

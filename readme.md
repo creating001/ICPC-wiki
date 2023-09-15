@@ -30,16 +30,16 @@
 6. [Bearch](./basic/bsearch.md)
 7. [Huffman](./basic/huffman.md)
 8. [Hash-Table](./basic/hash-table.md)
+9. [Stack-Queue](./basic/stack-queue.md)
 
 ## 数据结构
 1. [BIT](./structure/bit.md)
 2. [Heap](./structure/heap.md)
 3. [Mo-Algo](./structure/mo-algo.md)
-4. [Stack-Queue](./structure/stack-queue.md)
-5. [Segment-Tree](./structure/segment-tree.md)
-6. [Balance-Tree](./structure/balance-tree.md)
-7. [Tree-In-Tree](./structure/tree-in-tree.md)
-8. [Dancing-Links](./structure/dancing-links.md)
+4. [Segment-Tree](./structure/segment-tree.md)
+5. [Balance-Tree](./structure/balance-tree.md)
+6. [Tree-In-Tree](./structure/tree-in-tree.md)
+7. [Dancing-Links](./structure/dancing-links.md)
 
 ## 动态规划
 1. [Memo-Dp](./dp/memo-dp.md)
@@ -50,6 +50,7 @@
 6. [Knaspack](./dp/knapsack.md)
 7. [Linear-Dp](./dp/linear-dp.md)
 8. [Interval-Dp](./dp/interval-dp.md)
+9. [Optimize-Dp](./dp/optimize-dp.md)
 
 ## 数学
 
