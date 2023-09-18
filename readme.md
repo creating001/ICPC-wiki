@@ -88,3 +88,4 @@
 
 ## 计算几何
 1. [Convex-Hull](./geometry/convex-hull.md)
+2. [Half-Plane-Intersection](./geometry/half-plane-intersection.md)
