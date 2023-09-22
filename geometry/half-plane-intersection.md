@@ -7,7 +7,7 @@ inline PDD operator-(PDD a, PDD b) {
     return {a.F - b.F, a.S - b.S};
 }
 
-inline double operator^(PDD a, PDD b) {
+inline double operator*(PDD a, PDD b) {
     return a.F * b.S - a.S * b.F;
 }
 
@@ -22,13 +22,13 @@ inline double get_angle(Line a) {
 
 inline bool cmp(Line a, Line b) {
     auto A = get_angle(a), B = get_angle(b);
-    if (sign(A - B) == 0) return ((a.t - b.s) ^ (b.t - b.s)) < 0;
+    if (sign(A - B) == 0) return ((a.t - b.s) * (b.t - b.s)) < 0;
     return A < B;
 }
 
 inline PDD GLI(PDD p, PDD v, PDD q, PDD w) {
     auto u = p - q;
-    auto t = (w ^ u) / (v ^ w);
+    auto t = (w * u) / (v * w);
     return {p.F + t * v.F, p.S + v.S * t};
 }
 
@@ -38,7 +38,7 @@ inline PDD GLI(Line a, Line b) {
 
 inline bool on_right(Line a, Line b, Line c) {
     auto p = GLI(b, c);
-    return ((a.t - a.s) ^ (p - a.s)) < 0;
+    return ((a.t - a.s) * (p - a.s)) < 0;
 }
 
 inline void HPI() {
