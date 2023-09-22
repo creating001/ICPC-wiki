@@ -88,6 +88,7 @@
 
 ## 计算几何
 1. [Convex-Hull](./geometry/convex-hull.md)
-2. [Rotating-Callipers](./geometry/rotating-callipers.md)
-3. [Half-Plane-Intersection](./geometry/half-plane-intersection.md)
-4. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
+2. [triangulation](./geometry/triangulation.md)
+3. [Rotating-Callipers](./geometry/rotating-callipers.md)
+4. [Half-Plane-Intersection](./geometry/half-plane-intersection.md)
+5. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
