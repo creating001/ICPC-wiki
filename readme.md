@@ -90,5 +90,6 @@
 1. [Convex-Hull](./geometry/convex-hull.md)
 2. [triangulation](./geometry/triangulation.md)
 3. [Rotating-Callipers](./geometry/rotating-callipers.md)
-4. [Half-Plane-Intersection](./geometry/half-plane-intersection.md)
-5. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
+4. [Auto-Adapte-Simpson](./geometry/auto-adapte-simpson.md)
+5. [Half-Plane-Intersection](./geometry/half-plane-intersection.md)
+6. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
