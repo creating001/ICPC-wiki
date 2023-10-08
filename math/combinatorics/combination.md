@@ -35,7 +35,7 @@ inline LL qpow(LL a, int k, int p) {
     return ans;
 }
 
-auto __ = []() {
+const int init = []() {
     fac[0] = 1;
     for (int i = 1; i < N; i++) fac[i] = fac[i - 1] * i % P;
     ifac[N - 1] = qpow(fac[N - 1], P - 2, P);
