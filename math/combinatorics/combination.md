@@ -78,18 +78,18 @@ inline int lucas(LL a, LL b, int p) {
 > 板子题网址: https://www.acwing.com/problem/content/890
 
 ```cpp
-inline int get_p(int x, int p) {
+inline int get(int u, int p) {
     int ans = 0;
-    while (x) ans += (x = x / p);
+    while (u) ans += (u = u / p);
     return ans;
 }
 
-inline vector<int> comb(int a, int b) {
-    vector<int> ans(1, 1);
-    for (int i = 0; primes[i] <= a; i++) {
+inline vector<int> C(int n, int m) {
+    vector<int> ans = 1;
+    for (int i = 0; primes[i] <= n; i++) {
         int p = primes[i];
-        int cnt = get_p(a, p) - get_p(b, p) - get_p(a - b, p);
-        for (int j = 0; j < cnt; j++) ans = mul(ans, p);
+        int c = get(n, p) - get(m, p) - get(n - m, p);
+        for (int j = 0; j < c; j++) ans = ans * c;
     }
     return ans;
 }
