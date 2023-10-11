@@ -20,6 +20,7 @@
 2. [Trie](./string/trie.md)
 3. [Manacher](./string/manacher.md)
 4. [Automation](./string/automaton.md)
+5. [Minminal-Show](./string/minminal-show.md)
 
 ## 基础算法
 1. [RMQ](./basic/rmq.md)
