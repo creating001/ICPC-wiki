@@ -5,7 +5,102 @@
 > 板子题网址: https://www.luogu.com.cn/problem/P6136
 
 ```cpp
+struct Splay {
+    int s[2], p, v;
+    int size, cnt;
+} tr[N];
+int root, idx;
 
+inline void pushup(int u) {
+    tr[u].size = tr[tr[u].s[0]].size + tr[tr[u].s[1]].size + tr[u].cnt;
+}
+
+inline void rotate(int u) {
+    int y = tr[u].p, z = tr[y].p;
+    int k = u == tr[y].s[1];
+    tr[z].s[tr[z].s[1] == y] = u, tr[u].p = z;
+    tr[y].s[k] = tr[u].s[k ^ 1], tr[tr[u].s[k ^ 1]].p = y;
+    tr[u].s[k ^ 1] = y, tr[y].p = u;
+    pushup(y), pushup(u);
+}
+
+inline void splay(int u, int v) {
+    while (tr[u].p != v) {
+        int y = tr[u].p, z = tr[y].p;
+        if (z != v) {
+            if ((y == tr[z].s[1]) != (u == tr[y].s[1])) rotate(u);
+            else rotate(y);
+        }
+        rotate(u);
+    }
+    if (!v) root = u;
+}
+
+inline void insert(int x) {
+    int u = root, p = 0;
+    while (u) {
+        if (tr[u].v == x) return splay(u, 0), tr[u].cnt++, void();
+        p = u;
+        u = tr[u].s[x > tr[u].v];
+    }
+    u = ++idx;
+    if (p) tr[p].s[x > tr[p].v] = u;
+    tr[u].p = p, tr[u].v = x, tr[u].cnt = 1;
+    splay(u, 0);
+}
+
+inline void find(int x) {
+    int u = root;
+    while (tr[u].v != x && tr[u].s[x > tr[u].v])
+        u = tr[u].s[x > tr[u].v];
+    splay(u, 0);
+}
+
+inline int get_pre(int x) {
+    find(x);
+    if (tr[root].v < x) return root;
+    int u = tr[root].s[0];
+    while (tr[u].s[1]) u = tr[u].s[1];
+    splay(u, 0);
+    return u;
+}
+
+inline int get_nex(int x) {
+    find(x);
+    if (tr[root].v > x) return root;
+    int u = tr[root].s[1];
+    while (tr[u].s[0]) u = tr[u].s[0];
+    splay(u, 0);
+    return u;
+}
+
+inline int get_rank(int x) {
+    find(x);
+    if (tr[root].v >= x) return tr[tr[root].s[0]].size;
+    return tr[tr[root].s[0]].size + tr[root].cnt;
+}
+
+inline int get_k(int k) {
+    int u = root;
+    while (true) {
+        if (tr[tr[u].s[0]].size >= k) u = tr[u].s[0];
+        else if (tr[tr[u].s[0]].size + tr[u].cnt >= k) return splay(u, 0), u;
+        else k -= tr[tr[u].s[0]].size + tr[u].cnt, u = tr[u].s[1];
+    }
+}
+
+inline void remove(int x) {
+    int l = get_pre(x), r = get_nex(x);
+    splay(l, 0);
+    splay(r, l);
+    int u = tr[r].s[0];
+    if (tr[u].cnt > 1) {
+        tr[u].cnt--;
+        splay(u, 0);
+        return;
+    }
+    tr[r].s[0] = 0;
+}
 ```
 
 ## Splay线段树

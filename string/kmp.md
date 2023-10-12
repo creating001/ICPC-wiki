@@ -4,8 +4,6 @@
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3375
 
-时间复杂度: $O(N + M)$
-
 ```cpp
 char p[N], s[M];
 int n, m, nex[N];
