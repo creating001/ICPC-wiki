@@ -1,6 +1,6 @@
 # 字典树
 
-## Trie树
+## Trie
 
 > 板子题网址: https://www.luogu.com.cn/problem/P8306
 
@@ -24,7 +24,31 @@ inline int query(const char* str) {
 }
 ```
 
-## 可持久化Trie树
+## O1 Trie
+
+> 板子题网址: https://www.luogu.com.cn/problem/P4551
+
+```cpp
+
+```
+
+## Tire 合并
+
+> 板子题网址: https://www.luogu.com.cn/problem/P6623
+
+```cpp
+
+```
+
+## XorMST
+
+> 板子题网址: https://codeforces.com/problemset/problem/888/G
+
+```cpp
+
+```
+
+## 可持久化 Trie
 
 > 板子题网址: https://www.luogu.com.cn/problem/P4735
 

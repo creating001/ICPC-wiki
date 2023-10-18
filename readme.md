@@ -9,18 +9,18 @@
 1. [DFS](./graph/dfs.md)
 2. [MST](./graph/mst.md)
 3. [LCA](./graph/lca.md)
-4. [LCT](./graph/lct.md)
-5. [Cycle](./graph/cycle.md)
-6. [Tarjan](./graph/tarjan.md)
-7. [Bi-Graph](./graph/bi-graph.md)
-8. [Shortest-Path](./graph/shortest-path.md)
+4. [Cycle](./graph/cycle.md)
+5. [Tarjan](./graph/tarjan.md)
+6. [Bi-Graph](./graph/bi-graph.md)
+7. [Shortest-Path](./graph/shortest-path.md)
 
 ## 字符串
 1. [KMP](./string/kmp.md)
-2. [Trie](./string/trie.md)
-3. [Manacher](./string/manacher.md)
-4. [Automation](./string/automaton.md)
-5. [Minminal-Show](./string/minminal-show.md)
+2. [Hash](./string/hash.md)
+3. [Trie](./string/trie.md)
+4. [Manacher](./string/manacher.md)
+5. [Automation](./string/automaton.md)
+6. [Minminal-Show](./string/minminal-show.md)
 
 ## 基础算法
 1. [RMQ](./basic/rmq.md)

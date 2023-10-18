@@ -26,7 +26,6 @@ inline void tarjan(int u) {
 ## 强连通分量和缩点
 
 > 板子题网址: https://www.luogu.com.cn/problem/B3609
->
 > 板子题网址: https://www.luogu.com.cn/problem/P3387
 
 ```cpp

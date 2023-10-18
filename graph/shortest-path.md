@@ -104,11 +104,7 @@ inline void mul(int a[][N], int b[][N], int c[][N]) {
 inline void qpow(int k) {
     memset(ans, 0x3f, sizeof(ans));
     for (int i = 0; i < n; i++) ans[i][i] = 0;
-    while (k) {
-        if (k & 1) mul(ans, ans, g);
-        mul(g, g, g);
-        k >>= 1;
-    }
+    for (; k; k >>= 1, mul(g, g, g)) if (k & 1) mul(ans, ans, g);
 }
 ```
 
