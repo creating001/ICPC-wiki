@@ -20,12 +20,14 @@ inline int dis(PII a, PII b) {
 inline void andrew() {
     sort(p, p + n);
     for (int i = 0; i < n; i++) {
-        while (top >= 2 && (p[i] - stk[top - 2]) * (stk[top - 1] - stk[top - 2]) >= 0) top--;
+        while (top >= 2 && (p[i] - stk[top - 2]) * (stk[top - 1] - stk[top - 2]) >= 0)
+            top--;
         stk[top++] = p[i];
     }
     int m = top;
     for (int i = n - 2; i >= 0; i--) {
-        while (top >= m + 1 && (p[i] - stk[top - 2]) * (stk[top - 1] - stk[top - 2]) >= 0) top--;
+        while (top >= m + 1 && (p[i] - stk[top - 2]) * (stk[top - 1] - stk[top - 2]) >= 0)
+            top--;
         stk[top++] = p[i];
     }
     top--;
@@ -37,7 +39,8 @@ inline int rotating_calipers() {
     int ans = 0;
     for (int i = 0, j = 2; i < top; i++) {
         auto a = stk[i], b = stk[i + 1];
-        while ((b - a) * (stk[j] - a) < (b - a) * (stk[j + 1] - a)) j = (j + 1) % top;
+        while ((b - a) * (stk[j] - a) < (b - a) * (stk[j + 1] - a))
+            j = (j + 1) % top;
         ans = max(ans, max(dis(stk[j], a), dis(stk[j], b)));
     }
     return ans;

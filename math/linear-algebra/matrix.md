@@ -39,49 +39,24 @@ inline matrix quick_pow(matrix a, int k) {
 
 ## 矩阵加速数列
 
-> 板子题网址: https://www.luogu.com.cn/problem/P1939
+> 板子题网址: https://www.luogu.com.cn/problem/P1349
 
-这是一个稍微复杂一些的例子:
+```cpp
 
-$$
-\begin{gathered}
-f_{1} = f_{2} = 0\\
-f_{n} = 7f_{n-1}+6f_{n-2}+5n+4\times 3^n
-\end{gathered}
-$$
+```
 
-我们发现, $f_{n}$和 $f_{n-1}, f_{n-2}, n$ 有关，于是考虑构造一个矩阵描述状态。
+## 行列式求值
 
-但是发现如果矩阵仅有这三个元素
+> 板子题网址: https://www.luogu.com.cn/problem/P7112
 
-$$
-\begin{bmatrix}f_n& f_{n-1}& n\end{bmatrix}
-$$
+```cpp
 
-是难以构造出转移方程的，因为乘方运算和 $+1$ 无法用矩阵描述。
+```
 
-于是考虑构造一个更大的矩阵。
+## 矩阵求逆
 
-$$
-\begin{bmatrix}f_n& f_{n-1}& n& 3^n & 1\end{bmatrix}
-$$
+> 板子题网址: https://www.luogu.com.cn/problem/P4783
 
-我们希望构造一个递推矩阵可以转移到
+```cpp
 
-$$
-\begin{bmatrix}
-f_{n+1}& f_{n}& n+1& 3^{n+1} & 1
-\end{bmatrix}
-$$
-
-转移矩阵即为
-
-$$
-\begin{bmatrix}
-7  & 1 & 0 & 0 & 0\\
-6  & 0 & 0 & 0 & 0\\
-5  & 0 & 1 & 0 & 0\\
-12 & 0 & 0 & 3 & 0\\
-5  & 0 & 1 & 0 & 1\\
-\end{bmatrix}
-$$
+```

@@ -1,6 +1,6 @@
-# 并查集
+# DSU
 
-## 普通并查集
+## 普通 DSU
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3367
 
@@ -19,7 +19,7 @@ struct DSU {
 } dsu(N);
 ```
 
-## 带权并查集
+## 带权 DSU
 
 > 板子题网址: https://www.luogu.com.cn/problem/P2024
 
@@ -27,7 +27,7 @@ struct DSU {
 
 ```
 
-## 扩展域并查集
+## 扩展域 DSU
 
 > 板子题网址: https://www.acwing.com/problem/content/241
 
@@ -35,7 +35,7 @@ struct DSU {
 
 ```
 
-## 可持久化并查集
+## 可持久化 DSU
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3402
 

@@ -5,12 +5,6 @@
 > 板子题网址: https://www.luogu.com.cn/problem/P4929
 
 ```cpp
-#include<bits/stdc++.h>
-
-using namespace std;
-
-const int N = 6e3 + 5;
-
 int n, m, ans[N], top;
 int L[N], R[N], U[N], D[N], S[N], row[N], col[N], idx;
 

@@ -46,11 +46,15 @@ inline void HPI() {
     int hh = 0, tt = -1;
     for (int i = 0; i < cnts; i++) {
         if (i && sign(get_angle(line[i]) - get_angle(line[i - 1])) == 0) continue;
-        while (hh + 1 <= tt && on_right(line[i], line[que[tt - 1]], line[que[tt]])) tt--;
-        while (hh + 1 <= tt && on_right(line[i], line[que[hh]], line[que[hh + 1]])) hh++;
+        while (hh + 1 <= tt && on_right(line[i], line[que[tt - 1]], line[que[tt]]))
+            tt--;
+        while (hh + 1 <= tt && on_right(line[i], line[que[hh]], line[que[hh + 1]]))
+            hh++;
         que[++tt] = i;
     }
-    while (hh + 1 <= tt && on_right(line[hh], line[que[tt - 1]], line[que[tt]])) tt--;
-    while (hh + 1 <= tt && on_right(line[tt], line[que[hh]], line[que[hh + 1]])) hh++;
+    while (hh + 1 <= tt && on_right(line[hh], line[que[tt - 1]], line[que[tt]]))
+        tt--;
+    while (hh + 1 <= tt && on_right(line[tt], line[que[hh]], line[que[hh + 1]]))
+        hh++;
 }
 ```

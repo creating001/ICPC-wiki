@@ -66,6 +66,7 @@ inline void solve() {
     }
 
     int ans = INF;
-    for (int i = n; i <= a; i++) for (int j = n; j <= b; j++) ans = min(ans, mx[i][j] - mn[i][j]);
+    for (int i = n; i <= a; i++)
+        for (int j = n; j <= b; j++) ans = min(ans, mx[i][j] - mn[i][j]);
 }
 ```

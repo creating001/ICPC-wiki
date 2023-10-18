@@ -1,28 +1,8 @@
 # Huffman树
 
-## 果子合并 一般版
+## 2 进制 Huffman 树
 
 > 板子题网址: https://www.luogu.com.cn/problem/P1090
-
-```cpp
-inline int solve(){
-    for (int i = 0; i < n; i++)
-        q.emplace(a[i]);
-    int ans = 0;
-    while (q.size() > 1) {
-        int a = q.top();
-        q.pop();
-        int b = q.top();
-        q.pop();
-        ans += a + b;
-        q.emplace(a + b);
-    }
-    return ans;
-}
-```
-
-## 果子合并 强化版
-
 > 板子题网址: https://www.luogu.com.cn/problem/P6033
 
 ```cpp
@@ -50,4 +30,12 @@ inline LL solve(){
     }
     return ans;
 }
+```
+
+## K 进制 Huffman 树
+
+> 板子题网址: https://www.luogu.com.cn/problem/P2168
+
+```cpp
+
 ```

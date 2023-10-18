@@ -24,23 +24,21 @@
 
 ## 基础算法
 1. [RMQ](./basic/rmq.md)
-2. [DSU](./basic/dsu.md)
-3. [Sort](./basic/sort.md)
-4. [Trick](./basic/trick.md)
-5. [FASTIO](./basic/fastio.md)
-6. [Bearch](./basic/bsearch.md)
-7. [Huffman](./basic/huffman.md)
-8. [Hash-Table](./basic/hash-table.md)
-9. [Stack-Queue](./basic/stack-queue.md)
+2. [Sort](./basic/sort.md)
+3. [Trick](./basic/trick.md)
+4. [Huffman](./basic/huffman.md)
+5. [Hash-Table](./basic/hash-table.md)
+6. [Stack-Queue](./basic/stack-queue.md)
 
 ## 数据结构
 1. [BIT](./structure/bit.md)
-2. [Heap](./structure/heap.md)
-3. [Mo-Algo](./structure/mo-algo.md)
-4. [Segment-Tree](./structure/segment-tree.md)
-5. [Balance-Tree](./structure/balance-tree.md)
-6. [Tree-In-Tree](./structure/tree-in-tree.md)
-7. [Dancing-Links](./structure/dancing-links.md)
+2. [DSU](./structure/dsu.md)
+3. [Heap](./structure/heap.md)
+4. [Mo-Algo](./structure/mo-algo.md)
+5. [Segment-Tree](./structure/segment-tree.md)
+6. [Balance-Tree](./structure/balance-tree.md)
+7. [Tree-In-Tree](./structure/tree-in-tree.md)
+8. [Dancing-Links](./structure/dancing-links.md)
 
 ## 动态规划
 1. [Memo-Dp](./dp/memo-dp.md)
@@ -51,7 +49,6 @@
 6. [Knaspack](./dp/knapsack.md)
 7. [Linear-Dp](./dp/linear-dp.md)
 8. [Interval-Dp](./dp/interval-dp.md)
-9. [Optimize-Dp](./dp/optimize-dp.md)
 
 ## 数学
 
@@ -59,14 +56,13 @@
 1.  [Inv](./math/number-theory/inv.md)
 2.  [GCD](./math/number-theory/gcd.md)
 3.  [CRT](./math/number-theory/crt.md)
-5.  [Qpow](./math/number-theory/qpow.md)
-6.  [BSGS](./math/number-theory/bsgs.md)
-7.  [Euler](./math/number-theory/euler.md)
-8.  [Prime](./math/number-theory/prime.md)
-9.  [Mobius](./math/number-theory/mobius.md)
-10. [Random](./math/number-theory/random.md)
-11. [Divisor](./math/number-theory/divisor.md)
-12. [Permutation-Group](./math/number-theory/permutation-group.md)
+4.  [BSGS](./math/number-theory/bsgs.md)
+5.  [Euler](./math/number-theory/euler.md)
+6.  [Prime](./math/number-theory/prime.md)
+7.  [Mobius](./math/number-theory/mobius.md)
+8.  [Random](./math/number-theory/random.md)
+9.  [Divisor](./math/number-theory/divisor.md)
+10. [Group-Theory](./math/number-theory/group-theory.md)
 
 ### 博弈论
 1. [SG](./math/game-theory/sg.md)

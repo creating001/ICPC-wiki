@@ -1,7 +1,6 @@
 # 自适应辛普森积分
 
 > 板子题网址: https://www.luogu.com.cn/problem/P4525
->
 > 板子题网址: https://www.luogu.com.cn/problem/P4526
 
 ```cpp
