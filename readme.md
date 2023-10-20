@@ -44,11 +44,10 @@
 1. [Memo-Dp](./dp/memo-dp.md)
 2. [Tree-Dp](./dp/tree-dp.md)
 3. [State-Dp](./dp/state-dp.md)
-4. [Count-Dp](./dp/count-dp.md)
-5. [Digit-Dp](./dp/digit-dp.md)
-6. [Knaspack](./dp/knapsack.md)
-7. [Linear-Dp](./dp/linear-dp.md)
-8. [Interval-Dp](./dp/interval-dp.md)
+4. [Digit-Dp](./dp/digit-dp.md)
+5. [Knaspack](./dp/knapsack.md)
+6. [Linear-Dp](./dp/linear-dp.md)
+7. [Interval-Dp](./dp/interval-dp.md)
 
 ## 数学
 

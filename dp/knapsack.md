@@ -64,8 +64,7 @@ inline int multiple_knapsack() {
         for (int j = 0; j < v[i]; j++) {
             int tt = -1, hh = 0;
             for (int k = j; k <= m; k += v[i]) {
-                while (hh <= tt && (k - q[hh]) / v[i] > s[i])
-                    hh++;
+                while (hh <= tt && (k - q[hh]) / v[i] > s[i]) hh++;
                 while (hh <= tt && dp[i - 1 & 1][k] - dp[i - 1 & 1][q[tt]] >= (k - q[tt]) / v[i] * w[i])
                     tt--;
                 q[++tt] = k;
@@ -93,12 +92,10 @@ inline int mix_knapsack() {
             while (s[i] >= k) {
                 for (int j = m; j >= k * v[i]; j--)
                     dp[j] = max(dp[j], dp[j - k * v[i]] + k * w[i]);
-                s[i] -= k;
-                k *= 2;
+                s[i] -= k, k *= 2;
             }
             k = s[i];
-            if (k)
-                for (int j = m; j >= k * v[i]; j--)
+            if (k) for (int j = m; j >= k * v[i]; j--)
                     dp[j] = max(dp[j], dp[j - k * v[i]] + k * w[i]);
         }
     }
@@ -125,8 +122,8 @@ inline int group_knapsack() {
     for (int i = 1; i <= n; i++)
         for (int j = V; j >= 0; j--)
             for (int k = 0; k < g[i].size(); k++)
-                if (j >= g[i][k].first)
-                    dp[j] = max(dp[j], dp[j - g[i][k].first] + g[i][k].second);
+                if (j >= g[i][k].F)
+                    dp[j] = max(dp[j], dp[j - g[i][k].F] + g[i][k].S);
     return dp[V];
 }
 ```

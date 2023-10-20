@@ -1,7 +1,6 @@
 # 乘法逆元
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3811
->
 > 板子题网址: https://www.luogu.com.cn/problem/P5431
 
 ## 欧拉定理求逆元
@@ -35,18 +34,7 @@ inline void init_inv(int n) {
 }
 ```
 
-1. $p$ 可表示为 $p = i * k + r$，其中 $0 \leq r < i$
-2. 所以 $i * k + r \equiv 0 \pmod{p}$
-3. 两边同时乘以 $inv[i]$ 和 $inv[r]$，得到 $k \times inv[r] + inv[i] \equiv 0 \pmod{p}$
-4. 所以 $inv[i] \equiv k \times inv[r]$ 其中 $k = \left \lfloor \frac{p}{i}  \right \rfloor$
-5. 所以 $inv[i] \equiv (p - p / i) \times inv[p \pmod{i}]$
-
 ## 递推法求数组逆元
-
-1. 设数组 `a[]` 的前缀积数组为 `f[]` , 设前缀积的逆元数组为 `g[]`
-2. 预处理出 `f[]`, 并求出 `g[n] = inv(f[n])`
-3. 然后根据 `g[i] = g[i + 1] * a[i + 1]` 递推出 `g[1] ~ g[n - 1]`
-4. 最后得到 `inv[a[i]] = g[i] * f[i - 1]`
 
 ```cpp
 inline void init_inv(int n) {

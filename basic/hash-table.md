@@ -13,10 +13,8 @@ inline void init() {
 
 inline void insert(int x) {
     int u = (x % N + N) % N;
-    for (int i = h[u]; ~i; i = nex[i])
-        if (e[i] == x) return;
-    e[idx] = x, nex[idx] = h[u], h[u] = idx;
-    idx++;
+    for (int i = h[u]; ~i; i = nex[i]) if (e[i] == x) return;
+    e[idx] = x, nex[idx] = h[u], h[u] =  idx++;
 }
 
 inline bool find(int x) {
@@ -30,8 +28,10 @@ inline void remove(int x) {
     int u = (x % N + N) % N;
     if (h[u] == -1) return;
     if (e[h[u]] == x) h[u] = nex[h[u]];
-    else for (int i = h[u];~i && ~nex[i]; i = nex[i])
+    else{
+        for (int i = h[u];~i && ~nex[i]; i = nex[i])
             if (e[nex[i]] == x) nex[i] = nex[nex[i]];
+    }
 }
 ```
 
@@ -46,8 +46,7 @@ inline void init() {
 
 inline int get_index(int x){
     int u = (x % N + N) % N;
-    while (h[u] != null && h[u] != x)
-        u = (u + 1) % N;
+    while (h[u] != null && h[u] != x) u = (u + 1) % N;
     return u;
 }
 

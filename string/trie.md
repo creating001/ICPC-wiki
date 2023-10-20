@@ -40,14 +40,6 @@ inline int query(const char* str) {
 
 ```
 
-## XorMST
-
-> 板子题网址: https://codeforces.com/problemset/problem/888/G
-
-```cpp
-
-```
-
 ## 可持久化 Trie
 
 > 板子题网址: https://www.luogu.com.cn/problem/P4735
@@ -72,4 +64,12 @@ inline int query(int p, int l, int x) {
     }
     return s[id[p]] ^ x;
 }
+```
+
+## 最小异或树
+
+> 板子题网址: https://codeforces.com/problemset/problem/888/G
+
+```cpp
+
 ```

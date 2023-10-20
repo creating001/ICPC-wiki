@@ -18,7 +18,7 @@ static mt19937 eng(dev());
 static uniform_int_distribution<int> u(0, INT_MAX);
 ```
 
-# 快读快写
+## 快读快写
 
 ```cpp
 struct IO {

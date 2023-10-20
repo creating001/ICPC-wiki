@@ -24,7 +24,6 @@ $x = x_0 + \frac{b}{gcd(a, b)}t, y = y_0 - \frac{a}{gcd(a, b)}t$，其中 $x_0, 
 ## 扩展欧几里得算法
 
 > 板子题网址: https://www.luogu.com.cn/problem/P2613
->
 > 板子题网址: https://www.luogu.com.cn/problem/P5656
 
 ```cpp
@@ -37,17 +36,4 @@ inline int exgcd(int a, int b, int &x, int &y) {
     y = y - a / b * x;
     return d;
 }
-```
-
-推导过程: $ax + by = d$
-1. $b = 0$ 时 $ax + by = d$ , 则 $x = 1, y = 0$
-2. - $b \neq 0$ 时，我们已经已知 $by + (a \bmod b)x = d$ 成立, 我们需要构造 $ax' + by' = d$ 成立
-   - 所以可得 $x' = x$, $y' = y - a / b * x$
-
-## [类欧几里得算法](https://oi-wiki.org/math/number-theory/euclidean)
-
-> 板子题网址: https://www.luogu.com.cn/problem/P5170
-
-```cpp
-
 ```
