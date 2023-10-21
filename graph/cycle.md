@@ -63,6 +63,7 @@ inline bool spfa() {
 ## 01分数规划
 
 > 板子题网址: https://www.luogu.com.cn/problem/P2868
+> 板子题网址: https://atcoder.jp/contests/abc324/tasks/abc324_f
 
 ```cpp
 
