@@ -15,6 +15,17 @@
 3. [Alpha-Beta](./search/alpha-beta.md)
 4. [Rand-Technique](./search/rand-technique.md)
 
+## 动态规划
+1. [Memo-Dp](./dp/memo-dp.md)
+2. [Tree-Dp](./dp/tree-dp.md)
+3. [State-Dp](./dp/state-dp.md)
+4. [Digit-Dp](./dp/digit-dp.md)
+5. [Knaspack](./dp/knapsack.md)
+6. [Linear-Dp](./dp/linear-dp.md)
+7. [Interval-Dp](./dp/interval-dp.md)
+8. [Probability-Dp](./dp/probability-dp.md)
+9. [Optimization-Dp](./dp/optimization-dp.md)
+
 ## 字符串
 1. [KMP](./string/kmp.md)
 2. [Hash](./string/hash.md)
@@ -45,16 +56,6 @@
 6. [Balance-Tree](./structure/balance-tree.md)
 7. [Tree-In-Tree](./structure/tree-in-tree.md)
 8. [Dancing-Links](./structure/dancing-links.md)
-
-## 动态规划
-1. [Memo-Dp](./dp/memo-dp.md)
-2. [Tree-Dp](./dp/tree-dp.md)
-3. [State-Dp](./dp/state-dp.md)
-4. [Digit-Dp](./dp/digit-dp.md)
-5. [Knaspack](./dp/knapsack.md)
-6. [Linear-Dp](./dp/linear-dp.md)
-7. [Interval-Dp](./dp/interval-dp.md)
-8. [Optimize-Dp](./dp/optimize-dp.md)
 
 ## 数学
 
