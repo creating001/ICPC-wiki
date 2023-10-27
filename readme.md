@@ -57,6 +57,15 @@
 7. [Tree-In-Tree](./structure/tree-in-tree.md)
 8. [Dancing-Links](./structure/dancing-links.md)
 
+## 计算几何
+1. [Scanning](./geometry/scanning.md)
+2. [Convex-Hull](./geometry/convex-hull.md)
+3. [triangulation](./geometry/triangulation.md)
+4. [Nearest-Points](./geometry/nearest-points.md)
+5. [Rotating-Callipers](./geometry/rotating-callipers.md)
+6. [Half-Plane-Intersection](./geometry/half-plane-intersection.md)
+7. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
+
 ## 数学
 
 ### 数论
@@ -85,19 +94,10 @@
 3. [Stirling-Number](./math/combinatorics/stirling-number.md)
 4. [Inclusion-Exclusion](./math/combinatorics/inclusion-exclusion.md)
 
-## 数值计算
+### 数值计算
 1. [FFT](./math/numerical/fft.md)
 2. [Gauss](./math/numerical/gauss.md)
 3. [Newton](./math/numerical/newton.md)
 4. [Simpson](./math/numerical/simpson.md)
 5. [Lagrange](./math/numerical/lagrange.md)
 6. [High-Precision](./math/numerical/high-precision.md)
-
-## 计算几何
-1. [Scanning](./geometry/scanning.md)
-2. [Convex-Hull](./geometry/convex-hull.md)
-3. [triangulation](./geometry/triangulation.md)
-4. [Nearest-Points](./geometry/nearest-points.md)
-5. [Rotating-Callipers](./geometry/rotating-callipers.md)
-6. [Half-Plane-Intersection](./geometry/half-plane-intersection.md)
-7. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
