@@ -6,7 +6,6 @@
 3. [Huffman](./basic/huffman.md)
 4. [Doubling](./basic/doubling.md)
 5. [Stack-Queue](./basic/stack-queue.md)
-6. [Divide-Conquer](./basic/divide-conquer.md)
 
 ## 搜索
 1. [BFS](./search/bfs.md)

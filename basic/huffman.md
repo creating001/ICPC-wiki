@@ -37,5 +37,17 @@ inline LL solve(){
 > 板子题网址: https://www.luogu.com.cn/problem/P2168
 
 ```cpp
-
+inline PII solve() {
+    LL ans = 0;
+    while ((q.size() - 1) % (k - 1) != 0) q.emplace(0, 0);
+    while (q.size() >= k) {
+        LL h = -1, sum = 0;
+        for (int i = 0; i < k; i++) {
+            sum += q.top().F, h = max(h, q.top().S), q.pop();
+        }
+        ans += sum;
+        q.emplace(sum, h + 1);
+    }
+    return {ans, q.top().S};
+}
 ```
