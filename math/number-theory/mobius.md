@@ -45,3 +45,10 @@ const int init = [](int n) {
 ## [莫比乌斯反演](https://zhuanlan.zhihu.com/p/585474169)
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3327
+> 板子题网址: https://www.luogu.com.cn/problem/SP5971
+> 板子题网址: https://www.luogu.com.cn/problem/P1829
+> 板子题网址: https://www.luogu.com.cn/problem/P3327
+
+```cpp
+
+```

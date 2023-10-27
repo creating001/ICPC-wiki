@@ -160,3 +160,20 @@ inline bool topo_sort() {
     return cnts == n;
 }
 ```
+
+## 同余最短路
+
+> 板子题网址: https://www.luogu.com.cn/problem/P3403
+> 板子题网址: https://www.luogu.com.cn/problem/P2662
+
+```cpp
+
+```
+
+## K短路
+
+> 板子题网址: hhttps://www.luogu.com.cn/problem/P2662
+
+```cpp
+
+```
