@@ -2,7 +2,7 @@
 
 ## 线段树基础
 
-> 板子题网址: https://www.luogu.com.cn/problem/P3373
+> 板子题网址: https://www.luogu.com.cn/problem/P3372
 
 ```cpp
 
