@@ -3,9 +3,9 @@
 ## 基础算法
 1. [Sort](./basic/sort.md)
 2. [Trick](./basic/trick.md)
-3. [Huffman](./basic/huffman.md)
+3. [Greed](./basic/greed.md)
 4. [Doubling](./basic/doubling.md)
-5. [Stack-Queue](./basic/stack-queue.md)
+5. [Optimization](./basic/optimization.md)
 
 ## 搜索
 1. [BFS](./search/bfs.md)

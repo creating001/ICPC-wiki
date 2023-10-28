@@ -51,3 +51,7 @@ const int init = [](int n) {
 ```cpp
 
 ```
+
+## 威尔逊定理
+
+$(p-1)!\equiv -1\pmod p$ 当且仅当 $p$ 是质数

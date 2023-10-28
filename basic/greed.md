@@ -1,9 +1,30 @@
-# Huffman树
+# 贪心
 
-## 2 进制 Huffman 树
+## 普通贪心
 
-> 板子题网址: https://www.luogu.com.cn/problem/P1090
+> 板子题网址: https://www.luogu.com.cn/problem/P4447
+
+```cpp
+for (int i = 1; i <= n; i++) cin >> a[i];
+sort(a + 1, a + 1 + n);
+multiset<PII> q;
+for (int i = 1; i <= n; i++) {
+    auto p = q.lower_bound({a[i] - 1, 0});
+    if (p == q.end() || p->F != a[i] - 1) {
+        q.insert({a[i], 1});
+    } else {
+        q.insert({a[i], p->S + 1});
+        q.erase(p);
+    }
+}
+int ans = INT_MAX;
+for (auto& p : q)ans = min(ans, p.S);
+```
+
+## Huffman树
+
 > 板子题网址: https://www.luogu.com.cn/problem/P6033
+> 板子题网址: https://www.luogu.com.cn/problem/P2168
 
 ```cpp
 inline LL solve(){
@@ -29,25 +50,5 @@ inline LL solve(){
         q2.emplace(a + b);
     }
     return ans;
-}
-```
-
-## K 进制 Huffman 树
-
-> 板子题网址: https://www.luogu.com.cn/problem/P2168
-
-```cpp
-inline PII solve() {
-    LL ans = 0;
-    while ((q.size() - 1) % (k - 1) != 0) q.emplace(0, 0);
-    while (q.size() >= k) {
-        LL h = -1, sum = 0;
-        for (int i = 0; i < k; i++) {
-            sum += q.top().F, h = max(h, q.top().S), q.pop();
-        }
-        ans += sum;
-        q.emplace(sum, h + 1);
-    }
-    return {ans, q.top().S};
 }
 ```

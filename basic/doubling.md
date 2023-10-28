@@ -3,7 +3,6 @@
 ## RMQ
 
 > 板子题网址: https://www.luogu.com.cn/problem/P3865
-> 板子题网址: https://www.luogu.com.cn/problem/P1890
 
 ```cpp
 struct ST {
@@ -29,8 +28,6 @@ struct ST {
 
 ## 倍增典题
 
-> 板子题网址: https://www.luogu.com.cn/problem/P1081
-> 板子题网址: https://www.luogu.com.cn/problem/P1084
 > 板子题网址: https://www.luogu.com.cn/problem/P1967
 
 ```cpp

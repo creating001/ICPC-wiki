@@ -7,8 +7,7 @@
 ```cpp
 void quick_sort(int* a, int l, int r) {
     if (l >= r) return;
-    int i = l - 1, j = r + 1;
-    int x = a[rand() % (r - l + 1) + l];
+    int i = l - 1, j = r + 1，x = a[rand() % (r - l + 1) + l];
     while (i < j) {
         do i++; while (a[i] < x);
         do j--; while (a[j] > x);
