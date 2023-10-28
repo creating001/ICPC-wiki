@@ -2,7 +2,7 @@
 
 ## 题单进度
 1. [算法竞赛](https://vjudge.net/article/3284)[`1/990`]
-2. [kuangbin](https://www.acwing.com/activity/content/90/)[`0/26`]
+2. [Kuangbin](https://www.acwing.com/activity/content/90/)[`0/26`]
 3. [算法进阶指南](https://www.acwing.com/activity/content/6/)[`0/6`]
 
 ## 基础算法
