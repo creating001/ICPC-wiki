@@ -46,8 +46,9 @@
 7. [Tarjan](./graph/tarjan.md)
 8. [Bi-Graph](./graph/bi-graph.md)
 9. [Shortest-Path](./graph/shortest-path.md)
-10. [Network-Streams](./graph/network-streams.md)
-11. [Centroid-Decomposition](./graph/centroid-decomposition.md)
+10. [Tree-Divide](./graph/tree-divide.md)
+11. [Network-Streams](./graph/network-streams.md)
+12. [Centroid-Decomposition](./graph/centroid-decomposition.md)
 
 ## 数据结构
 1. [BIT](./structure/bit.md)
