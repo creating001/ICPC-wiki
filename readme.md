@@ -1,10 +1,5 @@
 # Acm 算法模板库 by 划船全靠浪 💭💡🎈
 
-## 题单进度
-1. [算法竞赛](https://vjudge.net/article/3284)[`1/990`]
-2. [Kuangbin](https://www.acwing.com/activity/content/90/)[`0/26`]
-3. [算法进阶指南](https://www.acwing.com/activity/content/6/)[`0/6`]
-
 ## 基础算法
 1. [Sort](./basic/sort.md)
 2. [Trick](./basic/trick.md)
@@ -41,14 +36,11 @@
 2. [MST](./graph/mst.md)
 3. [LCA](./graph/lca.md)
 4. [Euler](./graph/euler.md)
-5. [2-Sat](./graph/2-sat.md)
-6. [Cycle](./graph/cycle.md)
-7. [Tarjan](./graph/tarjan.md)
-8. [Bi-Graph](./graph/bi-graph.md)
+5. [Cycle](./graph/cycle.md)
+6. [Tarjan](./graph/tarjan.md)
+7. [Bi-Graph](./graph/bi-graph.md)
+8. [Tree-Divide](./graph/tree-divide.md)
 9. [Shortest-Path](./graph/shortest-path.md)
-10. [Tree-Divide](./graph/tree-divide.md)
-11. [Network-Streams](./graph/network-streams.md)
-12. [Centroid-Decomposition](./graph/centroid-decomposition.md)
 
 ## 数据结构
 1. [BIT](./structure/bit.md)
@@ -59,6 +51,7 @@
 6. [Balance-Tree](./structure/balance-tree.md)
 7. [Tree-In-Tree](./structure/tree-in-tree.md)
 8. [Dancing-Links](./structure/dancing-links.md)
+
 
 ## 计算几何
 1. [Scanning](./geometry/scanning.md)
