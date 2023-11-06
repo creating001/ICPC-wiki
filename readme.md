@@ -45,13 +45,13 @@
 ## 数据结构
 1. [BIT](./structure/bit.md)
 2. [DSU](./structure/dsu.md)
-3. [Heap](./structure/heap.md)
-4. [Mo-Algo](./structure/mo-algo.md)
-5. [Segment-Tree](./structure/segment-tree.md)
-6. [Balance-Tree](./structure/balance-tree.md)
-7. [Tree-In-Tree](./structure/tree-in-tree.md)
-8. [Dancing-Links](./structure/dancing-links.md)
-
+3. [CDQ](./structure/cdq.md)
+4. [Heap](./structure/heap.md)
+5. [Mo-Algo](./structure/mo-algo.md)
+6. [Segment-Tree](./structure/segment-tree.md)
+7. [Balance-Tree](./structure/balance-tree.md)
+8. [Tree-In-Tree](./structure/tree-in-tree.md)
+9. [Dancing-Links](./structure/dancing-links.md)
 
 ## 计算几何
 1. [Scanning](./geometry/scanning.md)
