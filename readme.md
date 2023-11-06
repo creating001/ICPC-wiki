@@ -1,16 +1,14 @@
 # Acm 算法模板库 by 划船全靠浪 💭💡🎈
 
 ## 基础算法
-1. [Sort](./basic/sort.md)
-2. [Trick](./basic/trick.md)
-3. [Greed](./basic/greed.md)
-4. [Optimization](./basic/optimization.md)
-
-## 搜索
-1. [BFS](./search/bfs.md)
-2. [DFS](./search/dfs.md)
-3. [Alpha-Beta](./search/alpha-beta.md)
-4. [Rand-Technique](./search/rand-technique.md)
+1. [BFS](./basic/bfs.md)
+2. [DFS](./basic/dfs.md)
+3. [Sort](./basic/sort.md)
+4. [Trick](./basic/trick.md)
+5. [Greed](./basic/greed.md)
+6. [Alpha-Beta](./basic/alpha-beta.md)
+7. [Optimization](./basic/optimization.md)
+8. [Rand-Technique](./basic/rand-technique.md)
 
 ## 动态规划
 1. [Memo-Dp](./dp/memo-dp.md)
@@ -32,15 +30,14 @@
 6. [Minminal-Show](./string/minminal-show.md)
 
 ## 图论
-1. [DFS](./graph/dfs.md)
-2. [MST](./graph/mst.md)
-3. [LCA](./graph/lca.md)
-4. [Euler](./graph/euler.md)
-5. [Cycle](./graph/cycle.md)
-6. [Tarjan](./graph/tarjan.md)
-7. [Bi-Graph](./graph/bi-graph.md)
-8. [Tree-Divide](./graph/tree-divide.md)
-9. [Shortest-Path](./graph/shortest-path.md)
+1. [MST](./graph/mst.md)
+2. [LCA](./graph/lca.md)
+3. [Euler](./graph/euler.md)
+4. [Cycle](./graph/cycle.md)
+5. [Tarjan](./graph/tarjan.md)
+6. [Bi-Graph](./graph/bi-graph.md)
+7. [Tree-Divide](./graph/tree-divide.md)
+8. [Shortest-Path](./graph/shortest-path.md)
 
 ## 数据结构
 1. [BIT](./structure/bit.md)
