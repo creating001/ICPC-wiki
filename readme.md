@@ -62,9 +62,7 @@
 6. [Half-Plane-Intersection](./geometry/half-plane-intersection.md)
 7. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
 
-## 数学
-
-### 数论
+## 数论
 1.  [Inv](./math/number-theory/inv.md)
 2.  [GCD](./math/number-theory/gcd.md)
 3.  [CRT](./math/number-theory/crt.md)
@@ -76,21 +74,21 @@
 9.  [Divisor](./math/number-theory/divisor.md)
 10. [Group-Theory](./math/number-theory/group-theory.md)
 
-### 博弈论
+## 博弈论
 1. [SG](./math/game-theory/sg.md)
 2. [Gambling](./math/game-theory/gambling.md)
 
-### 线性代数
+## 线性代数
 1. [Matrix](./math/linear-algebra/matrix.md)
 2. [Linear-Basis](./math/linear-algebra/linear-basis.md)
 
-### 组合数学
+## 组合数学
 1. [Cantor](./math/combinatorics/cantor.md)
 2. [Combination](./math/combinatorics/combination.md)
 3. [Stirling-Number](./math/combinatorics/stirling-number.md)
 4. [Inclusion-Exclusion](./math/combinatorics/inclusion-exclusion.md)
 
-### 数值计算
+## 数值计算
 1. [FFT](./math/numerical/fft.md)
 2. [Gauss](./math/numerical/gauss.md)
 3. [Newton](./math/numerical/newton.md)
