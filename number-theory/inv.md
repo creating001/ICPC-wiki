@@ -3,14 +3,6 @@
 > 板子题网址: https://www.luogu.com.cn/problem/P3811
 > 板子题网址: https://www.luogu.com.cn/problem/P5431
 
-## 欧拉定理求逆元
-
-```cpp
-inline int inv(int a) {
-    return quick_pow(a, phi[P]);
-}
-```
-
 ## 扩展欧几里得求逆元
 
 ```cpp
@@ -39,12 +31,9 @@ inline void init_inv(int n) {
 ```cpp
 inline void init_inv(int n) {
     f[0] = 1;
-    for (int i = 1; i <= n; ++i)
-        f[i] = f[i - 1] * a[i] % P;
+    for (int i = 1; i <= n; ++i) f[i] = f[i - 1] * a[i] % P;
     g[n] = inv(f[n], P);
-    for (int i = n - 1; i >= 1; --i)
-        g[i] = g[i + 1] * a[i + 1] % P;
-    for (int i = 1; i <= n; ++i)
-        inv[a[i]] = g[i] * f[i - 1] % P;
+    for (int i = n - 1; i >= 1; --i) g[i] = g[i + 1] * a[i + 1] % P;
+    for (int i = 1; i <= n; ++i) inv[a[i]] = g[i] * f[i - 1] % P;
 }
 ```

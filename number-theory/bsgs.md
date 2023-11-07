@@ -6,7 +6,7 @@ $$
 a^{kx} \equiv b \cdot a^{y} \pmod{p}
 $$
 
-> 板子题网址:
+> 板子题网址: https://www.luogu.com.cn/problem/P3846
 
 ```cpp
 inline int bsgs(int a, int b, int p) {

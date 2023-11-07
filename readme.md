@@ -6,9 +6,8 @@
 3. [Sort](./basic/sort.md)
 4. [Trick](./basic/trick.md)
 5. [Greed](./basic/greed.md)
-6. [Alpha-Beta](./basic/alpha-beta.md)
-7. [Optimization](./basic/optimization.md)
-8. [Rand-Technique](./basic/rand-technique.md)
+6. [Optimization](./basic/optimization.md)
+7. [Rand-Technique](./basic/rand-technique.md)
 
 ## 动态规划
 1. [Memo-Dp](./dp/memo-dp.md)
@@ -60,35 +59,35 @@
 7. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
 
 ## 数论
-1.  [Inv](./math/number-theory/inv.md)
-2.  [GCD](./math/number-theory/gcd.md)
-3.  [CRT](./math/number-theory/crt.md)
-4.  [BSGS](./math/number-theory/bsgs.md)
-5.  [Euler](./math/number-theory/euler.md)
-6.  [Prime](./math/number-theory/prime.md)
-7.  [Mobius](./math/number-theory/mobius.md)
-8.  [Random](./math/number-theory/random.md)
-9.  [Divisor](./math/number-theory/divisor.md)
-10. [Group-Theory](./math/number-theory/group-theory.md)
+1.  [Inv](./number-theory/inv.md)
+2.  [GCD](./number-theory/gcd.md)
+3.  [CRT](./number-theory/crt.md)
+4.  [BSGS](./number-theory/bsgs.md)
+5.  [Euler](./number-theory/euler.md)
+6.  [Prime](./number-theory/prime.md)
+7.  [Mobius](./number-theory/mobius.md)
+8.  [Random](./number-theory/random.md)
+9.  [Divisor](./number-theory/divisor.md)
 
 ## 博弈论
-1. [SG](./math/game-theory/sg.md)
-2. [Gambling](./math/game-theory/gambling.md)
+1. [SG](./game-theory/sg.md)
+2. [Gambling](./game-theory/gambling.md)
 
 ## 线性代数
-1. [Matrix](./math/linear-algebra/matrix.md)
-2. [Linear-Basis](./math/linear-algebra/linear-basis.md)
+1. [Matrix](./linear-algebra/matrix.md)
+2. [Linear-Basis](./linear-algebra/linear-basis.md)
 
 ## 组合数学
-1. [Cantor](./math/combinatorics/cantor.md)
-2. [Combination](./math/combinatorics/combination.md)
-3. [Stirling-Number](./math/combinatorics/stirling-number.md)
-4. [Inclusion-Exclusion](./math/combinatorics/inclusion-exclusion.md)
+1. [Polya](./combinatorics/polya.md)
+2. [Cantor](./combinatorics/cantor.md)
+3. [Combination](./combinatorics/combination.md)
+4. [Stirling-Number](./combinatorics/stirling-number.md)
+5. [Inclusion-Exclusion](./combinatorics/inclusion-exclusion.md)
 
 ## 数值计算
-1. [FFT](./math/numerical/fft.md)
-2. [Gauss](./math/numerical/gauss.md)
-3. [Newton](./math/numerical/newton.md)
-4. [Simpson](./math/numerical/simpson.md)
-5. [Lagrange](./math/numerical/lagrange.md)
-6. [High-Precision](./math/numerical/high-precision.md)
+1. [FFT](./numerical/fft.md)
+2. [Gauss](./numerical/gauss.md)
+3. [Newton](./numerical/newton.md)
+4. [Simpson](./numerical/simpson.md)
+5. [Lagrange](./numerical/lagrange.md)
+6. [High-Precision](./numerical/high-precision.md)

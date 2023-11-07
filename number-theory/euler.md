@@ -6,28 +6,7 @@
 2. $\varphi(p) = p - 1$，其中 $p$ 为质数
 3. $\varphi(n) = n \times \prod_{p | n} (1 - \frac{1}{p})$，其中 $p$ 为 $n$ 的质因子
 
-## 定义法求欧拉函数
-
-> 板子题网址：https://www.acwing.com/problem/content/875
-
-```cpp
-
-```cpp
-inline int get_phi(int x) {
-    int ans = x;
-    for (int i = 2; i <= x / i; i++)
-        if (x % i == 0) {
-            ans = ans / i * (i - 1);
-            while (x % i == 0) x /= i;
-        }
-    if (x > 1) ans = ans / x * (x - 1);
-    return ans;
-}
-```
-
 ## 线性筛法求欧拉函数
-
-> 板子题网址：https://www.acwing.com/problem/content/876
 
 ```cpp
 inline void get_primes(int n) {
@@ -50,8 +29,6 @@ inline void get_primes(int n) {
 
 定理: 若 $a$ 和 $n$ 互质，则 $a^{\varphi(n)} \equiv 1 \pmod{n}$。
 
-推论: 若 $a$ 和 $n$ 互质，则 $a^x \equiv a^{x \bmod \varphi(n)} \pmod{n}$。
-
 ## 扩展欧拉定理
 
 > 板子题网址: https://www.luogu.com.cn/problem/P5091
@@ -73,6 +50,6 @@ inline int quick_pow(LL a, int b, int p) {
 
 ## 欧拉几何公式
 
-公式: V-E+F = 2
+公式: V-E+F = 2 (V: 顶点数，E: 边数，F: 面数)
 
-板子题网址: https://www.luogu.com.cn/problem/U323480
+> 板子题网址: https://www.luogu.com.cn/problem/U323480
