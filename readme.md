@@ -59,15 +59,15 @@
 7. [Minminal-Circle-Coverge](./geometry/minminal-circle-coverge.md)
 
 ## 数论
-1.  [Inv](./number-theory/inv.md)
-2.  [GCD](./number-theory/gcd.md)
-3.  [CRT](./number-theory/crt.md)
-4.  [BSGS](./number-theory/bsgs.md)
-5.  [Euler](./number-theory/euler.md)
-6.  [Prime](./number-theory/prime.md)
-7.  [Mobius](./number-theory/mobius.md)
-8.  [Random](./number-theory/random.md)
-9.  [Divisor](./number-theory/divisor.md)
+1. [Inv](./number-theory/inv.md)
+2. [GCD](./number-theory/gcd.md)
+3. [CRT](./number-theory/crt.md)
+4. [BSGS](./number-theory/bsgs.md)
+5. [Euler](./number-theory/euler.md)
+6. [Prime](./number-theory/prime.md)
+7. [Mobius](./number-theory/mobius.md)
+8. [Random](./number-theory/random.md)
+9. [Divisor](./number-theory/divisor.md)
 
 ## 博弈论
 1. [SG](./game-theory/sg.md)
