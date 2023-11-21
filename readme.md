@@ -13,12 +13,11 @@
 1. [Memo-Dp](./dp/memo-dp.md)
 2. [Tree-Dp](./dp/tree-dp.md)
 3. [State-Dp](./dp/state-dp.md)
-4. [Digit-Dp](./dp/digit-dp.md)
-5. [Knaspack](./dp/knapsack.md)
-6. [Linear-Dp](./dp/linear-dp.md)
-7. [Interval-Dp](./dp/interval-dp.md)
-8. [Probability-Dp](./dp/probability-dp.md)
-9. [Optimization-Dp](./dp/optimization-dp.md)
+4. [Knaspack](./dp/knapsack.md)
+5. [Linear-Dp](./dp/linear-dp.md)
+6. [Interval-Dp](./dp/interval-dp.md)
+7. [Probability-Dp](./dp/probability-dp.md)
+8. [Optimization-Dp](./dp/optimization-dp.md)
 
 ## 字符串
 1. [KMP](./string/kmp.md)
