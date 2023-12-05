@@ -42,3 +42,23 @@ struct IO {
     inline void writeln(T x) { write(x), putchar('\n'); }
 } io;
 ```
+
+## __int128
+
+```cpp
+ostream& operator<<(ostream& os, __int128 x) {
+    if (x < 0) x = -x, os.put('-');
+    if (x > 9) os << (x / 10);
+    os.put(x % 10 + '0');
+    return os;
+}
+
+istream& operator>>(istream& is, __int128& x) {
+    x = 0;
+    signed f = 1, ch = is.get();
+    while (!isdigit(ch)) f = ch == '-' ? -1 : 1, ch = is.get();
+    while (isdigit(ch)) x = x * 10 + ch - '0', ch = is.get();
+    x *= f;
+    return is;
+}
+```
