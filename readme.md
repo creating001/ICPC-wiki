@@ -1,7 +1,5 @@
 # Acm 算法模板库 by 划船全靠浪 💭💡🎈
 
-[杂项](./misc.md)
-
 ## 基础算法
 1. [贪心](./basic/greedy.md)
 2. [模拟](./basic/simulate.md)
@@ -9,9 +7,8 @@
 4. [二分](./basic/binary-search.md)
 5. [倍增](./basic/binary-lifting.md)
 6. [双指针](./basic/two-pointers.md)
-7. [随机算法](./basic/rand-technique.md)
-8. [递归&分治](./basic/divide-and-conquer.md)
-9. [前缀和&差分](./basic/prefix-sum.md)
+7. [递归&分治](./basic/divide-and-conquer.md)
+8. [前缀和&差分](./basic/prefix-sum.md)
 
 ## 搜索
 1. [A*](./search/a-star.md)
@@ -165,3 +162,13 @@
 3. [旋转卡壳](./geometry/rotating-calipers.md)
 4. [半平面交](./geometry/half-plane.md)
 5. [平面最近点对](./geometry/closest-pair.md)
+
+## 杂项
+1. [随机化](./misc/randomization.md)
+2. [CDQ分治](./misc/cdq.md)
+3. [莫队算法](./misc/mo-algo.md)
+4. [常用技巧](./misc/technique.md)
+5. [分数规划](./misc/frac-programming.md)
+6. [整体二分](./misc/parallel-binsearch.md)
+7. [约瑟夫问题](./misc/josephus.md)
+8. [表达式求值](./misc/expression.md)
