@@ -102,6 +102,7 @@
 4. [牛顿迭代法](./math/numerical/newton.md)
 5. [高精度计算](./math/numerical/bignum.md)
 6. [拉格朗日插值](./math/numerical/lagrange.md)
+7. [自适应辛普森积分](./math/numerical/simpson.md)
 
 ## 数据结构
 1.  [堆](./ds/heap.md)
