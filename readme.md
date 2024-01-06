@@ -91,9 +91,6 @@
 2. [矩阵](./math/linear-algebra/matrix.md)
 3. [线性基](./math/linear-algebra/basis.md)
 
-### 群论
-1. [置换群](./math/group-theory/permutation-group.md)
-
 ### 博弈论
 1. [SG函数](./math/game-theory/sg.md)
 2. [Nim游戏](./math/game-theory/nim.md)
