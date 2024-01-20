@@ -1,13 +1,12 @@
 # Acm 算法模板库 by 划船全靠浪 💭💡🎈
 
 ## 基础算法
-1. [贪心](./basic/greedy.md)
-2. [构造](./basic/construct.md)
-3. [二分](./basic/binary-search.md)
-4. [倍增](./basic/binary-lifting.md)
-5. [双指针](./basic/two-pointers.md)
-6. [递归&分治](./basic/divide-and-conquer.md)
-7. [前缀和&差分](./basic/prefix-sum.md)
+1. [构造](./basic/construct.md)
+2. [二分](./basic/binary-search.md)
+3. [倍增](./basic/binary-lifting.md)
+4. [双指针](./basic/two-pointers.md)
+5. [递归&分治](./basic/divide-and-conquer.md)
+6. [前缀和&差分](./basic/prefix-sum.md)
 
 ## 搜索
 1. [A*](./search/a-star.md)
