@@ -1,162 +1,160 @@
 # Acm 算法模板库 by 划船全靠浪 💭💡🎈
 
 ## 基础算法
-1. [构造](./basic/construct.md)
-2. [二分](./basic/binary-search.md)
-3. [倍增](./basic/binary-lifting.md)
-4. [双指针](./basic/two-pointers.md)
-5. [递归&分治](./basic/divide-and-conquer.md)
-6. [前缀和&差分](./basic/prefix-sum.md)
+1. [构造]
+2. [二分]
+3. [倍增]
+4. [双指针]
+5. [递归&分治]
+6. [前缀和&差分]
 
 ## 搜索
-1. [A*](./search/a-star.md)
-2. [DFS](./search/dfs.md)
-3. [BFS](./search/bfs.md)
-4. [IDA*](./search/ida-star.md)
-5. [回溯法](./search/backtracking.md)
-6. [搜索剪枝](./search/pruning.md)
-7. [迭代加深](./basic/iterative.md)
-8. [双向搜索](./search/bidirectional.md)
-9. [启发式搜索](./search/heuristic.md)
+1. [A*]
+2. [DFS]
+3. [BFS]
+4. [IDA*]
+5. [回溯法]
+6. [搜索剪枝]
+7. [迭代加深]
+8. [双向搜索]
+9. [启发式搜索]
 
 ## 动态规划
-1.  [树形DP](./dp/tree.md)
-2.  [插头DP](./dp/plug.md)
-3.  [状压DP](./dp/state.md)
-4.  [数位DO](./dp/digit.md)
-5.  [线性DP](./dp/linear.md)
-6.  [背包DP](./dp/knapsack.md)
-7.  [区间DP](./dp/interval.md)
-8.  [概率DP](./dp/probability.md)
-9.  [DP优化](./dp/optimization.md)
-10. [记忆化搜索](./dp/memo.md)
+1.  [树形DP]
+2.  [插头DP]
+3.  [状压DP]
+4.  [数位DO]
+5.  [线性DP]
+6.  [背包DP]
+7.  [区间DP]
+8.  [概率DP]
+9.  [DP优化]
+10. [记忆化搜索]
 
 ## 字符串
-1.  [KMP](./string/kmp.md)
-2.  [Z函数](./string/z-func.md)
-3.  [字典树](./string/trie.md)
-4.  [后缀数组](./string/sa.md)
-5.  [AC自动机](./string/automaton.md)
-6.  [Manacher](./string/manacher.md)
-7.  [回文自动机](./string/pam.md)
-8.  [后缀自动机](./string/sam.md)
-9.  [字符串哈希](./string/hash.md)
-10. [字符串匹配](./string/match.md)
-11. [后缀平衡树](./string/suffix-bst.md)
-12. [序列自动机](./string/seq-automaton.md)
-13. [最小表示法](./string/minimal-string.md)
+1.  [KMP]
+2.  [Z函数]
+3.  [字典树]
+4.  [后缀数组]
+5.  [AC自动机]
+6.  [Manacher]
+7.  [回文自动机]
+8.  [后缀自动机]
+9.  [字符串哈希]
+10. [字符串匹配]
+11. [后缀平衡树]
+12. [序列自动机]
+13. [最小表示法]
 
 ## 数学
 
 ### 数论
-1.  [素数](./math/number-theory/prime.md)
-2.  [约数](./math/number-theory/divisor.md)
-3.  [原根](./math/number-theory/primitive-root.md)
-4.  [欧拉](./math/number-theory/euler.md)
-5.  [素数筛法](./math/number-theory/sieve.md)
-6.  [乘法逆元](./math/number-theory/inverse.md)
-7.  [数论分块](./math/number-theory/sqrt-decomposition.md)
-8.  [离散对数](./math/number-theory/discrete-logarithm.md)
-9.  [最大公约数](./math/number-theory/gcd.md)
-10. [威尔逊定理](./math/number-theory/wilson.md)
-11. [分解质因数](./math/number-theory/pollard-rho.md)
-12. [卢卡斯定理](./math/number-theory/lucas.md)
-13. [中国剩余定理](./math/number-theory/crt.md)
-14. [莫比乌斯反演](./math/number-theory/mobius.md)
+1.  [素数]
+2.  [约数]
+3.  [原根]
+4.  [欧拉]
+5.  [素数筛法]
+6.  [乘法逆元]
+7.  [数论分块]
+8.  [离散对数]
+9.  [最大公约数]
+10. [威尔逊定理]
+11. [分解质因数]
+12. [卢卡斯定理]
+13. [中国剩余定理]
+14. [莫比乌斯反演]
 
 ### 多项式与生成函数
-1. [快速傅里叶变换](./math/poly/fft.md)
+1. [快速傅里叶变换]
 
 ### 组合数学
-1.  [贝尔数](./math/combinatorics/bell.md)
-2.  [分拆数](./math/combinatorics/partition.md)
-3.  [排列组合](./math/combinatorics/combination.md)
-4.  [容斥原理](./math/combinatorics/drawer-principle.md)
-5.  [康托展开](./math/combinatorics/cantor.md)
-6.  [错位排列](./math/combinatorics/derangement.md)
-7.  [卡特兰数](./math/combinatorics/catalan.md)
-8.  [斯特林数](./math/combinatorics/stirling.md)
-9.  [图论计数](./math/combinatorics/graph-enumeration.md)
-10. [斐波那契数列](./math/combinatorics/fibonacci.md)
-11. [范德蒙德卷积](./math/combinatorics/vandermonde-convolution.md)
+1.  [贝尔数]
+2.  [分拆数]
+3.  [排列组合]
+4.  [容斥原理]
+5.  [康托展开]
+6.  [错位排列]
+7.  [卡特兰数]
+8.  [斯特林数]
+9.  [图论计数]
+10. [斐波那契数列]
+11. [范德蒙德卷积]
 
 ### 线性代数
-1. [向量](./math/linear-algebra/vector.md)
-2. [矩阵](./math/linear-algebra/matrix.md)
-3. [线性基](./math/linear-algebra/basis.md)
+1. [向量]
+2. [矩阵]
+3. [线性基]
 
 ### 博弈论
-1. [SG函数](./math/game-theory/sg.md)
-2. [Nim游戏](./math/game-theory/nim.md)
+1. [SG函数]
+2. [Nim游戏]
 
 ### 数值计算
-1. [快速幂](./math/numerical/binary-exponentiation.md)
-2. [数值积分](./math/numerical/integral.md)
-3. [高斯消元](./math/numerical/gauss.md)
-4. [牛顿迭代法](./math/numerical/newton.md)
-5. [高精度计算](./math/numerical/bignum.md)
-6. [拉格朗日插值](./math/numerical/lagrange.md)
+1. [快速幂]
+2. [数值积分]
+3. [高斯消元]
+4. [牛顿迭代法]
+5. [高精度计算]
+6. [拉格朗日插值]
 
 ## 数据结构
-1.  [堆](./ds/heap.md)
-2.  [KDT](./ds/kdt.md)
-3.  [ST表](./ds/st.md)
-4.  [并查集](./ds/dsu.md)
-5.  [线段树](./ds/seg.md)
-6.  [平衡树](./ds/bst.md)
-7.  [树套树](./ds/seg-in-seg.md)
-8.  [单调栈](./ds/monotonous-stack.md)
-9.  [树状数组](./ds/fenwick.md)
-10. [单调队列](./ds/monotonous-queue.md)
-11. [块状数据结构](./ds/block.md)
-12. [可持久化数据结构](./ds/persistent.md)
+1.  [堆]
+2.  [KDT]
+3.  [ST表]
+4.  [并查集]
+5.  [线段树]
+6.  [平衡树]
+7.  [树套树]
+8.  [单调栈]
+9.  [树状数组]
+10. [单调队列]
+11. [块状数据结构]
+12. [可持久化数据结构]
 
 ## 图论
-1.  [拆点](./graph/node.md)
-2.  [网络流](./graph/flow.md)
-3.  [2-SAT](./graph/2-sat.md)
-4.  [欧拉图](./graph/euler.md)
-5.  [K短路](./graph/kth-path.md)
-6.  [二分图](./graph/bi-graph.md)
-7.  [最小环](./graph/min-cycle.md)
-8.  [树分治](./graph/tree-divide.md)
-9.  [圆方树](./graph/block-forest.md)
-10. [最短路](./graph/shortest-path.md)
-11. [Tarjan](./graph/tarjan.md)
-12. [树链剖分](./graph/hld.md)
-13. [割点和桥](./graph/cut.md)
-14. [图的着色](./graph/color.md)
-15. [哈密顿图](./graph/hamilton.md)
-16. [树的直径](./graph/tree-diameter.md)
-17. [树的重心](./graph/tree-centroid.md)
-18. [图的匹配](./graph/graph-matching.md)
-19. [差分约束](./graph/diff-constraints.md)
-20. [强连通分量](./graph/scc.md)
-21. [双连通分量](./graph/bcc.md)
-22. [最小生成树](./graph/mst.md)
-23. [最小树形图](./graph/dmst.md)
-24. [矩阵树定理](./graph/matrix-tree.md)
-25. [环计数问题](./graph/rings-count.md)
-26. [同余最短路](./graph/mod-shortest-path.md)
-27. [最近公共祖先](./graph/lca.md)
-28. [树上启发式合并](./graph/tree.md)
-29. [最小直径生成树](./graph/mdst.md)
-30. [最大团搜索算法](./graph/max-clique.md)
+1.  [2-SAT]
+2.  [欧拉图]
+3.  [K短路]
+4.  [二分图]
+5.  [最小环]
+6.  [树分治]
+7.  [圆方树]
+8.  [最短路]
+9.  [Tarjan]
+10. [树链剖分]
+11. [割点和桥]
+12. [图的着色]
+13. [哈密顿图]
+14. [树的直径]
+15. [树的重心]
+16. [图的匹配]
+17. [差分约束]
+18. [强连通分量]
+19. [双连通分量]
+20. [最小生成树]
+21. [最小树形图]
+22. [矩阵树定理]
+23. [环计数问题]
+24. [同余最短路]
+25. [最近公共祖先]
+26. [树上启发式合并]
+27. [最小直径生成树]
+28. [最大团搜索算法]
 
 ## 计算几何
-1. [凸包](./geometry/convex-hull.md)
-2. [扫描线](./geometry/scanning.md)
-3. [三角剖分](./geometry/triangulation.md)
-4. [旋转卡壳](./geometry/rotating-calipers.md)
-5. [半平面交](./geometry/half-plane.md)
-6. [平面最近点对](./geometry/closest-pair.md)
+1. [凸包]
+2. [扫描线]
+3. [三角剖分]
+4. [旋转卡壳]
+5. [半平面交]
+6. [平面最近点对]
 
 ## 杂项
-1. [随机化](./misc/randomization.md)
-2. [CDQ分治](./misc/cdq.md)
-3. [莫队算法](./misc/mo-algo.md)
-4. [常用技巧](./misc/technique.md)
-5. [分数规划](./misc/frac-programming.md)
-6. [整体二分](./misc/parallel-binsearch.md)
-7. [约瑟夫问题](./misc/josephus.md)
-8. [表达式求值](./misc/expression.md)
+1. [随机化]
+2. [CDQ分治]
+3. [莫队算法]
+4. [常用技巧]
+5. [分数规划]
+6. [整体二分]
+7. [约瑟夫问题]
+8. [表达式求值]
